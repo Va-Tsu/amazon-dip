@@ -1,0 +1,19 @@
+//#region imports
+@use '../abstracts/variables' as *;
+//#endregion
+
+//#region authorization buttons styles
+.register-button{
+  background-color: $authorization-button-bg;
+  color: #ffffff;
+  border-radius: 26px;
+  font-size: 15px;
+  font-weight: 400;
+  border: none;
+}
+
+.register-button::placeholder{
+  font-family: $font-main;
+  color: #ffffff;
+}
+//#endregion
