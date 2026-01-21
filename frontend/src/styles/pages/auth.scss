@@ -1,0 +1,80 @@
+//#region imports
+@use '../abstracts/variables' as *;
+//#endregion
+
+//this is styles for both login and register pages
+
+.auth {
+  font-family: $font-main;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  //#region header
+  &__header {
+    font-family: $font-logo;
+    color: $authorization-text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 54px;
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    color: #2F2F2F;
+    margin-bottom: 29px;
+    display: flex;
+    justify-content: center;
+  }
+  //#endregion
+
+  //#region form
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 318px;
+    margin-bottom: 31px;
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 19px 20px;
+  }
+
+  &__input-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  //#endregion
+
+  //#region footer
+  &__footer {
+    font-size: 15px;
+    color: $authorization-text-color;
+    margin-bottom: 31px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $authorization-button-bg;
+    font-weight: 600;
+  }
+  //#endregion
+}

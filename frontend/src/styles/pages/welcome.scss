@@ -1,0 +1,20 @@
+//#region imports
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+//#endregion
+
+.welcome {
+  &__header {
+    margin-bottom: 181px;
+  }
+  &__authblock {
+    width: 318px;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}

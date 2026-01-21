@@ -1,63 +1,22 @@
 //#region imports
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 //#endregion
 
 .register {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  //#region header
-  &__header{
-    font-family: $font-logo;
-    color: $authorization-text-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  &__header {
     margin-bottom: 24px;
   }
 
-  &__logo, &__title {
-    font-weight: 400;
-    font-size: 54px;
-  }
-  &__subtitle {
-    font-size: 15px;
-    color: #2F2F2F;
-    margin-bottom: 29px;
-    display: flex;
-    justify-content: center;
-  }
-
-  //#endregion
-
-  //#region form
-  &__form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 318px;
-    margin-bottom: 31px;
-  }
-
-  &__input {
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 24px;
-    padding: 19px 20px;
-  }
-
-  &__input-wrapper {
-    box-sizing: border-box;
-    width: 100%;
-  }
-
+  //#region checkbox
   &__checkbox {
+    font-family: $font-main;
     margin-top: 7px;
     margin-bottom: 31px;
+    display: flex;
+    align-items: start;
   }
+  //#endregion
 
   &__button {
     width: 100%;
@@ -65,62 +24,4 @@
     font-size: 24px;
     font-weight: 400;
   }
-  //#endregion
-
-  //#region footer
-  &__footer{
-    font-size: 15px;
-    color: $authorization-text-color;
-    margin-bottom: 31px;
-  }
-
-  &__link{
-    text-decoration: none;
-    color: $authorization-button-bg;
-    font-weight: 600;
-    
-  }
-  //#endregion
-
-  //#region divider
-
-  &__divider {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 318px;
-    margin: 24px 0;
-  
-    &-text {
-      padding: 0 4px;
-      color: #2F2F2F;
-      font-size: 24px;
-      white-space: nowrap;
-    }
-  
-    &::before,
-    &::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background-color: #2F2F2F;
-    }
-  }
-  //#endregion
-
-  //region socials
-  &__social{
-    display: flex;
-    justify-content: center;
-    gap: 26px;
-
-    &-icon{
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  
-  //#endregion
 }
-

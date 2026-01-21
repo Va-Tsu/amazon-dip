@@ -1,0 +1,16 @@
+//#region imports
+@use '../abstracts/variables' as *;
+//#endregion
+
+//#region socials
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+//#endregion
