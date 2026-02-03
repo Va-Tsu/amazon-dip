@@ -1,0 +1,42 @@
+//#region imports
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+//#endregion
+
+.reset {
+  //#region header
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-family: $font-main;
+  }
+  //#endregion
+
+  //#region form
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 318px;
+    margin-bottom: 31px;
+  }
+
+  &__input {
+    margin-bottom: 42px;
+  }
+
+  &__submit {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  //#endregion
+}
