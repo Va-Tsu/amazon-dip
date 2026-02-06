@@ -1,11 +1,29 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 //#region Imports
 import { Divider } from "../../../assets/Divider";
 import { SocialLinks } from "../../../assets/SocialLinks";
 import { Logo } from "../../../assets/Logo";
+import { useState } from "react";
+import { register } from "../../../api/auth";
 
 //#endregion
 
 export function Register() {
+
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = async () => {
+    try {
+      const result = await register ({email, password, name});
+      localStorage.setItem('token', result.token);
+    } catch (e) {
+      setError((e as Error).message);
+    }
+  }
+
   return (
     <section className="register auth">
       <div className="register__container auth__container">
@@ -23,12 +41,16 @@ export function Register() {
             className="register__input auth__input auth-button"
             type="text"
             placeholder="Full name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
             required
           />
           <input
             className="register__input auth__input auth-button"
             type="email"
             placeholder="Email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
             required
           />
           <div className="register__input-wrapper auth__input-wrapper">
@@ -36,6 +58,8 @@ export function Register() {
               className="register__input auth__input auth-button"
               type="password"
               placeholder="Password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
               required
             />
             <button 
@@ -60,7 +84,7 @@ export function Register() {
             </span>
           </label>
           
-          <button className="register__button auth-button" type="submit">
+          <button className="register__button auth-button" type="submit" onSubmit={handleSubmit}>
             Create an account
           </button>
         </form>

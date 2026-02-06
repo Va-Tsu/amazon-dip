@@ -12,6 +12,12 @@
   justify-content: center;
   align-items: center;
 
+  //#region all
+  &-error {
+    background-color: $authorization-input-error-bg;
+  }
+  //#endregion
+
   //#region header
   &__header {
     font-family: $font-logo;
