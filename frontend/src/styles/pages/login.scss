@@ -1,0 +1,13 @@
+//#region imports
+@use '../abstracts/variables' as *;
+//#endregion
+
+.login {
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    margin-bottom: 24px;
+  }
+}
