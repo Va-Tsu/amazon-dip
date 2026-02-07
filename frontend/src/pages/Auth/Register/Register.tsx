@@ -1,10 +1,11 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 //#region Imports
 import { Divider } from "../../../assets/Divider";
 import { SocialLinks } from "../../../assets/SocialLinks";
 import { Logo } from "../../../assets/Logo";
 import { useState } from "react";
 import { register } from "../../../api/auth";
+import classNames from 'classnames';
+import { isAuthenticated } from "../../../auth/auth.helper";
 
 //#endregion
 
@@ -13,9 +14,11 @@ export function Register() {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
     try {
       const result = await register ({email, password, name});
       localStorage.setItem('token', result.token);
@@ -36,7 +39,7 @@ export function Register() {
         <p className="register__subtitle auth__subtitle">Create your account in second</p>
         
         {/* Form block */}
-        <form className="register__form auth__form">
+        <form className="register__form auth__form" onSubmit={handleSubmit}>
           <input
             className="register__input auth__input auth-button"
             type="text"
@@ -46,7 +49,7 @@ export function Register() {
             required
           />
           <input
-            className="register__input auth__input auth-button"
+            className={classNames("register__input auth__input auth-button", { 'auth-error': error === 'emailError' })} // Test classes
             type="email"
             placeholder="Email"
             value={email}
@@ -84,10 +87,12 @@ export function Register() {
             </span>
           </label>
           
-          <button className="register__button auth-button" type="submit" onSubmit={handleSubmit}>
+          <button className="register__button auth-button" type="submit">
             Create an account
           </button>
         </form>
+
+        {isAuthenticated() && <p>давай</p>} {/* Test realization */}
 
         {/* Footer link */}
         <p className="register__footer auth__footer">

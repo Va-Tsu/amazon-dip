@@ -1,11 +1,27 @@
 //#region Imports
+import React, { useState } from "react";
 import { Divider } from "../../../assets/Divider";
 import { Logo } from "../../../assets/Logo";
 import { SocialLinks } from "../../../assets/SocialLinks";
+import { login } from "../../../api/auth";
+import classNames from "classnames";
 
 //#endregion
 
 export function Login() {
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    const [error, setError] = useState<string | null>(null);
+
+    const handleSubmit = async (event: React.FormEvent) => {
+      event.preventDefault();
+      try {
+        const result = await login ({email, password});
+        localStorage.setItem('token', result.token);
+      } catch (e) {
+        setError((e as Error).message);
+      }
+    }
   return (
     <section className="login auth">
       <div className="login__container auth__container">
@@ -18,11 +34,13 @@ export function Login() {
         <p className="login__subtitle auth__subtitle">Log in your account</p>
         
         {/* Form block */}
-        <form className="login__form auth__form">
+        <form className="login__form auth__form" onSubmit={handleSubmit}>
           <input
-            className="login__input auth__input auth-button"
+            className={classNames("login__input auth__input auth-button", { 'auth-error': error === 'emailError' })} // Test classes
             type="email"
             placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <div className="login__input-wrapper auth__input-wrapper">
@@ -30,6 +48,8 @@ export function Login() {
               className="login__input auth__input auth-button"
               type="password"
               placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <button 
