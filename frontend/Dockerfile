@@ -1,24 +1,41 @@
-# Етап збірки
-FROM node:18 AS build
+# 1. Змінюємо образ на Node 22 (LTS), бо Vite 7+ та React 19 не працюють на Node 18
+FROM node:22 AS build
 WORKDIR /app
 
+# Копіюємо конфіги залежностей
 COPY package*.json ./
-# Встановлюємо те, що є в конфігу
+
+# Встановлюємо основні залежності
 RUN npm install
 
-# ПРИМУСОВО встановлюємо те, що розробники забули додати в package.json
-RUN npm install classnames @types/classnames
+# ПРИМУСОВО додаємо те, що розробники забули в package.json
+# Додаємо --no-save, щоб не намагатися змінити файл package.json, який ми не хочемо чіпати
+RUN npm install classnames @types/classnames --no-save
 
+# Копіюємо весь код
 COPY . .
-# Пропускаємо помилки типів, якщо вони будуть заважати білду (опціонально)
+
+# Виконуємо збірку. 
+# Якщо TypeScript все ще буде "лаятись" на типи, можна змінити на: RUN npx tsc --skipLibCheck && vite build
 RUN npm run build
 
-# Етап сервінгу
+# Етап сервінгу (Production)
 FROM nginx:alpine
-# Для Vite копіюємо з dist
+
+# Для Vite результат завжди в dist. 
+# Використовуємо --link для оптимізації, якщо доступно
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Додаємо конфіг для підтримки маршрутизації React (щоб не було 404)
-RUN echo 'server { listen 80; location / { root /usr/share/nginx/html; index index.html; try_files $uri $uri/ /index.html; } }' > /etc/nginx/conf.d/default.conf
+# Налаштування Nginx для React Router (щоб працювали посилання /login, /products тощо)
+RUN echo 'server { \
+    listen 80; \
+    location / { \
+        root /usr/share/nginx/html; \
+        index index.html; \
+        try_files $uri $uri/ /index.html; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
