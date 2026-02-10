@@ -53,7 +53,7 @@ export function logout(token: string) {
 
 // toggle switch
 
-const USE_FAKE_API = true;
+const USE_FAKE_API = false;
 
 export function register(data: RegisterRequest) {
   return USE_FAKE_API
