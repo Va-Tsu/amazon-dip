@@ -37,31 +37,26 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterDto dto)
+    public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
     {
-        // Разбиваем fullname на FirstName и LastName
-        var names = dto.FullName.Split(' ', 2);
-
-        var user = new AmazonClone.Domain.Entities.User
-        {
-            FirstName = names[0],
-            LastName = names.Length > 1 ? names[1] : "",
-            Username = dto.Email,
-            Email = dto.Email,
-            Birthday = DateOnly.Parse("2000-01-01") // временно фиксированная дата
-        };
-
         var identityUser = new IdentityUser
         {
-            UserName = user.Username,
-            Email = user.Email
+            UserName = registerDto.Email,
+            Email = registerDto.Email
         };
 
-        var result = await _userManager.CreateAsync(identityUser, dto.Password);
+        var result = await _userManager.CreateAsync(identityUser,registerDto.Password );
         if (!result.Succeeded)
             return BadRequest(result.Errors);
 
-        user.IdentityUserId = identityUser.Id;
+        var user = new User
+        {
+            FullName = registerDto.FullName,
+            Email = registerDto.Email,
+            IdentityUserId = identityUser.Id
+        };
+
+        
         _dbContext.Users.Add(user);
         await _dbContext.SaveChangesAsync();
 
@@ -71,11 +66,9 @@ public class UserController : ControllerBase
             new { id = identityUser.Id, token },
             Request.Scheme);
 
-        // TODO: отправить ссылку по email
+        // TODO: send link via email
         return Ok(new { message = "User created. Please confirm email.", confirmLink = link });
     }
-
-
     
     [HttpGet("confirm-email")]
     public async Task<IActionResult> ConfirmEmail(string id, string token)
@@ -96,7 +89,7 @@ public class UserController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
-        var user = await _userManager.FindByNameAsync(loginDto.Username);
+        var user = await _userManager.FindByEmailAsync(loginDto.Email);
         if (user == null)
             return Unauthorized("Invalid credentials");
 

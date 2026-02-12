@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bsootAPeGmk=",
+  "dgSpecHash": "digBeOv/zRQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Api\\AmazonClone.Api.csproj",
+  "projectFilePath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Api\\AmazonClone.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Oskar\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Oskar\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

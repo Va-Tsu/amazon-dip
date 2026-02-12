@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
+      "projectUniqueName": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
       "projectName": "AmazonClone.Domain",
-      "projectPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
+      "projectPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
       "packagesPath": "C:\\Users\\Oskar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\obj\\",
+      "outputPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Oskar\\AppData\\Roaming\\NuGet\\NuGet.Config"

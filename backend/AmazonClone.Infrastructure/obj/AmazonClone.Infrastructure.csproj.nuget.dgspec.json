@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj": {}
+    "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj": {
+    "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
+        "projectUniqueName": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
         "projectName": "AmazonClone.Domain",
-        "projectPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
+        "projectPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj",
         "packagesPath": "C:\\Users\\Oskar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\obj\\",
+        "outputPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oskar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj": {
+    "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj",
+        "projectUniqueName": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj",
         "projectName": "AmazonClone.Infrastructure",
-        "projectPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj",
+        "projectPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Infrastructure\\AmazonClone.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Oskar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Infrastructure\\obj\\",
+        "outputPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oskar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -84,8 +84,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj": {
-                "projectPath": "C:\\Users\\Oskar\\Desktop\\amazon-dip-backend-develop\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj"
+              "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj": {
+                "projectPath": "C:\\GLAVPROJECTS\\backendAmazon\\backend\\AmazonClone.Domain\\AmazonClone.Domain.csproj"
               }
             }
           }
