@@ -20,7 +20,7 @@ export function Register() {
     event.preventDefault();
 
     try {
-      const result = await register ({email, password, name});
+      const result = await register ({email, password, fullName: name});
       localStorage.setItem('token', result.token);
     } catch (e) {
       setError((e as Error).message);
@@ -92,7 +92,7 @@ export function Register() {
           </button>
         </form>
 
-        {isAuthenticated() && <p>давай</p>} {/* Test realization */}
+        {isAuthenticated() && <p>ТОКЕН СОХРАНЕН</p>} {/* Test realization */}
 
         {/* Footer link */}
         <p className="register__footer auth__footer">
