@@ -117,10 +117,12 @@
 
 
   }
+
   &__cards {
 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px;
     margin-top: 20px;
@@ -129,8 +131,8 @@
       background-color: #fff;
       border-radius: 16px;
       &__icon {
-        width: calc(200px + (100vw - 425px) * 0.3);
-        height: auto;
+        width: calc(200px + (100vw - 425px) * 0.1);
+        height: 200px;
         display: block;
       }
       &__title {
@@ -276,6 +278,94 @@
       border: none;
       border-radius: 26px;
       padding: 5px 30px;
+    }
+  }
+}
+
+
+.fou {
+  margin-left: $yommingoContainerValue;
+  margin-right: $yommingoContainerValue;
+  margin-top: 50px;
+  margin-bottom: 75px;
+}
+
+.footer {
+  padding-left: $yommingoContainerValue;
+  padding-right: $yommingoContainerValue; 
+  background-color: $yommingo-footer-bg;
+  color: $bg-color;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    gap: 20px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 15px;
+
+    &__title {
+      font-size: 10px;
+      color: #F7DFC4;
+    }
+
+    .social__block {
+      max-width: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+  }
+
+  .left {
+    max-width: 35%;
+    
+    &__title {
+      font-size: 10px;
+      color: #F7DFC4;
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      font-size: 10px;
+      color: #FFF4E6;
+      margin-bottom: 5px;
+    }
+
+    &__button {
+      font-size: 6px;
+      width: 70%;
+      background-color: #FFF4E6;
+      color: #161616;
+      border: none;
+      border-radius: 26px;
+      padding: 5px;
+    }
+  }
+
+  .right {
+    display: flex;
+    gap: 20px;
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      &__title {
+        font-size: 10px;
+        color: #F7DFC4;
+        margin-bottom: 5px;
+      }
+      &__link {
+        font-size: 8px;
+        color: #FFF4E6;
+        text-decoration: none;
+        margin-bottom: 5px;
+      }
     }
   }
 }
