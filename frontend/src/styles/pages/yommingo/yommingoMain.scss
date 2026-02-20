@@ -1,0 +1,281 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+.yommingo {
+  font-family: $font-main;
+  margin: 0 auto;
+  &__container {
+    
+    margin: 0 auto;
+  }
+}
+
+.header {
+  padding: 10px $yommingoContainerValue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $yommingo-header-bg;
+  gap: 5%;
+
+    &__input {
+      position: relative;
+      width: 30%;
+      
+      &-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &__search {
+        padding: 5px 0 5px 30px;
+        border-radius: 20px;
+        border: none;
+        width: 100%;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+}
+
+.mainpage {
+  background-image: url(/imgs/img/yommingo/bg.png);
+  background-size: cover;
+  background-position: center;
+  padding-top: 40px;
+  padding-left: $yommingoContainerValue;
+  padding-right: $yommingoContainerValue;
+
+  &__title {
+    color: $yommingo-text-color;
+    font-size: 24px;
+    width: 68%;
+
+  }
+
+  &__buttons {
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding-bottom: 70px;
+
+    &__button {
+      flex: 1;
+      width: 100%;
+      max-width: 150px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #fff;
+      background-color: $button-bg;
+      border: none;
+      padding: 10px 20px;
+    }
+  }
+
+
+} 
+
+.benefits {
+  margin-left: $yommingoContainerValue;
+  margin-right: $yommingoContainerValue;
+  &__top {
+  text-align: center;
+  
+    &__title {
+      font-size: 15px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+  
+    &__subtitle {
+      font-size: 20px;
+      position: relative;
+      display: inline-block;
+      padding-top: 10px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: black;
+      }
+    }
+
+
+  }
+  &__cards {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+
+    &__card {
+      background-color: #fff;
+      border-radius: 16px;
+      &__icon {
+        width: calc(200px + (100vw - 425px) * 0.3);
+        height: auto;
+        display: block;
+      }
+      &__title {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-size: 12px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+.popular {
+  margin-left: $yommingoContainerValue;
+  margin-right: $yommingoContainerValue;
+  &__title {
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 32px;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: black;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+.new {
+  margin-left: $yommingoContainerValue;
+  margin-right: $yommingoContainerValue;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &__title {
+      font-size: 24px;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: black;
+      }
+    }
+
+    &__button {
+      background-color: #FFF4E6;
+      color: #000;
+      border: 1px solid #575757;
+      border-radius: 26px;
+      padding: 10px 20px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__card {
+    background-color: #F7DFC4;
+    padding: 15px;
+    border-radius: 26px;
+
+    &__img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    &__span {
+      width: 100%;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000000;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__price {
+      font-size: 14px;
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+
+    &__brand {
+      font-size: 12px;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__weight {
+      font-size: 12px;
+    }
+
+    &__button {
+      background-color: #FF7A1A;
+      color: #fff;
+      border: none;
+      border-radius: 26px;
+      padding: 5px 30px;
+    }
+  }
+}

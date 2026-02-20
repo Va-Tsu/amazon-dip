@@ -5,7 +5,6 @@ import { Logo } from "../../../assets/Logo";
 import { useState } from "react";
 import { register } from "../../../api/auth";
 import classNames from 'classnames';
-import { isAuthenticated } from "../../../auth/auth.helper";
 
 //#endregion
 
@@ -91,8 +90,6 @@ export function Register() {
             Create an account
           </button>
         </form>
-
-        {isAuthenticated() && <p>ТОКЕН СОХРАНЕН</p>} {/* Test realization */}
 
         {/* Footer link */}
         <p className="register__footer auth__footer">

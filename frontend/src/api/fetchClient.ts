@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5123';
+const BASE_URL = 'https://localhost:7019';
 
 type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE';
 
