@@ -15,9 +15,9 @@ export function Welcome() {
       {/* AuthBlock */}
 
       <div className="welcome__authblock">
-        <button onClick={() => window.location.href = '/register'} className="welcome__button auth-button">Creat account</button>
+        <button onClick={() => window.location.href = '/yommingo/auth/register'} className="welcome__button auth-button">Creat account</button>
         <Divider />
-        <button onClick={() => window.location.href = '/login'} className="welcome__button auth-button">Log in</button>
+        <button onClick={() => window.location.href = '/yommingo/auth/login'} className="welcome__button auth-button">Log in</button>
       </div>
     </section>
   );

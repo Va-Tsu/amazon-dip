@@ -1,5 +1,6 @@
 //#region imports
-@use '../abstracts/variables' as *;
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
 //#endregion
 
 //this is styles for both login and register pages
@@ -79,7 +80,7 @@
 
   &__link {
     text-decoration: none;
-    color: $authorization-button-bg;
+    color: $button-bg;
     font-weight: 600;
   }
   //#endregion

@@ -1,7 +1,6 @@
 //#region color Variables
   $bg-color: #FFF4E6;
   //#region authorization colors
-  $authorization-button-bg: #FF7A1A;
   $authorization-button-bg-hover: #FF8F3F;
   $authorization-button-bg-active: #E86A10;
   $authorization-button-bg-focus: #F3D8C4;
@@ -9,6 +8,14 @@
   $authorization-input-error-bg: #E64545;
 
   $authorization-text-color: #2F2F2F;
+  //#endregion
+
+  $button-bg: #FF7A1A;
+
+  //#region yommingo colors
+  $yommingo-header-bg: #B38F6F;
+  $yommingo-text-color: #161616;
+  $yommingoContainerValue: 20px;
   //#endregion
 
 //#endregion

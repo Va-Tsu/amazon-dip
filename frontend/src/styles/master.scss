@@ -16,9 +16,16 @@
 //endregion
 
 //#region pages
-@use './pages/register.scss';
-@use './pages/login.scss';
-@use './pages/auth.scss';
-@use './pages/welcome.scss';
-@use './pages/reset.scss';
+
+  //#region auth
+  @use './pages/auth/register.scss';
+  @use './pages/auth/login.scss';
+  @use './pages/auth/auth.scss';
+  @use './pages/auth/welcome.scss';
+  @use './pages/auth/reset.scss';
+  //#endregion
+
+  //#region yommingo
+  @use './pages/yommingo/yommingoMain.scss';
+  //#endregion
 //endregion
