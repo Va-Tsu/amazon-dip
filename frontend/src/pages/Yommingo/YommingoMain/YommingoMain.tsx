@@ -28,7 +28,7 @@ export function YommingoMain() {
 
       <section className="benefits">
         <div className="benefits__top">
-          <h2 className="benefits__top__title">Logo</h2>
+          <img src="/imgs/icons/yommingo/YomingoLogo.svg" alt="Yommingo Logo" className="benefits__top__title" />
           <h2 className="benefits__top__subtitle">Why choose us?</h2>
         </div>
         <div className="benefits__cards">
