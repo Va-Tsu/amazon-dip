@@ -1,6 +1,6 @@
 // Медиа-запросы
 @mixin mobile {
-  @media (min-width: 767px) {
+  @media (max-width: 767px) {
     @content;
   }
 }

@@ -43,6 +43,34 @@
       display: flex;
       align-items: center;
       gap: 20px;
+
+      @include tablet {
+        flex-direction: row-reverse;
+        gap: 50px;
+      }
+
+      &__onmobile {
+        display: block;
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &__ondesktop {
+        display: none;
+        @include tablet {
+          display: block;
+        }
+
+        &__item {
+          margin-right: 15px;
+          text-decoration: none;
+          color: #161616;
+          gap: 30px;
+          font-family: $font-main;
+        }
+      }
+      
     }
 }
 

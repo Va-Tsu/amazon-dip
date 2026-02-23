@@ -5,15 +5,17 @@ import { Register } from "./pages/Auth/Register/Register"
 import { Welcome } from "./pages/Auth/Welcome/Welcome";
 import { Reset } from "./pages/Auth/Reset/Reset";
 import { YommingoMain } from "./pages/Yommingo/YommingoMain/YommingoMain";
+import { YommingoProductCard } from "./pages/Yommingo/YommingoProductCard/YommingoProductCard";
 //#endregion
 function App() {
 
   return (
     <Routes>
       {/*<Route path="/" element={<Welcome />}/>*/}
-      <Route path="/" element={<YommingoMain />}/>
+      <Route path="/" element={<YommingoProductCard />}/>
       <Route path="/yommingo">
-        <Route index element={<h1>Yommingo</h1>}/>
+        <Route index element={<YommingoMain />}/>
+        <Route path="product/card" element={<YommingoProductCard />}/>
         <Route path="auth">
           <Route index element={<Welcome />}/>
           <Route path="register" element={<Register />}/>
