@@ -1,0 +1,340 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $yommingo-header-bg;
+  gap: 5%;
+
+    &__Ypc {
+      padding: 10px 100px;
+      @include tablet {
+        padding: 10px 50px;
+      }
+      @include mobile {
+        padding: 10px $yommingoContainerValue;
+      }
+    }
+    &__logo {
+      width: 150px;
+      @include tablet {
+        width: 100px;
+      }
+      @include mobile {
+        width: 80px;
+      }
+    }
+    &__input {
+      position: relative;
+      width: 30%;
+
+      @include tablet {
+        width: 25%;
+      }
+      @include desktop {
+        width: 30%;
+      }
+      
+      &-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &__search {
+        padding: 5px 0 5px 30px;
+        border-radius: 20px;
+        border: none;
+        width: 100%;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include tablet {
+        flex-direction: row-reverse;
+        gap: 50px;
+      }
+
+      &__onmobile {
+        display: block;
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &__ondesktop {
+        display: none;
+        @include tablet {
+          display: block;
+        }
+
+        &__item {
+          margin-right: 15px;
+          text-decoration: none;
+          color: #161616;
+          font-family: $font-main;
+          font-size: 12px;
+          @include desktop {
+            font-size: 20px;
+          }
+        }
+      }
+      
+    }
+}
+
+.Ypc {
+  &__main {
+    margin-left: 100px;
+    margin-right: 100px;
+    @include tablet {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    @include mobile {
+      margin-left: $yommingoContainerValue;
+      margin-right: $yommingoContainerValue;
+    }
+    
+  }
+  //# region Product Card
+  &__productCard {
+    font-family: $font-main;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 80px;
+    background-color: #F7DFC4;
+    margin-top: 60px;
+    border-radius: 26px;
+    margin-bottom: 20px;
+
+    //#region Top Info
+    &__topInfo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10%;
+
+      &__img {
+        height: calc(200px + (100vw - 425px) * 0.1);
+        border-radius: 16px;
+      }
+
+      &__text {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+
+        &__title {
+          font-size: 32px;
+          margin-bottom: 10px;
+        }
+
+        &__description {
+          font-size: 20px;
+        }
+      }
+    }
+    //#endregion
+
+    &__price {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 32px;
+      margin-top: 15px;
+      margin-right: 40px;
+    }
+
+    //#region Down Info
+    &__downInfo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      margin-left: 20px;
+      margin-right: 20px;
+      &__form {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      &__counter {
+        display: flex;
+        gap: 10px;
+      }
+      &__addButton {
+        background-color: #FF7A1A;
+        border: none;
+        border-radius: 26px;
+        color: #fff;
+        padding: 10px 100px;
+        font-size: 36px;
+        font-weight:normal;
+        font-family: $font-main;
+      }
+      &__sertificate {
+        display: flex;
+        gap: 40px;
+        &__title {
+          font-size: 24px;
+          color: #161616;
+          text-decoration: none;
+        }
+      }
+    }
+    //#endregion
+
+    &__information {
+      margin-top: 90px;
+      &__title {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include tablet {
+          grid-template-columns: 1fr;
+        }
+        @include desktop {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        gap: 40px;
+        margin-bottom: 20px;
+
+        &__item {
+          display: flex;
+          justify-content: space-between;
+          gap: 40px;
+          position: relative;
+          ::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            height: 1px;
+            background-color: #000000;
+          }
+          &__label {
+            font-size: 24px;
+            color: #161616;
+            opacity: 0.5;
+          }
+          &__value {
+            font-size: 24px;
+            color: #161616;
+            text-align: right;
+            max-width: 350px;
+          }
+        }
+      }
+    }
+
+    &__details{
+      &__title {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      &__description {
+        font-size: 20px;
+        color: #161616;
+        opacity: 0.5;
+        padding-bottom: 50px;
+      }
+    }
+
+    &__comments {
+      font-family: $font-main;
+      background-color: #DED0C1;
+      border-radius: 26px;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      &__add {
+        width: 22%;
+        &__title {
+          font-size: 32px;
+          margin-bottom: 20px;
+        }
+        &__input {
+          width: 100%;
+          padding: 10px;
+          border-radius: 16px;
+          border: none;
+          margin-bottom: 10px;
+          background-color: #FF7A1A;
+          &::placeholder {
+            color: #fff;
+          }
+        }
+      }
+
+
+      &__title {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      &__comment {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 5px;
+        &__username {
+          font-size: 20px;
+        }
+        &__content {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  //#endregion
+
+  
+}
+
+.Ypc__footer {
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @include tablet {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include mobile {
+    padding-left: $yommingoContainerValue;
+    padding-right: $yommingoContainerValue;
+  }
+}
+
+.empty__style {
+  padding: 20px 20px;
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: 1px solid #161616;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}

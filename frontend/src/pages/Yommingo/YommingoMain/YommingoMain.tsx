@@ -1,7 +1,7 @@
-//#region Imports
-//#endregion
 
+//#region Imports
 import { Link } from "react-router-dom";
+//#endregion
 
 export function YommingoMain() {
   return (
@@ -14,7 +14,15 @@ export function YommingoMain() {
         </div>
         <div className="header__nav">
           <Link to="/yommingo/auth/login" className="header__nav__account"><img src="/imgs/icons/yommingo/account.svg" alt="User Account" /></Link>
-          <nav className="header__nav__burger"><img src="/imgs/icons/yommingo/nav.svg" alt="" /></nav>
+          <nav className="header__nav__burger">
+            <img className="header__nav__onmobile" src="/imgs/icons/yommingo/nav.svg" alt="" />
+            <div className="header__nav__ondesktop">
+            <Link to="#" className="header__nav__ondesktop__item">About us</Link>
+            <Link to="#" className="header__nav__ondesktop__item">Client type</Link>
+            <Link to="#" className="header__nav__ondesktop__item">Support</Link>
+            <Link to="#" className="header__nav__ondesktop__item">Catalog</Link>
+            </div>
+          </nav>
         </div>
       </header>
 
@@ -28,7 +36,7 @@ export function YommingoMain() {
 
       <section className="benefits">
         <div className="benefits__top">
-          <h2 className="benefits__top__title">Logo</h2>
+          <img src="/imgs/icons/yommingo/YomingoLogo.svg" alt="Yommingo Logo" className="benefits__top__title" />
           <h2 className="benefits__top__subtitle">Why choose us?</h2>
         </div>
         <div className="benefits__cards">
@@ -139,7 +147,7 @@ export function YommingoMain() {
         </div>
       </section>
 
-      <section className="footer">
+      <footer className="footer">
         <div className="footer__nav">
           <div className="left">
             <h3 className="left__title">
@@ -190,7 +198,7 @@ export function YommingoMain() {
             <a href="#" className="social__link"><img src="/imgs/icons/yommingo/you.svg" alt="" className="social__link__img" /></a>
           </div>
         </div>
-      </section>
+      </footer>
     </section>
   );
 }
