@@ -1,0 +1,32 @@
+name: Auto Merge Frontend to Develop
+
+on:
+  push:
+    branches:
+      - frontend   # слідкуємо тільки за гілкою frontend
+
+jobs:
+  merge-to-develop:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          repository: Va-Tsu/amazon-dip
+          ref: frontend
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+      - name: Merge frontend into develop
+        run: |
+          git fetch origin develop
+          git checkout develop
+          git merge --no-ff origin/frontend -m "Auto-merge frontend into develop"
+
+      - name: Push to develop
+        run: git push origin develop
