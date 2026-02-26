@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - frontend   # слідкуємо тільки за гілкою frontend
-
+permissions:
+  contents: write
+  
 jobs:
   merge-to-develop:
     runs-on: ubuntu-latest
