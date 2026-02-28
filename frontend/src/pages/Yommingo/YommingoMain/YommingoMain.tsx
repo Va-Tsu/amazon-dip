@@ -5,7 +5,7 @@ import { CardList } from "../../../assets/CardList";
 import { mockCards } from "../../../types/testData";
 import { useEffect, useState } from "react";
 import { Header } from "../../../assets/Header";
-import { Footer } from "../../../assets/footer";
+import { Footer } from "../../../assets/Footer";
 //#endregion
 
 export function YommingoMain() {

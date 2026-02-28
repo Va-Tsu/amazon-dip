@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
 import { mockProducts } from "../../../types/testData"
-import { Footer } from "../../../assets/footer";
 import { Header } from "../../../assets/Header";
+import { Footer } from "../../../assets/Footer";
 
 
 export function YommingoProductCard() {
