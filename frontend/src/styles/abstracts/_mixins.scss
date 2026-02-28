@@ -11,8 +11,26 @@
   }
 }
 
+@mixin toDesktop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin toLaptop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: 1200px) {
     @content;
   }
+}
+
+@mixin text($size, $line-height: normal, $weight: 400) {
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $weight;
 }

@@ -12,10 +12,10 @@ function App() {
   return (
     <Routes>
       {/*<Route path="/" element={<Welcome />}/>*/}
-      <Route path="/" element={<YommingoProductCard />}/>
-      <Route path="/yommingo">
+      <Route path="/">
         <Route index element={<YommingoMain />}/>
-        <Route path="product/card" element={<YommingoProductCard />}/>
+        <Route path="product/:id" element={<YommingoProductCard />}/>
+        
         <Route path="auth">
           <Route index element={<Welcome />}/>
           <Route path="register" element={<Register />}/>

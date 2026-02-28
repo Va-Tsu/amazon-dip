@@ -1,35 +1,47 @@
 
 //#region Imports
 import { Link } from "react-router-dom";
+import { CardList } from "../../../assets/CardList";
+import { mockCards } from "../../../types/testData";
+import { useEffect, useState } from "react";
+import { Footer } from "../../../assets/footer";
+import { Header } from "../../../assets/Header";
 //#endregion
 
 export function YommingoMain() {
+  function useLimit() {
+    const [limit, setLimit] = useState(4);
+
+    useEffect(() => {
+      const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+      const handleChange = (e: MediaQueryList | MediaQueryListEvent): void => {
+        setLimit(e.matches ? 2 : 4);
+      };
+
+      handleChange(mediaQuery); // сразу установить
+
+      mediaQuery.addEventListener('change', handleChange);
+
+      return () => {
+        mediaQuery.removeEventListener('change', handleChange);
+      };
+    }, []);
+
+    return limit;
+  }
+
+  const limit = useLimit();
+
   return (
     <section className="yommingo">
-      <header className=" header">
-        <img src="/imgs/icons/yommingo/YomingoLogo.svg" alt="Yommingo Logo" className="header__logo" />
-        <div className="header__input">
-          <img src="/imgs/icons/yommingo/search-normal.svg" alt="Search Icon" className="header__input-icon" />
-          <input type="text" className="header__input__search" placeholder="Search..." />
-        </div>
-        <div className="header__nav">
-          <Link to="/yommingo/auth/login" className="header__nav__account"><img src="/imgs/icons/yommingo/account.svg" alt="User Account" /></Link>
-          <nav className="header__nav__burger">
-            <img className="header__nav__onmobile" src="/imgs/icons/yommingo/nav.svg" alt="" />
-            <div className="header__nav__ondesktop">
-            <Link to="#" className="header__nav__ondesktop__item">About us</Link>
-            <Link to="#" className="header__nav__ondesktop__item">Client type</Link>
-            <Link to="#" className="header__nav__ondesktop__item">Support</Link>
-            <Link to="#" className="header__nav__ondesktop__item">Catalog</Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+
+      <Header />
 
       <section className="mainpage">
         <h1 className="mainpage__title">Your best choice of products from around the world</h1>
         <div className="mainpage__buttons">
-          <button onClick={() => window.location.href = "/yommingo/auth/register"} className="mainpage__buttons__button">Registration</button>
+          <button onClick={() => window.location.href = "/auth/register"} className="mainpage__buttons__button">Registration</button>
           <button className="mainpage__buttons__button">Buy now</button>
         </div>
       </section>
@@ -80,33 +92,7 @@ export function YommingoMain() {
         </div>
 
         <div className="new__cards">
-          <div className="new__card">
-            <img src="/imgs/img/yommingo/card2.png" alt="" className="new__card__img" />
-            <div className="new__card__content">
-              <h3 className="new__card__price">99.9 USD</h3>
-              <span className="new__card__span"></span>
-              <h3 className="new__card__name">Name</h3>
-              <h3 className="new__card__brand">Brand</h3>
-              <div className="new__card__footer">
-                <h3 className="new__card__weight">120g</h3>
-                <button className="new__card__button">Buy</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="new__card">
-            <img src="/imgs/img/yommingo/card2.png" alt="" className="new__card__img" />
-            <div className="new__card__content">
-              <h3 className="new__card__price">99.9 USD</h3>
-              <span className="new__card__span"></span>
-              <h3 className="new__card__name">Name</h3>
-              <h3 className="new__card__brand">Brand</h3>
-              <div className="new__card__footer">
-                <h3 className="new__card__weight">120g</h3>
-                <button className="new__card__button">Buy</button>
-              </div>
-            </div>
-          </div>
+          <CardList cards={mockCards} limit={limit}/>
         </div>
       </section>
 
@@ -117,88 +103,11 @@ export function YommingoMain() {
         </div>
 
         <div className="new__cards">
-          <div className="new__card">
-            <img src="/imgs/img/yommingo/card2.png" alt="" className="new__card__img" />
-            <div className="new__card__content">
-              <h3 className="new__card__price">99.9 USD</h3>
-              <span className="new__card__span"></span>
-              <h3 className="new__card__name">Name</h3>
-              <h3 className="new__card__brand">Brand</h3>
-              <div className="new__card__footer">
-                <h3 className="new__card__weight">120g</h3>
-                <button className="new__card__button">Buy</button>
-              </div>
-            </div>
-          </div>
-
-          <div className="new__card">
-            <img src="/imgs/img/yommingo/card2.png" alt="" className="new__card__img" />
-            <div className="new__card__content">
-              <h3 className="new__card__price">99.9 USD</h3>
-              <span className="new__card__span"></span>
-              <h3 className="new__card__name">Name</h3>
-              <h3 className="new__card__brand">Brand</h3>
-              <div className="new__card__footer">
-                <h3 className="new__card__weight">120g</h3>
-                <button className="new__card__button">Buy</button>
-              </div>
-            </div>
-          </div>
+          <CardList cards={mockCards} limit={limit * 2}/>
         </div>
       </section>
 
-      <footer className="footer">
-        <div className="footer__nav">
-          <div className="left">
-            <h3 className="left__title">
-              Yommingo
-            </h3>
-            <p className="left__text">
-              Premium imported food from all over the world.
-            </p>
-            <p className="left__text">
-              Get exclusive deals and new arrivals.
-            </p>
-            <input type="text" className="left__button" placeholder="Email.."/>
-          </div>
-          <div className="right">
-            <div className="right__card">
-              <h3 className="right__card__title">Contact us</h3>
-              <Link to={'#'} className="right__card__link">Popular Categories</Link>
-              <Link to={'#'} className="right__card__link">World Catalog</Link>
-              <Link to={'#'} className="right__card__link">For You</Link>
-              <Link to={'#'} className="right__card__link">New</Link>
-            </div>
-            
-            <div className="right__card">
-              <h3 className="right__card__title">Company</h3>
-              <Link to={'#'} className="right__card__link">Contact Us</Link>
-              <Link to={'#'} className="right__card__link">About Us</Link>
-              <Link to={'#'} className="right__card__link">Partners</Link>
-            </div>
-
-            <div className="right__card">
-              <h3 className="right__card__title">Support</h3>
-              <Link to={'#'} className="right__card__link">Shoping & Delivery</Link>
-              <Link to={'#'} className="right__card__link">Returns & Refunds</Link>
-              <Link to={'#'} className="right__card__link">Pricacy policy</Link>
-            </div>
-
-          </div>
-        </div>
-
-        <div className="footer__social">
-
-          <div className="social__block">
-            <h4 className="social__title">Social</h4>
-            <a href="#" className="social__link"><img src="/imgs/icons/yommingo/face.svg" alt="" className="social__link__img" /></a>
-            <a href="#" className="social__link"><img src="/imgs/icons/yommingo/inst.svg" alt="" className="social__link__img" /></a>
-            <a href="#" className="social__link"><img src="/imgs/icons/yommingo/tick.svg" alt="" className="social__link__img" /></a>
-            <a href="#" className="social__link"><img src="/imgs/icons/yommingo/tel.svg" alt="" className="social__link__img" /></a>
-            <a href="#" className="social__link"><img src="/imgs/icons/yommingo/you.svg" alt="" className="social__link__img" /></a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </section>
   );
 }
