@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { Header } from "../../../assets/Header";
 import { CardList } from "../../../assets/CardList";
 import { mockCards } from "../../../types/testData";
-import { Footer } from "../../../assets/footer";
+import { Footer } from "../../../assets/Footer";
 
 const mockCategory = {
   vegetables: {

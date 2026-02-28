@@ -1,0 +1,215 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+.about {
+  font-family: $font-main;
+
+  &__content {
+    min-height: 100vh;
+    padding: 0 20px;
+    @include tablet() {
+      padding: 0 50px;
+    }
+    @include desktop() {
+      padding: 0 100px;
+    }
+  }
+
+  //&__breadcrumb {}
+
+  // Info section
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7DFC4;
+    border-radius: 26px;
+    margin-bottom: 50px;
+
+    &__block {
+      padding: 0 50px;
+      width: 35%;
+    }
+
+    &__title {
+      font-family: $font-logo;
+      @include text(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
+
+    &__subtitle {
+      @include text(24px, 100%, 400);
+      color: #FF7A1A;
+    }
+
+    &__text {
+      @include text(24px, 100%, 400);
+    }
+
+    //&__img {}
+  }
+
+  // Story section
+  &__story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7DFC4;
+    border-radius: 26px;
+
+    &__block {
+      padding: 100px 50px;
+      width: 50%;
+    }
+
+    &__title {
+      font-family: $font-logo;
+      @include text(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include text(24px, 100%, 400);
+      margin-top: 30px;
+    }
+
+    //&__img {}
+  }
+
+  // Mission section
+  &__mission {
+    &__title {
+      margin-top: 50px;
+      font-family: $font-logo;
+      display: flex;
+      justify-content: center;
+      @include text(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      max-width: 900px;
+      margin: 0 auto;
+      @include text(24px, 100%, 400);
+      margin-bottom: 20px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    &__card {
+      background-color: #F7DFC4;
+      padding: 20px 30px;
+      border-radius: 26px;
+    // &__img {}
+    // &__text {}
+      &__title {
+        @include text(20px, 100%, 400);
+      }
+      &__subtitle {
+        margin-top: 16px;
+        @include text(13px, 100%, 400);
+      }
+    }
+  }
+
+  // Stats
+  &__stats {
+    background-color: #F7DFC4;
+    padding: 20px 30px;
+    border-radius: 26px;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__count {
+      align-self: center;
+      @include text(32px, 100%, 600);
+      color: #FF7A1A;
+    }
+    &__label {
+      @include text(16px, 100%, 400);
+    }
+  }
+
+  // Vision section
+  &__vision {
+    margin-top: 50px;
+    padding: 100px 50px;
+    background-color: #F7DFC4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 26px;
+    &__top {
+      display: flex;
+      gap: 50px;
+    }
+    //&__block {}
+    &__title {
+      @include text(32px, 100%, 400);
+      font-family: $font-logo;
+    }
+    &__text {
+      margin-top: 20px;
+      @include text(24px, 100%, 400);
+    }
+    //&__img {}
+    &__tagline {
+      margin-top: 100px;
+      @include text(24px, 100%, 600);
+      color: #FF7A1A;
+    }
+  }
+
+  // Join section
+  &__join {
+    margin-top: 50px;
+    padding: 80px 100px;
+    background-color: #F7DFC4;
+    border-radius: 26px;
+    margin-bottom: 200px;
+    &__title {
+      @include text(32px, 100%, 600);
+      font-family: $font-logo;
+      display: flex;
+      justify-content: center;
+    }
+    &__subtitle {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      @include text(24px, 100%, 400);
+    }
+    &__actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__btn {
+      border: none;
+      padding: 20px 75px;
+      border-radius: 26px;
+      @include text(20px, 100%, 400);
+      &--primary {
+        color: #fff;
+        background-color: #FF7A1A;
+      }
+      &--secondary {
+        background-color: #fff;
+        border: 1px solid #FF7A1A;
+        color: #FF7A1A;
+      }
+    }
+  }
+}

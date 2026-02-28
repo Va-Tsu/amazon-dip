@@ -95,9 +95,8 @@
         margin-bottom: 50px;
       }
       
-      &__title {
+      //&__title {}
 
-      }
       &__button {
         border: none;
         background-color: #F7DFC4;
@@ -122,8 +121,7 @@
     &__title {
       @include text (16px,100%,400);
     }
-    &__list {
-    }
+    //&__list {}
   }
 
   &__main {

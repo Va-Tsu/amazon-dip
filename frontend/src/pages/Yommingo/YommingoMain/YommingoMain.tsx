@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { CardList } from "../../../assets/CardList";
 import { mockCards } from "../../../types/testData";
 import { useEffect, useState } from "react";
-import { Footer } from "../../../assets/footer";
 import { Header } from "../../../assets/Header";
+import { Footer } from "../../../assets/Footer";
 //#endregion
 
 export function YommingoMain() {
@@ -19,7 +19,7 @@ export function YommingoMain() {
         setLimit(e.matches ? 2 : 4);
       };
 
-      handleChange(mediaQuery); // сразу установить
+      handleChange(mediaQuery);
 
       mediaQuery.addEventListener('change', handleChange);
 
