@@ -5,8 +5,6 @@ import { Footer } from "../../../assets/footer";
 import { Header } from "../../../assets/Header";
 
 
-
-
 export function YommingoProductCard() {
   const { id } = useParams();
   const product = mockProducts.find(p => p.id === Number(id));
