@@ -8,6 +8,7 @@
   color: $bg-color;
   font-family: $font-main;
   position: relative;
+  margin-top: auto;
 
   @include tablet() {
     padding: 0 50px;
@@ -23,10 +24,6 @@
     padding-top: 20px;
     padding-bottom: 100px;
     gap: 20px;
-
-    &__ondesktop__item {
-      @include text (16, 100%, 400);
-    }
 
     @include mobile() {
       flex-direction: column;

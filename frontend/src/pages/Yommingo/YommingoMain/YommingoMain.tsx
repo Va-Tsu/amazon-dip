@@ -75,13 +75,13 @@ export function YommingoMain() {
         <h2 className="popular__title">Popular categories</h2>
 
         <div className="popular__grid">
-          <Link to="/yommingo/categories/vegetables"><img src="/imgs/img/yommingo/vg.png" alt="Vegetables" className="popular__grid__img" /></Link>
-          <Link to="/yommingo/categories/fruits"><img src="/imgs/img/yommingo/fb.png" alt="Fruits" className="popular__grid__img" /></Link>
-          <Link to="/yommingo/categories/dairy"><img src="/imgs/img/yommingo/dp.png" alt="Dairy" className="popular__grid__img" /></Link>
-          <Link to="/yommingo/categories/meat"><img src="/imgs/img/yommingo/mf.png" alt="Meat" className="popular__grid__img" /></Link>
-          <Link to="/yommingo/categories/grocery"><img src="/imgs/img/yommingo/gs.png" alt="Grocery" className="popular__grid__img" /></Link>
-          <Link to="/yommingo/categories/Snacks"><img src="/imgs/img/yommingo/ss.png" alt="Snacks" className="popular__grid__img" /></Link>
-          <Link to="/yommingo/categories/Drinks"><img src="/imgs/img/yommingo/d.png" alt="Drinks" className="popular__grid__img" /></Link>
+          <Link to="/categories/vegetables"><img src="/imgs/img/yommingo/vg.png" alt="Vegetables" className="popular__grid__img" /></Link>
+          <Link to="/categories/fruits"><img src="/imgs/img/yommingo/fb.png" alt="Fruits" className="popular__grid__img" /></Link>
+          <Link to="/categories/dairy"><img src="/imgs/img/yommingo/dp.png" alt="Dairy" className="popular__grid__img" /></Link>
+          <Link to="/categories/meat"><img src="/imgs/img/yommingo/mf.png" alt="Meat" className="popular__grid__img" /></Link>
+          <Link to="/categories/grocery"><img src="/imgs/img/yommingo/gs.png" alt="Grocery" className="popular__grid__img" /></Link>
+          <Link to="/categories/Snacks"><img src="/imgs/img/yommingo/ss.png" alt="Snacks" className="popular__grid__img" /></Link>
+          <Link to="/categories/Drinks"><img src="/imgs/img/yommingo/d.png" alt="Drinks" className="popular__grid__img" /></Link>
         </div>
       </section>
 
