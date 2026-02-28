@@ -6,6 +6,7 @@ import { Welcome } from "./pages/Auth/Welcome/Welcome";
 import { Reset } from "./pages/Auth/Reset/Reset";
 import { YommingoMain } from "./pages/Yommingo/YommingoMain/YommingoMain";
 import { YommingoProductCard } from "./pages/Yommingo/YommingoProductCard/YommingoProductCard";
+import { YommingoCatalog } from "./pages/Yommingo/YommingoCatalog/YommingoCatalog";
 //#endregion
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/">
         <Route index element={<YommingoMain />}/>
         <Route path="product/:id" element={<YommingoProductCard />}/>
+        <Route path="categories/:category" element={<YommingoCatalog/>}/>
         
         <Route path="auth">
           <Route index element={<Welcome />}/>

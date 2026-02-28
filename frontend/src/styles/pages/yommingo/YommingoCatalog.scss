@@ -1,0 +1,157 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+
+#catalog__title {
+  font-family: $font-logo;
+  @include text(40px,100%,600);
+  margin-bottom: 35px;
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: '';
+    bottom: -10px;
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: black;
+  }
+}
+.catalog {
+  font-family: $font-main;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  &__pres {
+    
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    background-color: #FEFEFE;
+    align-items: center;
+    @include tablet() {
+      padding-left: 50px;
+    }
+
+    @include desktop() {
+      padding-left: 100px;
+    }
+
+    &__title {
+      @include text (64px, 100%, 400);
+
+      @include toDesktop () {
+        @include text (32px, 100%, 400);
+      }
+      @include mobile () {
+        @include text (24px, 100%, 400);
+      }
+      text-align: center;
+    }
+
+    &__img {
+      width: 30%;
+    }
+  }
+  &__aside__disc {
+    margin-top: 60px;
+    display: flex;
+    gap: 25px;
+
+    @include toDesktop() {
+      flex-direction: column;
+    }
+  }
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    &__nav{
+      padding-left: 30px;
+    }
+    &__card{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      background-color: #F7DFC4;
+      border-bottom-right-radius: 26px;
+      border-top-right-radius: 26px;
+      height: 100px;
+      padding-left: 30px;
+
+      @include toDesktop() {
+        padding: 0;
+        justify-content: center;
+        height: 50px;
+        width: 30%;
+        margin-bottom: 50px;
+      }
+      
+      &__title {
+
+      }
+      &__button {
+        border: none;
+        background-color: #F7DFC4;
+        border-radius: 26px;
+      }
+    }
+  }
+
+  &__discounts {
+    padding-left: 20px;
+    padding: 0 20px;
+    @include desktop () {
+      width: 100%;
+    }
+    @include tablet() {
+      padding: 0 50px;
+    }
+
+    @include desktop() {
+      padding: 0 100px;
+    }
+    &__title {
+      @include text (16px,100%,400);
+    }
+    &__list {
+    }
+  }
+
+  &__main {
+    margin-top: 75px;
+    padding: 0 20px;
+    @include tablet() {
+      padding: 0 50px;
+    }
+
+    @include desktop() {
+      padding: 0 100px;
+    }
+    margin-bottom: 50px;
+  }
+}
+
+.catalog__aside__onDesktop {
+  display: none;
+  @include desktop() {
+    display: flex;
+  }
+
+}
+
+.catalog__aside__onMobile {
+  display: none;
+
+  @include toDesktop() {
+    display: flex;
+  }
+}
