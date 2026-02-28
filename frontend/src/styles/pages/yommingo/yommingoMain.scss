@@ -12,68 +12,6 @@
   }
 }
 
-.header {
-  padding: 10px $yommingoContainerValue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $yommingo-header-bg;
-  gap: 5%;
-
-    &__input {
-      position: relative;
-      width: 30%;
-      
-      &-icon {
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      &__search {
-        padding: 5px 0 5px 30px;
-        border-radius: 20px;
-        border: none;
-        width: 100%;
-      }
-    }
-
-    &__nav {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-
-      @include tablet {
-        flex-direction: row-reverse;
-        gap: 50px;
-      }
-
-      &__onmobile {
-        display: block;
-        @include tablet {
-          display: none;
-        }
-      }
-
-      &__ondesktop {
-        display: none;
-        @include tablet {
-          display: block;
-        }
-
-        &__item {
-          margin-right: 15px;
-          text-decoration: none;
-          color: #161616;
-          gap: 30px;
-          font-family: $font-main;
-        }
-      }
-      
-    }
-}
-
 .mainpage {
   background-image: url(/imgs/img/yommingo/bg.png);
   background-size: cover;
@@ -260,14 +198,6 @@
     }
   }
 
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
   &__card {
     background-color: #F7DFC4;
     padding: 15px;
@@ -332,82 +262,3 @@
   margin-bottom: 75px;
 }
 
-.footer {
-  padding-left: $yommingoContainerValue;
-  padding-right: $yommingoContainerValue; 
-  background-color: $yommingo-footer-bg;
-  color: $bg-color;
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8px;
-    gap: 20px;
-  }
-
-  &__social {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    padding-right: 15px;
-
-    &__title {
-      font-size: 10px;
-      color: #F7DFC4;
-    }
-
-    .social__block {
-      max-width: 60px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-    }
-  }
-
-  .left {
-    max-width: 35%;
-    
-    &__title {
-      font-size: 10px;
-      color: #F7DFC4;
-      margin-bottom: 5px;
-    }
-
-    &__text {
-      font-size: 10px;
-      color: #FFF4E6;
-      margin-bottom: 5px;
-    }
-
-    &__button {
-      font-size: 6px;
-      width: 70%;
-      background-color: #FFF4E6;
-      color: #161616;
-      border: none;
-      border-radius: 26px;
-      padding: 5px;
-    }
-  }
-
-  .right {
-    display: flex;
-    gap: 20px;
-
-    &__card {
-      display: flex;
-      flex-direction: column;
-      &__title {
-        font-size: 10px;
-        color: #F7DFC4;
-        margin-bottom: 5px;
-      }
-      &__link {
-        font-size: 8px;
-        color: #FFF4E6;
-        text-decoration: none;
-        margin-bottom: 5px;
-      }
-    }
-  }
-}

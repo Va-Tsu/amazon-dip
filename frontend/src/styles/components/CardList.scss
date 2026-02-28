@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.CardList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  @include mobile () {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

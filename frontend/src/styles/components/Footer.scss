@@ -1,0 +1,143 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+
+  padding: 0 20px;
+  background-color: $yommingo-footer-bg;
+  color: $bg-color;
+  font-family: $font-main;
+  position: relative;
+
+  @include tablet() {
+    padding: 0 50px;
+  }
+
+  @include desktop() {
+    padding: 0 100px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    gap: 20px;
+
+    &__ondesktop__item {
+      @include text (16, 100%, 400);
+    }
+
+    @include mobile() {
+      flex-direction: column;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 15px;
+
+    &__title {
+      font-size: 10px;
+      color: #F7DFC4;
+    }
+
+  }
+
+  .left {
+    max-width: 35%;
+    
+    &__title {
+      @include text (24px, 100%, 400);
+      font-family: $font-logo;
+      color: #F7DFC4;
+      margin-bottom: 5px;
+    }
+
+    &__text {
+      @include text (16px, 100%, 400);
+      color: #FFF4E6;
+      margin-bottom: 5px;
+    }
+
+    &__input {
+      position: absolute;
+      bottom: 55px;
+      &__text {
+         @include text (12px, 100%, 400);
+      }
+    }
+
+    &__button {
+      font-size: 6px;
+      width: 100%;
+      background-color: #FFF4E6;
+      color: #161616;
+      border: none;
+      border-radius: 26px;
+      padding: 9px 15px;
+      margin-top: 5px;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include toLaptop() {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      & > *:nth-child(even) {
+        justify-self: end;
+      }
+
+      & > *:nth-child(odd) {
+        justify-self: start;
+      }
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      &__title {
+        @include text (24px, 100%, 400);
+        font-family: $font-logo;
+        color: #F7DFC4;
+        margin-bottom: 5px;
+        width: 150px;
+      }
+      &__link {
+        @include text (16px, 100%, 400);
+        color: #FFF4E6;
+        text-decoration: none;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__law {
+     @include text (12px, 100%, 400);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+.social__block {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 12px;
+}
+
+.social__link {
+  max-width: 32px;
+  &__img {
+    width: 32px;
+    height: 32px;
+  }
+} 
