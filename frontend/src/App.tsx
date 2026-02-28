@@ -8,6 +8,7 @@ import { YommingoMain } from "./pages/Yommingo/YommingoMain/YommingoMain";
 import { YommingoProductCard } from "./pages/Yommingo/YommingoProductCard/YommingoProductCard";
 import { YommingoCatalog } from "./pages/Yommingo/YommingoCatalog/YommingoCatalog";
 import { YommingoAboutPage } from "./pages/YommingoAboutPage";
+import { UserProfile } from "./pages/User/UserProfile";
 //#endregion
 function App() {
 
@@ -19,8 +20,11 @@ function App() {
         <Route path="product/:id" element={<YommingoProductCard />}/>
         <Route path="categories/:category" element={<YommingoCatalog/>}/>
         <Route path="about" element={<YommingoAboutPage/>}/>
-        
+        <Route path="user">
+          <Route index element={<UserProfile/>}/>
+        </Route>
         <Route path="auth">
+          
           <Route index element={<Welcome />}/>
           <Route path="register" element={<Register />}/>
           <Route path="login" element={<Login />}/>

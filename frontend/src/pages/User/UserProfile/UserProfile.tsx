@@ -1,0 +1,57 @@
+import { Footer } from "../../../assets/Footer";
+import { Header } from "../../../assets/Header";
+
+export function UserProfile() { 
+  return (
+    <section className="userProfile">
+      <Header />
+      <div className="userProfile__content">
+        <p className="userProfile__breadcrumb">Home / User</p>
+
+        <section className="userProfile__hero">
+          <div className="userProfile__hero__block">
+            <img className="userProfile__hero__img" src="/imgs/icons/user/userAvatar.png" alt="" />
+            <div className="userProfile__hero__text">
+              <h1 className="userProfile__hero__name">User</h1>
+              <h2 className="userProfile__hero__email">@user</h2>
+              <button className="userProfile__hero__edit">Edit Profile</button>
+            </div>
+          </div>
+          <button className="userProfile__hero__basket">Basket</button>
+        </section>
+
+        <div className="userProfile__orders">
+          <aside className="userProfile__orders__sidebar">
+            <h1 className="userProfile__orders__sidebar__title">Order management</h1>
+            <nav className="userProfile__orders__sidebar__nav">
+              <a className="userProfile__orders__sidebar__link">My orders</a>
+              <a className="userProfile__orders__sidebar__link">Track order</a>
+              <a className="userProfile__orders__sidebar__link">Viewed products</a>
+              <a className="userProfile__orders__sidebar__link">Reviews</a>
+              <a className="userProfile__orders__sidebar__link">Payments</a>
+              <a className="userProfile__orders__sidebar__link">Favourites</a>
+              <a className="userProfile__orders__sidebar__link">Delivery addresses</a>
+              <a className="userProfile__orders__sidebar__link">Support</a>
+            </nav>
+          </aside>
+
+          <div className="userProfile__orders__main">
+            <div className="userProfile__orders__main__header">
+              <h1 className="userProfile__orders__main__title">My orders</h1>
+              <div className="userProfile__orders__main__filters">
+                <button className="userProfile__orders__main__filter">All (1)</button>
+                <button className="userProfile__orders__main__filter">Cancelled (0)</button>
+                <button className="userProfile__orders__main__filter">Delivered (1)</button>
+                <button className="userProfile__orders__main__filter">Processing (0)</button>
+              </div>
+            </div>
+            <div className="userProfile__orders__main__list">
+              <div className="userProfile__orders__main__card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer/>
+    </section>
+  );
+}
