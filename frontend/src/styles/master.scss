@@ -29,6 +29,10 @@
   @use './pages/auth/reset.scss';
   //#endregion
 
+  //#region user
+  @use './pages/user/UserProfile.scss';
+  //#endregion
+
   //#region yommingo
   @use './pages/yommingo/yommingoMain.scss';
   @use './pages/yommingo/YommingoAboutPage.scss';

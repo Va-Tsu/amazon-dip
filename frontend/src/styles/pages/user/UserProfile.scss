@@ -1,0 +1,90 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+.userProfile {
+  font-family: $font-main;
+
+  &__content {
+    min-height: 100vh;
+    padding: 0 20px;
+
+    @include tablet() {
+      padding: 0 50px;
+    }
+
+    @include desktop() {
+      padding: 0 100px;
+    }
+  }
+
+  &__breadcrumb {
+    margin-top: 20px;
+    @include text(12px, 100%, 400);
+    color: #433B38;
+  }
+
+  // Hero section
+  &__hero {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    &__block {
+      display: flex;
+      gap: 30px;
+    }
+    &__img {
+      width: 80px;
+    }
+    &__text {}
+    &__name {
+      @include text(40px, 100%, 400);
+    }
+    &__email {
+      @include text(20px, 100%, 400);
+    }
+    &__edit {
+      @include text(20px, 100%, 400);
+      border: none;
+      background-color: #FF7A1A;
+      padding: 10px 30px;
+      border-radius: 26px;
+      color: #fff;
+    }
+    &__basket {
+      padding: 20px 40px;
+      border: none;
+      border-radius: 26px;
+      background-color: #B38F6F;
+      @include text(24px, 100%, 400);
+      @include mobile () {
+        border-radius: 16px;
+        max-height: 50px;
+        padding: 0 20px;
+        @include text(14px, 100%, 400);
+      }
+    }
+  }
+
+  // Orders section
+  &__orders {
+
+    // Sidebar
+    &__sidebar {
+      &__title {}
+      &__nav {}
+      &__link {}
+    }
+
+    // Main content
+    &__main {
+      &__header {}
+      &__title {}
+      &__filters {}
+      &__filter {}
+      &__list {}
+      &__card {}
+    }
+  }
+}

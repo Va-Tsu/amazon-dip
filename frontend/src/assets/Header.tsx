@@ -10,7 +10,7 @@ export function Header () {
         <input type="text" className="header__input__search" placeholder="Search..." />
       </div>
       <div className="header__nav">
-        <Link to="/yommingo/auth/login" className="header__nav__account"><img src="/imgs/icons/yommingo/account.svg" alt="User Account" /></Link>
+        <Link to="/user" className="header__nav__account"><img src="/imgs/icons/yommingo/account.svg" alt="User Account" /></Link>
         <nav className="header__nav__burger">
           <img className="header__nav__onmobile" src="/imgs/icons/yommingo/nav.svg" alt="" />
           <div className="header__nav__ondesktop">
