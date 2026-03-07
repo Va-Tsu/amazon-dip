@@ -29,6 +29,7 @@
   &__hero {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
     &__block {
       display: flex;
@@ -36,13 +37,16 @@
     }
     &__img {
       width: 80px;
+      height: 80px;
     }
-    &__text {}
+    //&__text {}
     &__name {
-      @include text(40px, 100%, 400);
+      @include text(20px, 100%, 400);
+      margin-bottom: 10px;
     }
     &__email {
-      @include text(20px, 100%, 400);
+      @include text(14px, 100%, 400);
+      margin-bottom: 10px;
     }
     &__edit {
       @include text(20px, 100%, 400);
@@ -51,17 +55,24 @@
       padding: 10px 30px;
       border-radius: 26px;
       color: #fff;
+
+      @include mobile () {
+        @include text(12px, 100%, 400);
+        padding: 5px 15px;
+      }
     }
     &__basket {
       padding: 20px 40px;
       border: none;
       border-radius: 26px;
       background-color: #B38F6F;
+      text-decoration: none;
+      color: #161616;
       @include text(24px, 100%, 400);
       @include mobile () {
         border-radius: 16px;
         max-height: 50px;
-        padding: 0 20px;
+        padding: 10px 25px;
         @include text(14px, 100%, 400);
       }
     }
@@ -69,22 +80,83 @@
 
   // Orders section
   &__orders {
-
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #F7DFC4;
+    border-radius: 26px;
+    padding: 30px 40px;
+    @include tablet() {
+      justify-content: space-between;
+    }
     // Sidebar
     &__sidebar {
-      &__title {}
-      &__nav {}
-      &__link {}
+      &__title {
+        @include text(16px,100%,400);
+      }
+      &__nav {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+      }
+      &__link {
+        @include text(14px,100%,400);
+        margin-bottom: 16px;
+      }
     }
 
     // Main content
     &__main {
+      display: none;
+
+      @include tablet() {
+        display: block;
+      }
+      /*
       &__header {}
       &__title {}
       &__filters {}
       &__filter {}
       &__list {}
       &__card {}
+      */
+    }
+  }
+
+  //seller
+  &__seller__register {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F7DFC4;
+    padding: 30px 40px;
+    border-radius: 26px;
+    &__title {
+      @include text(20px,100%,400);
+    }
+    &__block {
+      display: flex;
+      gap: 8px;
+      @include tablet() {
+        gap: 30px;
+      }
+    }
+
+    &__button__create {
+      background-color: #F7DFC4;
+      color: #FF7A1A;
+      border: 1px solid #FF7A1A;
+      border-radius: 26px;
+      padding: 5px 10px;
+      
+
+    }
+    &__button__log {
+      border: none;
+      color: #fff;
+      background-color: #FF7A1A;
+      border-radius: 26px;
+      padding: 5px 10px;
     }
   }
 }

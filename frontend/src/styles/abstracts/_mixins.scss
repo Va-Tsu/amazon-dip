@@ -29,8 +29,20 @@
   }
 }
 
-@mixin text($size, $line-height: normal, $weight: 400) {
+@mixin text($size: 12px, $line-height: normal, $weight: 400) {
   font-size: $size;
   line-height: $line-height;
   font-weight: $weight;
+}
+
+@mixin container() {
+  padding: 0 20px;
+
+  @include tablet() {
+    padding: 0 50px;
+  }
+
+  @include desktop() {
+    padding: 0 100px;
+  }
 }

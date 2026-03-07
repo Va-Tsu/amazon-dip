@@ -1,5 +1,5 @@
-import { Footer } from "../../assets/Footer";
-import { Header } from "../../assets/Header";
+import { Footer } from "../../../assets/Footer";
+import { Header } from "../../../assets/Header";
 
 export function YommingoAboutPage() {
   return (  

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 
@@ -17,7 +18,7 @@ export function UserProfile() {
               <button className="userProfile__hero__edit">Edit Profile</button>
             </div>
           </div>
-          <button className="userProfile__hero__basket">Basket</button>
+          <Link to={'/basket'} className="userProfile__hero__basket">Basket</Link>
         </section>
 
         <div className="userProfile__orders">
@@ -48,6 +49,15 @@ export function UserProfile() {
             <div className="userProfile__orders__main__list">
               <div className="userProfile__orders__main__card"></div>
             </div>
+          </div>
+        </div>
+
+        <div className="userProfile__seller__register">
+          <h1 className="userProfile__seller__register__title">My market</h1>
+
+          <div className="userProfile__seller__register__block">
+            <button className="userProfile__seller__register__button__create">Creat an acoount</button>
+            <button className="userProfile__seller__register__button__log">Log in</button>
           </div>
         </div>
       </div>
