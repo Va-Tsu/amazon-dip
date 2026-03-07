@@ -24,6 +24,10 @@ export type Comment = {
   date: string; // ISO format
 };
 
+export type BasketItem = {
+  id: number
+}
+
 export type Category = 'snacks' | 'meat' | 'dairy' | 'drinks' | 'sweets' | 'bakery' | 'seafood' | 'other';
 
 export type Country = 'Germany' | 'Italy' | 'France' | 'Japan' | 'USA' | 'Spain' | 'Switzerland' | 'Other';

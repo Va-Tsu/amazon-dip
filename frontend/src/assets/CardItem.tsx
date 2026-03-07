@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import type { CardItemType } from "../types/product"
+import { useBasket } from "../context/Providers/BasketProvider";
 
 
 type CardItemProps = {
@@ -9,6 +10,7 @@ type CardItemProps = {
 
 export function CardItem( {card} : CardItemProps) {
   const navigate = useNavigate();
+  const { addItem } = useBasket();
 
   return (
     <div className="CardItem" onClick={() => navigate(`/product/${card.id}`)}>
@@ -20,7 +22,10 @@ export function CardItem( {card} : CardItemProps) {
         <h3 className="CardItem__brand">{card.brand}</h3>
         <div className="CardItem__footer">
           <h3 className="CardItem__weight">{card.weight}</h3>
-          <button className="CardItem__button" onClick={(e) => e.stopPropagation()}>
+          <button className="CardItem__button" onClick={(e) => {
+              e.stopPropagation();
+              addItem(card);
+            }}>
             Buy
           </button>
         </div>

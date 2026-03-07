@@ -11,7 +11,7 @@ export function CardList({ cards, limit }: CardListProps) {
   return (
     <section className="CardList">
       {visbleCards.map((card) => (
-        <CardItem key={card.id} card={card} />
+        <CardItem key={card.id} card={card}/>
       ))}
     </section>
   );

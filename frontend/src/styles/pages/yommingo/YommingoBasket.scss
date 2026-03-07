@@ -1,0 +1,105 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+.basket {
+  font-family: $font-main;
+
+  &__content {
+    min-height: 100vh;
+  }
+  
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    padding: 45px 20px;
+
+    @include tablet() { 
+      padding: 45px 50px; 
+    }
+
+    @include desktop() { 
+      padding: 45px 100px;
+    }
+
+    &__title {
+      @include text(40px,100%,400);
+    }
+    &__img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include text();
+    @include container;
+
+    &__link {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+
+  &__main {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    &__title {
+      font-family: $font-logo;
+      width: fit-content;
+      @include text(32px);
+      margin-bottom: 40px;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+      }
+    }
+    &__btn {
+      margin-top: 40px;
+      padding: 20px 50px; 
+      align-self: flex-end;
+      border: none;
+      color: #fff;
+      background-color: #FF7A1A;
+      border-radius: 26px;
+
+      @include text(20px);
+
+      @include tablet () {
+        @include text(32px);
+      }
+    }
+  }
+
+  &__viewed {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include container;
+    &__title {
+      font-family: $font-logo;
+      width: fit-content;
+      @include text(32px);
+      margin-bottom: 40px;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+      }
+    }
+  }
+}
