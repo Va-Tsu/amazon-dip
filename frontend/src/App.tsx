@@ -10,6 +10,7 @@ import { YommingoCatalog } from "./pages/Yommingo/YommingoCatalog/YommingoCatalo
 import { YommingoAboutPage } from "./pages/Yommingo/YommingoAboutPage";
 import { UserProfile } from "./pages/User/UserProfile";
 import { YommingoBasket } from "./pages/Yommingo/YommingoBasket/YommingoBasket";
+import { YommingoSearch } from "./pages/Yommingo/YommingoSearch/YommingoSearch";
 //#endregion
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="categories/:category" element={<YommingoCatalog/>}/>
         <Route path="about" element={<YommingoAboutPage/>}/>
         <Route path="basket" element={<YommingoBasket/>}/>
+        <Route path="search" element={<YommingoSearch />} />
         <Route path="user">
           <Route index element={<UserProfile/>}/>
         </Route>
