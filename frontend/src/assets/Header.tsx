@@ -1,13 +1,26 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export function Header () {
   const navigate = useNavigate();
+  const [query, setQuery] = useState('');
+  const handleSearch = () => {
+    if (!query.trim()) return;
+    navigate(`/search?q=${query}`);
+  };
   return (
     <header className="header">
       <img src="/imgs/icons/yommingo/YomingoLogo.svg" alt="Yommingo Logo" className="header__logo" onClick={() => navigate(`/`)}/>
       <div className="header__input">
         <img src="/imgs/icons/yommingo/search-normal.svg" alt="Search Icon" className="header__input-icon" />
-        <input type="text" className="header__input__search" placeholder="Search..." />
+        <input 
+          type="text" 
+          className="header__input__search" 
+          placeholder="Search..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+        />
       </div>
       <div className="header__nav">
         <Link to="/user" className="header__nav__account"><img src="/imgs/icons/yommingo/account.svg" alt="User Account" /></Link>

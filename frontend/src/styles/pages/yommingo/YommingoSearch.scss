@@ -1,0 +1,23 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+.search {
+  font-family: $font-main;
+
+  &__content {
+    min-height: 100vh;
+    @include container;
+  }
+
+  &__text {
+    &__title {}
+    &__subtitle {}
+  }
+
+  &__filter {}
+
+  &__main {
+  }
+}
