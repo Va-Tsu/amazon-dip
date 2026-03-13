@@ -28,7 +28,7 @@ export function Header () {
           <img className="header__nav__onmobile" src="/imgs/icons/yommingo/nav.svg" alt="" />
           <div className="header__nav__ondesktop">
           <Link to="/about" className="header__nav__ondesktop__item">About us</Link>
-          <Link to="#" className="header__nav__ondesktop__item">Backet</Link>
+          <Link to="/basket" className="header__nav__ondesktop__item">Backet</Link>
           <Link to="#" className="header__nav__ondesktop__item">Support</Link>
           </div>
         </nav>

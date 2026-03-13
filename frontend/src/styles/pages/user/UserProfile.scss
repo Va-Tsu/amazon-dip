@@ -23,6 +23,11 @@
     margin-top: 20px;
     @include text(12px, 100%, 400);
     color: #433B38;
+    &__link {
+      text-decoration: none;
+      color: #433B38;
+      @include text(12px, 100%, 400);
+    }
   }
 
   // Hero section
@@ -148,6 +153,7 @@
       border: 1px solid #FF7A1A;
       border-radius: 26px;
       padding: 5px 10px;
+      text-decoration: none;
       
 
     }
@@ -157,6 +163,7 @@
       background-color: #FF7A1A;
       border-radius: 26px;
       padding: 5px 10px;
+      text-decoration: none;
     }
   }
 }

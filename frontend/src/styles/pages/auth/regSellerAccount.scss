@@ -1,0 +1,11 @@
+//#region imports
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+//#endregion
+
+.sellreg {
+
+  &__content {
+    min-height: 100vh;
+  }
+}

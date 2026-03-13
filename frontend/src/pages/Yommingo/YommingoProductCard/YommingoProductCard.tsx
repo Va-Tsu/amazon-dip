@@ -18,7 +18,7 @@ export function YommingoProductCard() {
     if (!commentText.trim() || rating === 0) return;
     
     const newComment = {
-      id: Date.now(), // временный id
+      id: Date.now(),
       userId: 0,
       userName: 'You',
       content: commentText,

@@ -27,6 +27,9 @@
   @use './pages/auth/auth.scss';
   @use './pages/auth/welcome.scss';
   @use './pages/auth/reset.scss';
+    //#region sellerAccount 
+      @use './pages/auth/regSellerAccount.scss';
+    //#endRegion
   //#endregion
 
   //#region user

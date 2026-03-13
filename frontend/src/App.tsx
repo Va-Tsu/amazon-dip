@@ -11,6 +11,7 @@ import { YommingoAboutPage } from "./pages/Yommingo/YommingoAboutPage";
 import { UserProfile } from "./pages/User/UserProfile";
 import { YommingoBasket } from "./pages/Yommingo/YommingoBasket/YommingoBasket";
 import { YommingoSearch } from "./pages/Yommingo/YommingoSearch/YommingoSearch";
+import { RegisterSellerAccount } from "./pages/Auth/RegisterSellerAccount";
 //#endregion
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="search" element={<YommingoSearch />} />
         <Route path="user">
           <Route index element={<UserProfile/>}/>
+          <Route path="regsellacc" element={<RegisterSellerAccount/>}/>
         </Route>
         <Route path="auth">
           
