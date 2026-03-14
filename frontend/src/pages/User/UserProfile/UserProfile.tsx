@@ -57,7 +57,7 @@ export function UserProfile() {
 
           <div className="userProfile__seller__register__block">
             <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Creat an acoount</Link>
-            <Link className="userProfile__seller__register__button__log" to={"/user/logsellacc"}>Log in</Link>
+            <Link className="userProfile__seller__register__button__log" to={"/user/selleracc"}>Log in</Link>
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@ import { UserProfile } from "./pages/User/UserProfile";
 import { YommingoBasket } from "./pages/Yommingo/YommingoBasket/YommingoBasket";
 import { YommingoSearch } from "./pages/Yommingo/YommingoSearch/YommingoSearch";
 import { RegisterSellerAccount } from "./pages/Auth/RegisterSellerAccount";
+import { SellerAccount } from "./pages/User/SellerAccount";
 //#endregion
 function App() {
 
@@ -28,6 +29,11 @@ function App() {
         <Route path="user">
           <Route index element={<UserProfile/>}/>
           <Route path="regsellacc" element={<RegisterSellerAccount/>}/>
+          <Route path="selleracc">
+            <Route index element={<SellerAccount/>}/>
+            <Route path="addproduct" element={<SellerAccount/>}/>
+            
+          </Route>
         </Route>
         <Route path="auth">
           
