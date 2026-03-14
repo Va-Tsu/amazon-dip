@@ -3,11 +3,33 @@ import { useParams } from "react-router-dom";
 import { mockProducts } from "../../../types/testData"
 import { Header } from "../../../assets/Header";
 import { Footer } from "../../../assets/Footer";
+import { useState } from "react";
 
 
 export function YommingoProductCard() {
   const { id } = useParams();
   const product = mockProducts.find(p => p.id === Number(id));
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
+  const [comments, setComments] = useState(product?.comments ?? []);
+  const [commentText, setCommentText] = useState('');
+
+  const handlePublish = () => {
+    if (!commentText.trim() || rating === 0) return;
+    
+    const newComment = {
+      id: Date.now(),
+      userId: 0,
+      userName: 'You',
+      content: commentText,
+      rating: rating,
+      date: new Date().toISOString(),
+    };
+
+    setComments(prev => [...prev, newComment]);
+    setCommentText('');
+    setRating(0);
+  };
 
   if (!product) return <h1>Product not found</h1>;
 
@@ -62,18 +84,47 @@ export function YommingoProductCard() {
 
         <section className="Ypc__productCard__comments">
           <h2 className="Ypc__productCard__comments__title">Comments</h2>
-          {product.comments?.map((comment) => (
+          {comments?.map((comment) => (
             <div key={comment.id} className="Ypc__productCard__comments__comment">
               <span className="Ypc__productCard__comments__comment__username">{comment.userName}</span>
               <p className="Ypc__productCard__comments__comment__content">{comment.content}</p>
-              <span className="Ypc__productCard__comments__comment__header__rating">{'⭐'.repeat(comment.rating)}</span>
+              <span className="Ypc__productCard__comments__comment__header__rating">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <img
+                    key={i}
+                    src={i < comment.rating ? '/imgs/icons/productCard/starYea.svg' : '/imgs/icons/productCard/starNo.svg'}
+                    alt="star"
+                  />
+                ))}
+              </span>
               <span className="Ypc__productCard__comments__comment__date">{new Date(comment.date).toLocaleDateString()}</span>
             </div>
           ))}
 
           <div className="Ypc__productCard__comments__add">
-            <h3 className="Ypc__productCard__comments__add__title">Add comment</h3>
-            <input className="Ypc__productCard__comments__add__input" type="text" placeholder="Text" />
+            <h3 className="Ypc__productCard__comments__add__title">New comment:</h3>
+            <div className="Ypc__productCard__comments__add__block">
+              <textarea 
+                className="Ypc__productCard__comments__add__block__textarea" 
+                placeholder="Enter text"
+                value={commentText}
+                onChange={(e) => setCommentText(e.target.value)}
+              />
+              <button className="Ypc__productCard__comments__add__block__button" onClick={handlePublish}>Publish</button>
+              <div className="Ypc__productCard__comments__add__block__stars">
+              {Array.from({ length: 5 }, (_, i) => (
+                <img
+                  key={i}
+                  src={(hover || rating) > i ? '/imgs/icons/productCard/starYea.svg' : '/imgs/icons/productCard/starNo.svg'}
+                  alt="star"
+                  onClick={() => setRating(i + 1)}
+                  onMouseEnter={() => setHover(i + 1)}
+                  onMouseLeave={() => setHover(0)}
+                  style={{ cursor: 'pointer' }}
+                />
+              ))}
+            </div>
+            </div>
           </div>
         </section>
       </main>

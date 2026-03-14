@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { CardList } from "../../../assets/CardList";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
@@ -30,9 +29,6 @@ export function YommingoSearch () {
         <div className="search__filter"></div>
         <CardList cards={results}/>
       </section>
-
-
-
       <Footer />
     </section>
   );

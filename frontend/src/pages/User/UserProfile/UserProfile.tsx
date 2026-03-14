@@ -7,7 +7,7 @@ export function UserProfile() {
     <section className="userProfile">
       <Header />
       <div className="userProfile__content">
-        <p className="userProfile__breadcrumb">Home / User</p>
+        <p className="userProfile__breadcrumb"><Link className="userProfile__breadcrumb__link" to={'/'}>Home</Link> / <Link className="userProfile__breadcrumb__link" to={'/user'}>User</Link></p>
 
         <section className="userProfile__hero">
           <div className="userProfile__hero__block">
@@ -56,8 +56,8 @@ export function UserProfile() {
           <h1 className="userProfile__seller__register__title">My market</h1>
 
           <div className="userProfile__seller__register__block">
-            <button className="userProfile__seller__register__button__create">Creat an acoount</button>
-            <button className="userProfile__seller__register__button__log">Log in</button>
+            <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Creat an acoount</Link>
+            <Link className="userProfile__seller__register__button__log" to={"/user/selleracc"}>Log in</Link>
           </div>
         </div>
       </div>
