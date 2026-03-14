@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
@@ -6,7 +5,7 @@ import { Header } from "../../../assets/Header";
 
 export function SellerAccount() {
 
-  const BASE__IMG__URL = '/imgs/img/sellerAcc';
+  //const BASE__IMG__URL = '/imgs/img/sellerAcc';
   const BASE__ICON__URL = '/imgs/icons/sellerAcc';
   return (
     <section className="sellacc">
