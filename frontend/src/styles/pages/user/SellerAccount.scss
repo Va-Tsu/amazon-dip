@@ -190,7 +190,7 @@
         padding: 5px 20px;
         align-items: center;
         display: flex;
-        &.active {}
+        //&.active {}
         &__img {
           display: none;
           @include tablet () {
@@ -209,11 +209,11 @@
       background-color: #F7DFC4;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      &__card {
-        &__img {}
-        &__title {}
-        &__value {}
-      }
+      //&__card {
+        //&__img {}
+        //&__title {}
+        //&__value {}
+      //}
     }
   }
 
@@ -285,5 +285,5 @@
     }
   }
 
-  &__myproducts {}
+  //&__myproducts {}
 }
