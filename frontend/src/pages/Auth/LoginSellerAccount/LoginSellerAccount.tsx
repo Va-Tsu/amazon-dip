@@ -2,17 +2,17 @@ import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 
-export function RegisterSellerAccount() {
+export function LoginSellerAccount() {
   return (
     <section className="sellreg">
       <Header/>
       <section className="sellreg__content">
         <p className="sellreg__breadcrumb">
-          <Link className="sellreg__breadcrumb__link" to={'/'}>Home</Link> / <Link className="sellreg__breadcrumb__link" to={'/user'}>User</Link> / <Link className="sellreg__breadcrumb__link" to={'/regsellacc'}>Create seller account</Link>
+          <Link className="sellreg__breadcrumb__link" to={'/'}>Home</Link> / <Link className="sellreg__breadcrumb__link" to={'/user'}>User</Link> / <Link className="sellreg__breadcrumb__link" to={'/regsellacc'}>Log in seller account</Link>
         </p>
 
-        <h1 className="sellreg__title">Seller Account</h1>
-        <p className="sellreg__subtitle">Sell your product in one click</p>
+        <h1 className="sellreg__title">Login In To Seller account</h1>
+        <p className="sellreg__subtitle">Welcome back!</p>
 
         <section className="sellreg__block">
           <form className="sellreg__form">
@@ -31,34 +31,8 @@ export function RegisterSellerAccount() {
                 <input className="sellreg__field__input" type="password" placeholder="Minimum 8 characters" />
               </div>
               <div className="sellreg__field">
-                <h3 className="sellreg__field__label">Confirm Password</h3>
-                <input className="sellreg__field__input" type="password" placeholder="Re-enter your password" />
-              </div>
-            </div>
-
-            <div className="sellreg__form__business">
-              <h2 className="sellreg__form__business__title">Business Information</h2>
-              <div className="sellreg__field">
-                <h3 className="sellreg__field__label">Full Name</h3>
-                <input className="sellreg__field__input" type="text" placeholder="Enter your full name" />
-              </div>
-              <div className="sellreg__field">
-                <h3 className="sellreg__field__label">Full Name</h3>
-                <input className="sellreg__field__input" type="text" placeholder="Enter your full name" />
-              </div>
-              <div className="sellreg__field">
-                <h3 className="sellreg__field__label">Full Name</h3>
-                <input className="sellreg__field__input" type="text" placeholder="Enter your full name" />
-              </div>
-              <div className="sellreg__field__checkbox">
-                <input 
-                  type="checkbox" 
-                  id="terms" 
-                  className="sellreg__field__checkbox__input"
-                />
-                <label htmlFor="terms" className="sellreg__field__checkbox__label">
-                  I agree to the <Link to="/terms" className="sellreg__field__checkbox__link">Terms and Conditions</Link>
-                </label>
+                <h3 className="sellreg__field__label">Phone Number</h3>
+                <input className="sellreg__field__input" type="tel" placeholder="+1 (555) 000-0000" />
               </div>
             </div>
             <div className="sellreg__form__submit">
@@ -66,7 +40,7 @@ export function RegisterSellerAccount() {
             </div>
 
             <p className="sellreg__form__login">
-              Already have a seller account? <Link className="sellreg__form__login__link" to={'./'}>Log in</Link>
+              Forgot Password? <Link className="sellreg__form__login__link" to={'../resetsellacc'}> Reset your password</Link>
             </p>
 
           </form>

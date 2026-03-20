@@ -1,0 +1,270 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+
+
+.sap {
+  font-family: $font-main;
+
+  &__content {
+    @include container;
+    min-height: 100vh;
+  }
+
+  &__breadcrumb {
+    margin-top: 20px;
+    @include text(12px);
+    color: $yommingo-text-color;
+    &__link {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__title {
+    @include text(16px);
+    color: $yommingo-text-color;
+    font-family: $font-logo;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  // Photo
+  &__photo {
+    background-color: #F7DFC4;
+    padding: 25px;
+    border-radius: 24px;
+
+    &__title {
+      @include text(16px);
+      color: $yommingo-text-color;
+    }
+    &__block {
+      margin-top: 25px;
+    }
+    //&__input {}
+  }
+
+  // Information
+  &__inf {
+    background-color: #F7DFC4;
+    padding: 25px;
+    border-radius: 24px;
+    margin-top: 40px;
+    &__about {
+      &__title {
+        color: $yommingo-text-color;
+        @include text(16px);        
+      }
+
+      //&__block {}
+
+      &__field {
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        &__label {
+          width: 30%;
+          color: $yommingo-text-color;
+          @include text(12px);
+        }
+        &__input {
+          width: 100%;
+          height: 25px;
+          background-color: #FFF4E6;
+          border: none;
+          border-radius: 6px;
+          box-sizing: border-box
+        }
+      }
+    }
+
+    &__desc {
+      &__title {
+        @include text(16px);
+        color: $yommingo-text-color;
+      }
+      &__textarea {
+        background-color: #FFF4E6;
+        margin-top: 10px;
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 6px;
+        padding: 20px;
+        box-sizing: border-box;
+        color: $yommingo-text-color;
+      }
+    }
+
+    &__product {
+      margin-top: 40px;
+      &__title {
+        @include text(16px);
+        color: $yommingo-text-color;
+      }
+      &__grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      &__field {
+        margin-top: 5px;
+        &__label {
+          @include text(12px);
+          color: $yommingo-text-color;
+        }
+        &__input {
+          margin-top: 5px;
+          color: $yommingo-text-color;
+          width: 100%;
+          box-sizing: border-box;
+          background-color: #FFF4E6;
+          border: none;
+          border-radius: 6px;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  // Pricing
+  &__pricing {
+    background-color: #F7DFC4;
+    padding: 25px;
+    border-radius: 24px;
+    margin-top: 40px;
+    &__title {
+      color: $yommingo-text-color;
+      @include text(16px);
+    }
+    &__subtitle {
+      margin-top: 20px;
+      color: $yommingo-text-color;
+      @include text(16px);
+    }
+
+    &__note {
+      margin-top: 20px;
+      color: $yommingo-text-color;
+      @include text(8px);
+    }
+
+    &__price {
+      margin-top: 20px;
+      &__field {
+        &__label {
+          color: $yommingo-text-color;
+          @include text(16px);
+        }
+        &__input {
+          margin-top: 5px;
+          background-color: #FFF4E6;
+          border: none;
+          border-radius: 6px;
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    &__calc {
+      margin-top: 20px;
+      &__field {
+        &__label {
+          color: $yommingo-text-color;
+          @include text(16px);
+        }
+        &__input {
+          margin-top: 5px;
+          background-color: #FFF4E6;
+          border: none;
+          border-radius: 6px;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  // Params
+  &__params {
+    background-color: #F7DFC4;
+    padding: 25px;
+    border-radius: 24px;
+    margin-top: 40px;
+    &__title {
+      color: $yommingo-text-color;
+      @include text(16px);
+    }
+    &__add {
+      margin-top: 20px;
+      color: #fff;
+      background-color: #FF7A1A;
+      border-radius: 26px;
+      padding: 10px 20px;
+      border: none;
+    }
+  }
+
+  // Goods
+  &__goods {
+    background-color: #F7DFC4;
+    padding: 25px;
+    border-radius: 24px;
+    margin-top: 40px;
+    &__title {
+      color: $yommingo-text-color;
+      @include text(16px);
+    }
+
+    &__status {
+      margin-top: 20px;
+      &__field {
+        &__label {
+          color: $yommingo-text-color;
+          @include text(16px);
+        }
+        &__input {
+          margin-top: 5px;
+          background-color: #FFF4E6;
+          border: none;
+          border-radius: 6px;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  // Publish
+  &__publish {
+    background-color: #F7DFC4;
+    padding: 25px;
+    border-radius: 24px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    &__btn {
+      color: #fff;
+      background-color: #FF7A1A;
+      border-radius: 26px;
+      padding: 10px 20px;
+      border: none;
+    }
+    margin-bottom: 50px;
+  }
+
+  // Toggle — переиспользуется везде
+  &__toggle {
+    &__wrap {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    //&__input {}
+    //&__slider {}
+    //&__label {}
+  }
+
+}

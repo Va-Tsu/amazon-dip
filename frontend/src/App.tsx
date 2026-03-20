@@ -11,9 +11,14 @@ import { YommingoAboutPage } from "./pages/Yommingo/YommingoAboutPage";
 import { UserProfile } from "./pages/User/UserProfile";
 import { YommingoBasket } from "./pages/Yommingo/YommingoBasket/YommingoBasket";
 import { YommingoSearch } from "./pages/Yommingo/YommingoSearch/YommingoSearch";
-import { RegisterSellerAccount } from "./pages/Auth/RegisterSellerAccount";
 import { SellerAccount } from "./pages/User/SellerAccount";
+import { SellerAddProduct } from "./pages/User/SellerAddProduct/SellerAddProduct";
+import { RegisterSellerAccount } from "./pages/Auth/RegisterSellerAccount";
+import { LoginSellerAccount } from "./pages/Auth/LoginSellerAccount";
+import { ResetSellerAccount } from "./pages/Auth/ResetSellerAccount";
 //#endregion
+
+
 function App() {
 
   return (
@@ -23,16 +28,18 @@ function App() {
         <Route index element={<YommingoMain />}/>
         <Route path="product/:id" element={<YommingoProductCard />}/>
         <Route path="categories/:category" element={<YommingoCatalog/>}/>
+        <Route path="country/:category" element={<YommingoCatalog/>}/>
         <Route path="about" element={<YommingoAboutPage/>}/>
         <Route path="basket" element={<YommingoBasket/>}/>
         <Route path="search" element={<YommingoSearch />} />
         <Route path="user">
           <Route index element={<UserProfile/>}/>
           <Route path="regsellacc" element={<RegisterSellerAccount/>}/>
+          <Route path="logsellacc" element={<LoginSellerAccount/>}/>
+          <Route path="resetsellacc" element={<ResetSellerAccount/>}/>
           <Route path="selleracc">
             <Route index element={<SellerAccount/>}/>
-            <Route path="addproduct" element={<SellerAccount/>}/>
-            
+            <Route path="addproduct" element={<SellerAddProduct/>}/>
           </Route>
         </Route>
         <Route path="auth">
