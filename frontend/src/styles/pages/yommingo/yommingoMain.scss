@@ -127,6 +127,14 @@
   }
 }
 
+.main__catalog {
+  margin-left: 20px;
+  margin-right: 20px;
+  &__title {
+    margin-bottom: 20px;
+  }
+}
+
 .popular {
   margin-left: $yommingoContainerValue;
   margin-right: $yommingoContainerValue;

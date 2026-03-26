@@ -1,0 +1,75 @@
+//#region imports
+@use '../abstracts/variables' as *;
+//#endregion
+
+.slider {
+
+  position: relative;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__title {
+      font-size: 24px;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: black;
+      }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 32px;
+    width: 32px;
+    background-color: #F7DFC4;
+    border-radius: 32px;
+  }
+
+  &__track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  &__item {
+    min-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    flex-shrink: 0;
+
+    img {
+      width: 80px;
+    }
+  }
+}
+
+  .sliderblock {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }

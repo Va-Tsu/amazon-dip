@@ -1,4 +1,3 @@
-
 //#region Imports
 import { Link } from "react-router-dom";
 import { CardList } from "../../../assets/CardList";
@@ -6,7 +5,9 @@ import { mockCards } from "../../../types/testData";
 import { useEffect, useState } from "react";
 import { Header } from "../../../assets/Header";
 import { Footer } from "../../../assets/Footer";
+import { Slider } from "../../../assets/CatalogSlider/CatalogSlider";
 //#endregion
+
 
 export function YommingoMain() {
   function useLimit() {
@@ -68,7 +69,8 @@ export function YommingoMain() {
         </div>
       </section>
 
-      <section className="catalog">
+      <section className="main__catalog">
+        <Slider />
       </section>
 
       <section className="popular">
