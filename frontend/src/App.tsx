@@ -16,6 +16,7 @@ import { SellerAddProduct } from "./pages/User/SellerAddProduct/SellerAddProduct
 import { RegisterSellerAccount } from "./pages/Auth/RegisterSellerAccount";
 import { LoginSellerAccount } from "./pages/Auth/LoginSellerAccount";
 import { ResetSellerAccount } from "./pages/Auth/ResetSellerAccount";
+import { YommingoCountries } from "./pages/Yommingo/YommingoCountries";
 //#endregion
 
 
@@ -28,7 +29,7 @@ function App() {
         <Route index element={<YommingoMain />}/>
         <Route path="product/:id" element={<YommingoProductCard />}/>
         <Route path="categories/:category" element={<YommingoCatalog/>}/>
-        <Route path="country/:category" element={<YommingoCatalog/>}/>
+        <Route path="country/:country" element={<YommingoCountries/>}/>
         <Route path="about" element={<YommingoAboutPage/>}/>
         <Route path="basket" element={<YommingoBasket/>}/>
         <Route path="search" element={<YommingoSearch />} />

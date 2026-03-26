@@ -1,7 +1,7 @@
 import { request } from './fetchClient';
 import type { LoginRequest, RegisterRequest, AuthResponse } from '../types/auth';
 
-// Real API calls would look something like this:
+//#region auth
 
 export function login(data: LoginRequest) {
   return request<AuthResponse>(
@@ -27,4 +27,6 @@ export function logout(token: string) {
     token,
   );
 }
+
+//#endregion
 

@@ -28,9 +28,9 @@ export type BasketItem = {
   id: number
 }
 
-export type Category = 'snacks' | 'meat' | 'dairy' | 'drinks' | 'sweets' | 'bakery' | 'seafood' | 'other';
+export type Category = 'snacks' | 'meat' | 'dairy' | 'drinks' | 'sweets' | 'bakery' | 'seafood' | 'other' | null;
 
-export type Country = 'Germany' | 'Italy' | 'France' | 'Japan' | 'USA' | 'Spain' | 'Switzerland' | 'Other';
+export type Country = 'Germany' | 'Italy' | 'France' | 'Japan' | 'USA' | 'Spain' | 'Switzerland' | 'Other' | null;
 
 export type CardItemType = {
   id: number;
@@ -45,3 +45,30 @@ export type CardItemType = {
   isNew: boolean;
   createdAt: string;  // ISO формат "2024-03-15T10:30:00Z"
 };
+
+
+//#region addProduct 
+
+export type AddProduct = {
+  photo: string[];
+  name: string;
+  brand: string;
+  category: Category;
+  description: string;
+  weight: string;
+  ingredients: string; //mb array?
+  sku: string;
+  country: Country;
+  conditions: string;
+  exparaition: string;
+  avaibality: boolean;
+  price: number;
+  sale: boolean;
+  showPricePerUnit: boolean;
+  costOfGood: number;
+  profit: number;
+  margin: number;
+  params?: InformationItem[];
+}
+
+//#endregion
