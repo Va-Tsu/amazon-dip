@@ -1,5 +1,5 @@
 import { request } from './fetchClient';
-import type { LoginRequest, RegisterRequest, AuthResponse } from '../types/auth';
+import type { LoginRequest, RegisterRequest, AuthResponse, RegisterSellerRequest } from '../types/auth';
 
 //#region auth
 
@@ -28,5 +28,16 @@ export function logout(token: string) {
   );
 }
 
+//#endregion
+
+//#region selleracc
+export function registerSeller(data: RegisterSellerRequest, token: string) {
+  return request<void>(
+    '/api/seller/register',
+    'POST',
+    data,
+    token,
+  );
+}
 //#endregion
 

@@ -1,8 +1,21 @@
 import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
+import { useEffect, useState } from "react";
+import type { User } from "../../../types/user";
+import { mockUser } from "../../../types/testData";
+import { getMe } from "../../../api/user";
+
+
 
 export function UserProfile() { 
+
+  const [user, setUser] = useState<User | null>(mockUser);
+
+  useEffect (() => {
+    const token = localStorage.getItem('token') ?? '';
+    getMe(token).then(data => setUser(data));
+  }, [])
   return (
     <section className="userProfile">
       <Header />
@@ -11,10 +24,10 @@ export function UserProfile() {
 
         <section className="userProfile__hero">
           <div className="userProfile__hero__block">
-            <img className="userProfile__hero__img" src="/imgs/icons/user/userAvatar.png" alt="" />
+            <img className="userProfile__hero__img" src={user?.photoUrl} alt="" />
             <div className="userProfile__hero__text">
-              <h1 className="userProfile__hero__name">User</h1>
-              <h2 className="userProfile__hero__email">@user</h2>
+              <h1 className="userProfile__hero__name">{user?.name}</h1>
+              <h2 className="userProfile__hero__email">{user?.email}</h2>
               <button className="userProfile__hero__edit">Edit Profile</button>
             </div>
           </div>
@@ -54,13 +67,14 @@ export function UserProfile() {
 
         <div className="userProfile__seller__register">
           <h1 className="userProfile__seller__register__title">My market</h1>
-
-          <div className="userProfile__seller__register__block">
-            <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Creat an acoount</Link>
-            <Link className="userProfile__seller__register__button__log" to={"/user/selleracc"}>Log in</Link>
-          </div>
+            {user?.shopId !== 0 ? (
+              <div className="userProfile__seller__register__block">
+                <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Creat an acoount</Link>
+                <Link className="userProfile__seller__register__button__log" to={"/user/selleracc"}>Log in</Link>
+              </div>
+            ) : null}
         </div>
-      </div>
+      </div>  
       <Footer/>
     </section>
   );
