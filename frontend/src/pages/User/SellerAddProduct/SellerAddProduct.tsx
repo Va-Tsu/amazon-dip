@@ -1,34 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
-import { useState } from "react";
-import type { AddProduct } from "../../../types/product";
 
 export function SellerAddProduct () {
-  
-  const [product, setProduct] = useState<AddProduct>({
-    photo: [],
-    name: "",
-    brand: "",
-    category: null,
-    description: "",
-    weight: "",
-    ingredients: "",
-    sku: "",
-    country: null,
-    conditions: "",
-    exparaition: "",
-    avaibality: false,
-    price: 0,
-    sale: false,
-    showPricePerUnit: false,
-    costOfGood: 0,
-    profit: 0,
-    margin: 0,
-    params: []
-  });
-
 
   return (
     <section className="sap">
