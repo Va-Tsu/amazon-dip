@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Divider } from "../../../assets/Divider";
 import { Logo } from "../../../assets/Logo";
 import { SocialLinks } from "../../../assets/SocialLinks";
-import { login } from "../../../api/auth";
+import { login } from "../../../api/auths";
 import classNames from "classnames";
 
 //#endregion

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
-import { loginSeller } from "../../../api/auth";
+import { loginSeller } from "../../../api/auths";
 import { useState } from "react";
 import type { LoginSellerRequest } from "../../../types/auth";
 

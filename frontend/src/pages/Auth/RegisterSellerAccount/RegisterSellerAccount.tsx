@@ -3,7 +3,7 @@ import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 import { useState } from "react";
 import type { RegisterSellerRequest } from "../../../types/auth";
-import { registerSeller } from "../../../api/auth";
+import { registerSeller } from "../../../api/auths";
 
 export function RegisterSellerAccount() {
   const navigate = useNavigate();
