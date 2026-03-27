@@ -1,5 +1,6 @@
 //#region Imports
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Divider } from "../../../assets/Divider";
 import { Logo } from "../../../assets/Logo";
 import { SocialLinks } from "../../../assets/SocialLinks";
@@ -9,6 +10,7 @@ import classNames from "classnames";
 //#endregion
 
 export function Login() {
+    const navigate = useNavigate();
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState<string | null>(null);
@@ -18,6 +20,7 @@ export function Login() {
       try {
         const result = await login ({email, password});
         localStorage.setItem('token', result.token);
+        navigate('/');
       } catch (e) {
         setError((e as Error).message);
       }

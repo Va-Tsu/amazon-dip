@@ -1,5 +1,6 @@
 import type { CardItemType } from "./product";
 import type { Product } from "./product";
+import type { User } from "./user";
 
 
 //not full info about card
@@ -177,3 +178,11 @@ export const mockProducts: Product[] = [
     ],
   },
 ];
+
+export const mockUser: User = {
+  id: 0,
+  shopId: null,
+  name: "User",
+  email: "@user",
+  photoUrl: "/imgs/icons/user/userAvatar.png"
+}
