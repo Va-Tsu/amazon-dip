@@ -3,7 +3,7 @@ import { Divider } from "../../../assets/Divider";
 import { SocialLinks } from "../../../assets/SocialLinks";
 import { Logo } from "../../../assets/Logo";
 import { useState } from "react";
-import { register } from "../../../api/auth";
+import { register } from "../../../api/auths";
 import classNames from 'classnames';
 
 //#endregion
