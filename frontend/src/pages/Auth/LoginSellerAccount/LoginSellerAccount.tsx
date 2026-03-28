@@ -19,6 +19,7 @@ export function LoginSellerAccount() {
   const updateLogSeller = (fields: Partial<LoginSellerRequest>) => {
     setLogSeller(prev => ({...prev, ...fields}))
   }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try{

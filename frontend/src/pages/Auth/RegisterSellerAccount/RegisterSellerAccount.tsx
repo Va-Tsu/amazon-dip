@@ -30,10 +30,10 @@ export function RegisterSellerAccount() {
       const token = localStorage.getItem('token') ?? '';
       await registerSeller(regSeller, token);
       navigate('/user/selleracc');
-      console.log(regSeller)
     } catch (e) {
       alert((e as Error).message);
     }
+    console.log(regSeller)
   };
 
   return (

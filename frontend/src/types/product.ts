@@ -49,16 +49,16 @@ export type CardItemType = {
 
 //#region addProduct 
 
-export type AddProduct = {
-  photo: string[];
+export type AddProductRequest = {
+  photo: File[];
   name: string;
   brand: string;
-  category: Category;
+  category: string;
   description: string;
   weight: string;
   ingredients: string; //mb array?
   sku: string;
-  country: Country;
+  country: string;
   conditions: string;
   exparaition: string;
   avaibality: boolean;
@@ -68,7 +68,7 @@ export type AddProduct = {
   costOfGood: number;
   profit: number;
   margin: number;
-  params?: InformationItem[];
+  params: InformationItem[];
 }
 
 //#endregion
