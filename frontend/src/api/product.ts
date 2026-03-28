@@ -1,5 +1,5 @@
-import type { AddProductRequest } from "../types/product";
-import { requestWithFormData } from "./fetchClient";
+import type { AddProductRequest, Product } from "../types/product";
+import { request, requestWithFormData } from "./fetchClient";
 
 export async function addProduct(productData: AddProductRequest, token?: string) {
   const formData = new FormData();
@@ -37,4 +37,12 @@ export async function addProduct(productData: AddProductRequest, token?: string)
     formData,
     token,
   );
+}
+
+export async function getSellerProducts(token: string): Promise<Product[]> {
+  return request('/api/seller/products', 'GET', token);
+}
+
+export async function deleteProduct(id: number, token: string): Promise<void> {
+  return request(`/api/products/${id}`, 'DELETE', undefined, token);
 }

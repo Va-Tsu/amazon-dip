@@ -72,3 +72,8 @@ export type AddProductRequest = {
 }
 
 //#endregion
+
+
+//#region product card for seller
+export type SellerCardItem = Pick<Product, "id" | "photoUrl" | "price" | "title">;
+//#endregion

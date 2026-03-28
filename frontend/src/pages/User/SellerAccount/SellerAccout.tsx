@@ -5,16 +5,30 @@ import { useEffect, useState } from "react";
 import type { Seller } from "../../../types/seller";
 import { getSellerMe } from "../../../api/seller";
 import { mockSeller } from "../../../types/testData";
+import type { Product } from "../../../types/product";
+import { deleteProduct, getSellerProducts } from "../../../api/product";
 //import { CardList } from "../../../assets/CardList";
 
 export function SellerAccount() {
 
   const [seller, setSeller] = useState<Seller | null>(mockSeller);
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const token = localStorage.getItem('token') ?? '';
     getSellerMe(token).then(setSeller);
+    getSellerProducts(token).then(setProducts);
   }, []);
+
+  const handleDelete = async (id: number) => {
+    try {
+      const token = localStorage.getItem('token') ?? '';
+      await deleteProduct(id, token);
+      setProducts(prev => prev.filter(p => p.id !== id));
+    } catch (e) {
+      alert((e as Error).message);
+    }
+  };
 
   return (
     <section className="sellacc">
@@ -152,7 +166,26 @@ export function SellerAccount() {
         </div>
 
         <div className="sellacc__myproducts">
-          {/*<CardList/>*/}
+          <h2 className="sellacc__myproducts__title">My products</h2>
+          {products.length !== 0 ? (
+            <div className="sellacc__myproducts__grid">
+              {products.map(product => (
+                <div key={product.id} className="sellacc__myproducts__card">
+                  <img src={product.photoUrl} alt={product.title} className="sellacc__myproducts__card__img" />
+                  <div className="sellacc__myproducts__card__info">
+                    <h3 className="sellacc__myproducts__card__name">{product.title}</h3>
+                    <p className="sellacc__myproducts__card__price">{product.price}</p>
+                  </div>
+                  <div className="sellacc__myproducts__card__actions">
+                    <button className="sellacc__myproducts__card__edit">Edit</button>
+                    <button className="sellacc__myproducts__card__delete" onClick={() => handleDelete(product.id)}>Delete</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="sellacc__myproducts__empty">No products yet</p>
+          )}
         </div>
       </div>
       <Footer/>
