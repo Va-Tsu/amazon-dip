@@ -11,3 +11,4 @@ export type Seller = {
   sells: number;
   pending: number;
 };
+

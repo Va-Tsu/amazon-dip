@@ -11,14 +11,13 @@ const slides = [
 
 export function Slider() {
   const [current, setCurrent] = useState(0);
-  const itemWidth = 316; // 300px + 16px gap
+  const itemWidth = 316;
 
   const prev = () => setCurrent(i => i === 0 ? slides.length - 1 : i - 1);
   const next = () => setCurrent(i => i === slides.length - 1 ? 0 : i + 1);
 
-  // дублируем слайды — конец + оригинал + начало
   const loopedSlides = [...slides, ...slides, ...slides];
-  const offset = slides.length; // начинаем с середины
+  const offset = slides.length;
 
   return (
     <div className="sliderblock">
