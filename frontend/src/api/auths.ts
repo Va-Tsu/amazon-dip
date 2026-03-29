@@ -31,20 +31,20 @@ export function logout(token: string) {
 //#endregion
 
 //#region selleracc
-export function registerSeller(data: RegisterSellerRequest, token: string) {
-  return request<void>(
-    '/api/seller/register',
-    'POST',
-    data,
-    token,
-  );
-}
-export function loginSeller(data: LoginSellerRequest) {
-  return request<void>(
-    '/api/seller/login',
-    'POST',
-    data,
-  );
-}
+  export function registerSeller(data: RegisterSellerRequest, token: string) {
+    return request<void>(
+      '/api/seller/register',
+      'POST',
+      data,
+      token,
+    );
+  }
+  export function loginSeller(data: LoginSellerRequest) {
+    return request<void>(
+      '/api/seller/login',
+      'POST',
+      data,
+    );
+  }
 //#endregion
 

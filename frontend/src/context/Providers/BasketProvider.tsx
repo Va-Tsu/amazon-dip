@@ -1,12 +1,14 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
 import type { BasketItem } from "../../types/product";
+import { addToBasket, getBasket, removeFromBasket } from "../../api/basket";
  
 
 type BasketContextType = {
   basket: BasketItem[],
-  addItem: (item: BasketItem) => void,
-  removeItem: (id: number) => void,
+  addItem: (item: BasketItem) => Promise<void>,
+  removeItem: (id: number) => Promise<void>,
+  fetchBasket: () => Promise<void>,
 }
 
 export const BasketContext = createContext<BasketContextType | null>(null);
@@ -15,17 +17,26 @@ export function BasketProvider({ children }: { children: React.ReactNode }) {
 
   const [basket, setBasket] = useState<BasketItem[]>([]);
 
+    async function fetchBasket() {
+      const token = localStorage.getItem('token') ?? '';
+      const items = await getBasket(token);
+      setBasket(items);
+    }
 
-  function addItem(item: BasketItem) {
+  async function addItem(item: BasketItem) {
+    const token = localStorage.getItem('token') ?? '';
+    await addToBasket(item.id, token);   
     setBasket(prev => [...prev, item]);
   }
 
-  function removeItem(id: number) {
+  async function removeItem(id: number) {
+    const token = localStorage.getItem('token') ?? '';
+    await removeFromBasket(id, token);
     setBasket(prev => prev.filter(item => item.id !== id))
   }
 
   return (
-    <BasketContext.Provider value={{ basket, addItem, removeItem }}>
+    <BasketContext.Provider value={{ basket, addItem, removeItem, fetchBasket }}>
       {children}
     </BasketContext.Provider>
   );

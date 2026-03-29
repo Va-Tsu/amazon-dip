@@ -29,3 +29,29 @@ export async function request<T>(
 
   return response.json();
 }
+
+export async function requestWithFormData<T>(
+  url: string,
+  method: RequestMethod = 'POST',
+  formData: FormData,
+  token?: string,
+): Promise<T> {
+  const headers: HeadersInit = {};
+
+  if (token) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+
+  const response = await fetch(BASE_URL + url, {
+    method,
+    headers,
+    body: formData,
+  });
+
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(error || 'Request failed');
+  }
+
+  return response.json();
+}

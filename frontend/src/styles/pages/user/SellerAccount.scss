@@ -97,7 +97,7 @@
     }
     &__card {
       background-color: #FFF4E6;
-      padding: 15px 20px;
+      padding: 15px 10px;
       border-radius: 16px;
       &__label {
         @include text(14px);
@@ -105,6 +105,10 @@
       }
       &__value {
         @include text(16px);
+      }
+
+      @include tablet() {
+        padding: 15px 20px;
       }
     }
   }

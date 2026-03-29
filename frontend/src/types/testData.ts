@@ -1,5 +1,6 @@
 import type { CardItemType } from "./product";
 import type { Product } from "./product";
+import type { Seller } from "./seller";
 import type { User } from "./user";
 
 
@@ -179,6 +180,7 @@ export const mockProducts: Product[] = [
   },
 ];
 
+//user
 export const mockUser: User = {
   id: 0,
   shopId: null,
@@ -186,3 +188,19 @@ export const mockUser: User = {
   email: "@user",
   photoUrl: "/imgs/icons/user/userAvatar.png"
 }
+
+//seller acc
+
+export const mockSeller: Seller = {
+  id: 1,
+  name: "john_store",
+  storeName: "John's Premium Store",
+  email: "john@store.com",
+  phone: "+1 (555) 123-4567",
+  country: "USA",
+  description: "Premium imported food from around the world.",
+  logoUrl: "/imgs/icons/sellerAcc/ava.svg",
+  balance: 2847.50,
+  sells: 4675.80,
+  pending: 324.00,
+};
