@@ -14,7 +14,10 @@ export function UserProfile() {
 
   useEffect (() => {
     const token = localStorage.getItem('token') ?? '';
-    getMe(token).then(data => setUser(data));
+    getMe(token).then(data => {
+      console.log(data);
+      setUser(data);
+    });
   }, [])
   return (
     <section className="userProfile">
@@ -24,9 +27,9 @@ export function UserProfile() {
 
         <section className="userProfile__hero">
           <div className="userProfile__hero__block">
-            <img className="userProfile__hero__img" src={user?.photoUrl} alt="" />
+            <img className="userProfile__hero__img" src={user?.imageUrl} alt="" />
             <div className="userProfile__hero__text">
-              <h1 className="userProfile__hero__name">{user?.name}</h1>
+              <h1 className="userProfile__hero__name">{user?.fullName}</h1>
               <h2 className="userProfile__hero__email">{user?.email}</h2>
               <button className="userProfile__hero__edit">Edit Profile</button>
             </div>
@@ -67,9 +70,9 @@ export function UserProfile() {
 
         <div className="userProfile__seller__register">
           <h1 className="userProfile__seller__register__title">My market</h1>
-            {user?.shopId !== 0 ? (
+            {user?.seller !== null ? (
               <div className="userProfile__seller__register__block">
-                <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Creat an acoount</Link>
+                <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Create an acoount</Link>
                 <Link className="userProfile__seller__register__button__log" to={"/user/selleracc"}>Log in</Link>
               </div>
             ) : null}

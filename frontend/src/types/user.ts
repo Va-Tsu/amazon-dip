@@ -1,8 +1,8 @@
 export type User = {
-  shopId: number | null;
-  id: number;
-  name: string;
-  email: string;
-  photoUrl: string;
+  id: string;
+  fullName: string;
+  email: string;  
+  imageUrl: string;
+  seller: unknown | null;
 }
 

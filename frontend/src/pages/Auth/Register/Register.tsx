@@ -5,6 +5,7 @@ import { Logo } from "../../../assets/Logo";
 import { useState } from "react";
 import { register } from "../../../api/auths";
 import classNames from 'classnames';
+import { Link, useNavigate } from "react-router-dom";
 
 //#endregion
 
@@ -14,6 +15,7 @@ export function Register() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
   const [error, setError] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -21,6 +23,8 @@ export function Register() {
     try {
       const result = await register ({email, password, fullName: name});
       localStorage.setItem('token', result.token);
+      console.log(result);
+      navigate('/');
     } catch (e) {
       setError((e as Error).message);
     }
@@ -94,7 +98,7 @@ export function Register() {
         {/* Footer link */}
         <p className="register__footer auth__footer">
           Already a member? 
-          <a href="/login" className="register__link auth__link"> Log in</a>
+          <Link to="/auth/login" className="register__link auth__link"> Log in</Link>
         </p>
 
         {/* Divider */}

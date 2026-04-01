@@ -1,6 +1,6 @@
 //#region Imports
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Divider } from "../../../assets/Divider";
 import { Logo } from "../../../assets/Logo";
 import { SocialLinks } from "../../../assets/SocialLinks";
@@ -73,7 +73,7 @@ export function Login() {
         {/* Footer link */}
         <p className="login__footer auth__footer">
           New here?
-          <a href="/register" className="login__link auth__link"> Sign up</a>
+          <Link to="/auth/register" className="login__link auth__link"> Sign up</Link>
         </p>
 
         {/* Divider */}
