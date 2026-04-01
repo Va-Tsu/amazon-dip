@@ -31,6 +31,7 @@ export function logout(token: string) {
 //#endregion
 
 //#region selleracc
+/*
   export function registerSeller(data: RegisterSellerRequest, token: string) {
     return request<void>(
       '/api/seller/register',
@@ -39,6 +40,27 @@ export function logout(token: string) {
       token,
     );
   }
+*/
+
+  export function registerSeller(data: RegisterSellerRequest, token: string) {
+    const params = new URLSearchParams();
+    
+    params.append('fullName', data.fullName);
+    params.append('email', data.email);
+    params.append('password', data.password);
+    params.append('confirmedPassword', data.confirmedPassword);
+    params.append('storeName', data.storeName);
+    params.append('phoneNumber', data.phoneNumber);
+    const countryId = isNaN(Number(data.country)) ? "1" : data.country;
+    params.append('countryId', countryId);
+    return request<void>(
+      `/api/seller/register?${params.toString()}`,
+      'POST',
+      undefined,
+      token
+    );
+  }
+/*
   export function loginSeller(data: LoginSellerRequest) {
     return request<void>(
       '/api/seller/login',
@@ -46,5 +68,20 @@ export function logout(token: string) {
       data,
     );
   }
+*/
+export function loginSeller(data: LoginSellerRequest, token: string) {
+  const params = new URLSearchParams();
+  
+  params.append('fullName', data.name);
+  params.append('email', data.email);
+  params.append('password', data.password);
+
+  return request<void>(
+    `/api/seller/login?${params.toString()}`,
+    'POST',
+    undefined,
+    token
+  );
+}
 //#endregion
 

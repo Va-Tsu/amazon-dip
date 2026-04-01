@@ -154,7 +154,10 @@
       border-radius: 26px;
       padding: 5px 10px;
       text-decoration: none;
-      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include text(10px,100%,400);
 
     }
     &__button__log {
@@ -164,6 +167,10 @@
       border-radius: 26px;
       padding: 5px 10px;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include text(10px,100%,400);
     }
   }
 }

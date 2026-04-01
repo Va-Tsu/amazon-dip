@@ -11,6 +11,7 @@ export type RegisterRequest = {
   password: string;
 };
 
+/*
 export type AuthResponse = {
   token: string;
   user: {
@@ -19,20 +20,27 @@ export type AuthResponse = {
   };
 };
 
+*/
+
+export type AuthResponse = {
+  token: string;
+  expiration: string;
+};
+
 
 // seller auth
 
 export type RegisterSellerRequest = {
   //seller info
-  name: string;
+  fullName: string;
   email: string;
   password: string;
-  confirmPassword: string;
+  confirmedPassword: string;
 
   //bisness
   storeName: string;
   counry: string;
-  phone: string;
+  phoneNumber: string;
   agreed: boolean;
 }
 

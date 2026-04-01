@@ -23,9 +23,15 @@ export function LoginSellerAccount() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try{
-      await loginSeller(logSeller)
+
+      const token = localStorage.getItem('token') ?? '';
+      if (!token) {
+        alert("Сначала войдите в основной аккаунт");
+        return;
+      }
+      await loginSeller(logSeller, token)
       navigate('/user/selleracc');
-      console.log(logSeller)
+      console.log("Login successful", logSeller);
     } catch (e) {
       alert((e as Error).message)
     }

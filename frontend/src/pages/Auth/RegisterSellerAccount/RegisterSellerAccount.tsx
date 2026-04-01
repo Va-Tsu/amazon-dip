@@ -8,13 +8,13 @@ import { registerSeller } from "../../../api/auths";
 export function RegisterSellerAccount() {
   const navigate = useNavigate();
   const [regSeller, setRegSeller] = useState<RegisterSellerRequest>({
-    name: '',
+    fullName: '',
     email: '',
     password: '',
-    confirmPassword: '',
+    confirmedPassword: '',
     storeName: '',
-    counry: '',
-    phone: '',
+    country: '',
+    phoneNumber: '',
     agreed: false,
   });
 
@@ -57,8 +57,8 @@ export function RegisterSellerAccount() {
                   className="sellreg__field__input" 
                   type="text" 
                   placeholder="Enter your full name"
-                  value={regSeller.name}
-                  onChange={(e) => updateRegSeller({ name: e.target.value })}
+                  value={regSeller.fullName}
+                  onChange={(e) => updateRegSeller({ fullName: e.target.value })}
                 />
               </div>
               <div className="sellreg__field">
@@ -87,8 +87,8 @@ export function RegisterSellerAccount() {
                   className="sellreg__field__input"
                   type="password"
                   placeholder="Re-enter your password"
-                  value={regSeller.confirmPassword}
-                  onChange={(e) => updateRegSeller({ confirmPassword: e.target.value })}
+                  value={regSeller.confirmedPassword}
+                  onChange={(e) => updateRegSeller({ confirmedPassword: e.target.value })}
                 />
               </div>
             </div>
@@ -111,8 +111,8 @@ export function RegisterSellerAccount() {
                   className="sellreg__field__input"
                   type="text"
                   placeholder="Enter your country"
-                  value={regSeller.counry}
-                  onChange={(e) => updateRegSeller({ counry: e.target.value })}
+                  value={regSeller.country}
+                  onChange={(e) => updateRegSeller({ country: e.target.value })}
                 />
               </div>
               <div className="sellreg__field">
@@ -121,8 +121,8 @@ export function RegisterSellerAccount() {
                   className="sellreg__field__input"
                   type="text"
                   placeholder="Enter your phone"
-                  value={regSeller.phone}
-                  onChange={(e) => updateRegSeller({ phone: e.target.value })}
+                  value={regSeller.phoneNumber}
+                  onChange={(e) => updateRegSeller({ phoneNumber: e.target.value })}
                 />
               </div>
               <div className="sellreg__field__checkbox">
