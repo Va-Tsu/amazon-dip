@@ -182,11 +182,11 @@ export const mockProducts: Product[] = [
 
 //user
 export const mockUser: User = {
-  id: 0,
-  shopId: null,
-  name: "User",
+  id: "1",
+  seller: null,
+  fullName: "User",
   email: "@user",
-  photoUrl: "/imgs/icons/user/userAvatar.png"
+  imageUrl: "/imgs/icons/user/userAvatar.png"
 }
 
 //seller acc

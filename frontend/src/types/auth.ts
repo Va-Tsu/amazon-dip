@@ -39,7 +39,7 @@ export type RegisterSellerRequest = {
 
   //bisness
   storeName: string;
-  counry: string;
+  country: string;
   phoneNumber: string;
   agreed: boolean;
 }

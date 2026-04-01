@@ -1,0 +1,123 @@
+"filename", "language", "JavaScript", "JSON", "TypeScript", "JSON with Comments", "SCSS", "HTML", "Markdown", "TypeScript JSX", "XML", "comment", "blank", "total"
+"c:\GLAVPROJECTS\amazon-dip\frontend\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 60, 0, 0, 0, 14, 74
+"c:\GLAVPROJECTS\amazon-dip\frontend\eslint.config.js", "JavaScript", 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\GLAVPROJECTS\amazon-dip\frontend\index.html", "HTML", 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 1, 21
+"c:\GLAVPROJECTS\amazon-dip\frontend\package-lock.json", "JSON", 0, 3882, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3883
+"c:\GLAVPROJECTS\amazon-dip\frontend\package.json", "JSON", 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 1, 37
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\Facebook.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 1, 11
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\apple.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\google.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 1, 7
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\sellerAcc\lightning.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 1, 8
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\twitter.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\basket\bag.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\catalog\arrowR.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\productCard\starNo.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\productCard\starYea.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\sellerAcc\ava.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\sellerAcc\kol.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 6
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\YomingoLogo.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\account.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 6
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\face.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 1, 12
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\inst.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 1, 18
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\nav.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 1, 7
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\search-normal.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 1, 5
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\tel.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 1, 16
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\tick.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 6
+"c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\you.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 1, 12
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\App.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 51, 0, 3, 5, 59
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\api\auths.ts", "TypeScript", 0, 0, 39, 0, 0, 0, 0, 0, 0, 4, 8, 51
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\api\basket.ts", "TypeScript", 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 3, 14
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\api\fetchClient.ts", "TypeScript", 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 11, 57
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\api\product.ts", "TypeScript", 0, 0, 41, 0, 0, 0, 0, 0, 0, 0, 7, 48
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\api\seller.ts", "TypeScript", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\api\user.ts", "TypeScript", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 1, 11
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CardItem.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 5, 35
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CardList.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 2, 18
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CatalogSlider\CatalogSlider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 41, 0, 0, 6, 47
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CatalogSlider\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Divider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 8, 0, 2, 1, 11
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Footer.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 7, 64
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Header.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 37, 0, 0, 1, 38
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Logo.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 6, 0, 2, 1, 9
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\SocialLinks.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 19, 0, 2, 2, 23
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\auth\auth.helper.ts", "TypeScript", 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\context\Providers.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 1, 9
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\context\Providers\BasketProvider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 40, 0, 1, 12, 53
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\main.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 14, 0, 1, 2, 17
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\LoginSellerAccount\LoginSellerAccount.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 104, 0, 0, 11, 115
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\LoginSellerAccount\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Login\Login.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 71, 0, 7, 10, 88
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Login\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\PasswordReset\PasswordReset.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 6, 0, 2, 2, 10
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\PasswordReset\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\RegisterSellerAccount\RegisterSellerAccount.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 154, 0, 0, 12, 166
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\RegisterSellerAccount\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Register\Register.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 87, 0, 8, 13, 108
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Register\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\ResetSellerAccount\ResetSellerAccount.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 49, 0, 0, 7, 56
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\ResetSellerAccount\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Reset\Reset.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 21, 0, 2, 2, 25
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Reset\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Welcome\Welcome.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 17, 0, 4, 3, 24
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Welcome\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAccount\SellerAccout.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 167, 0, 1, 26, 194
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAccount\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAddProduct\SellerAddProduct.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 358, 0, 0, 18, 376
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAddProduct\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\UserProfile\UserProfile.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 72, 0, 0, 9, 81
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\UserProfile\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoAboutPage\YommingoAboutPage.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 117, 0, 0, 7, 124
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoAboutPage\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoBasket\YommingoBasket.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 39, 0, 0, 7, 46
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoBasket\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCatalog\YommingoCatalog.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 99, 0, 0, 8, 107
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCatalog\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCountries\YommingoCountries.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 93, 0, 0, 9, 102
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCountries\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoMain\YommingoMain.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 92, 0, 2, 21, 115
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoMain\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoProductCard\YommingoProductCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 121, 0, 0, 15, 136
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoProductCard\index.ts", "TypeScript", 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoSearch\YommingoSearch.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 5, 35
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoSearch\index.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\abstracts\_mixins.scss", "SCSS", 0, 0, 0, 0, 44, 0, 0, 0, 0, 1, 9, 54
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\abstracts\_variables.scss", "SCSS", 0, 0, 0, 0, 14, 0, 0, 0, 0, 8, 5, 27
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\base\_global.scss", "SCSS", 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 1, 6
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\base\_normalise.scss", "SCSS", 0, 0, 0, 0, 45, 0, 0, 0, 0, 6, 1, 52
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\CardItem.scss", "SCSS", 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 11, 71
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\CardList.scss", "SCSS", 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 3, 13
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\CatalogSlider.scss", "SCSS", 0, 0, 0, 0, 62, 0, 0, 0, 0, 2, 11, 75
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\Footermv.scss", "SCSS", 0, 0, 0, 0, 119, 0, 0, 0, 0, 0, 23, 142
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\Header.scss", "SCSS", 0, 0, 0, 0, 68, 0, 0, 0, 0, 0, 14, 82
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\buttons.scss", "SCSS", 0, 0, 0, 0, 13, 0, 0, 0, 0, 4, 2, 19
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\divider.scss", "SCSS", 0, 0, 0, 0, 21, 0, 0, 0, 0, 4, 4, 29
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\logo.scss", "SCSS", 0, 0, 0, 0, 6, 0, 0, 0, 0, 4, 2, 12
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\social.scss", "SCSS", 0, 0, 0, 0, 10, 0, 0, 0, 0, 4, 2, 16
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\master.scss", "SCSS", 0, 0, 0, 0, 28, 0, 0, 0, 0, 16, 6, 50
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\auth.scss", "SCSS", 0, 0, 0, 0, 64, 0, 0, 0, 0, 11, 13, 88
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\logSellerAccount.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\login.scss", "SCSS", 0, 0, 0, 0, 10, 0, 0, 0, 0, 2, 2, 14
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\regSellerAccount.scss", "SCSS", 0, 0, 0, 0, 150, 0, 0, 0, 0, 6, 19, 175
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\register.scss", "SCSS", 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 4, 31
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\reset.scss", "SCSS", 0, 0, 0, 0, 30, 0, 0, 0, 0, 6, 6, 42
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\resetSellerAccount.scss", "SCSS", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\welcome.scss", "SCSS", 0, 0, 0, 0, 16, 0, 0, 0, 0, 2, 2, 20
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\user\SellerAccount.scss", "SCSS", 0, 0, 0, 0, 256, 0, 0, 0, 0, 18, 19, 293
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\user\SellerAddProduct.scss", "SCSS", 0, 0, 0, 0, 235, 0, 0, 0, 0, 12, 23, 270
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\user\UserProfile.scss", "SCSS", 0, 0, 0, 0, 139, 0, 0, 0, 0, 16, 14, 169
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoAboutPage.scss", "SCSS", 0, 0, 0, 0, 179, 0, 0, 0, 0, 15, 21, 215
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoBasket.scss", "SCSS", 0, 0, 0, 0, 88, 0, 0, 0, 0, 2, 15, 105
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoCatalog.scss", "SCSS", 0, 0, 0, 0, 130, 0, 0, 0, 0, 4, 21, 155
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoSearch.scss", "SCSS", 0, 0, 0, 0, 9, 0, 0, 0, 0, 7, 5, 21
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\yommingoMain.scss", "SCSS", 0, 0, 0, 0, 227, 0, 0, 0, 0, 2, 44, 273
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\yommingoProductCard.scss", "SCSS", 0, 0, 0, 0, 260, 0, 0, 0, 0, 6, 35, 301
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\types\auth.ts", "TypeScript", 0, 0, 37, 0, 0, 0, 0, 0, 0, 4, 9, 50
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\types\product.ts", "TypeScript", 0, 0, 63, 0, 0, 0, 0, 0, 0, 4, 12, 79
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\types\seller.ts", "TypeScript", 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 13
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\types\testData.ts", "TypeScript", 0, 0, 196, 0, 0, 0, 0, 0, 0, 4, 7, 207
+"c:\GLAVPROJECTS\amazon-dip\frontend\src\types\user.ts", "TypeScript", 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\GLAVPROJECTS\amazon-dip\frontend\tsconfig.app.json", "JSON", 0, 24, 0, 0, 0, 0, 0, 0, 0, 2, 3, 29
+"c:\GLAVPROJECTS\amazon-dip\frontend\tsconfig.json", "JSON with Comments", 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 1, 8
+"c:\GLAVPROJECTS\amazon-dip\frontend\tsconfig.node.json", "JSON", 0, 22, 0, 0, 0, 0, 0, 0, 0, 2, 3, 27
+"c:\GLAVPROJECTS\amazon-dip\frontend\vite.config.ts", "TypeScript", 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"Total", "-", 22, 3964, 500, 7, 2321, 20, 60, 2024, 131, 219, 682, 9950

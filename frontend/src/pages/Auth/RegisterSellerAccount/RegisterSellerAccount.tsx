@@ -143,7 +143,7 @@ export function RegisterSellerAccount() {
             </div>
 
             <p className="sellreg__form__login">
-              Already have a seller account? <Link className="sellreg__form__login__link" to={'./'}>Log in</Link>
+              Already have a seller account? <Link className="sellreg__form__login__link" to={'../logsellacc'}>Log in</Link>
             </p>
 
           </form>

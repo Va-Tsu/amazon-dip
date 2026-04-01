@@ -1,0 +1,207 @@
+Date : 2026-03-28 14:14:27
+Directory : c:\GLAVPROJECTS\amazon-dip\frontend
+Total : 121 files,  9049 codes, 219 comments, 682 blanks, all 9950 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          4 |      3,964 |          4 |          8 |      3,976 |
+| SCSS               |         31 |      2,321 |        162 |        339 |      2,822 |
+| TypeScript JSX     |         30 |      2,024 |         37 |        230 |      2,291 |
+| TypeScript         |         32 |        500 |         16 |         67 |        583 |
+| XML                |         20 |        131 |          0 |         20 |        151 |
+| Markdown           |          1 |         60 |          0 |         14 |         74 |
+| JavaScript         |          1 |         22 |          0 |          2 |         24 |
+| HTML               |          1 |         20 |          0 |          1 |         21 |
+| JSON with Comments |          1 |          7 |          0 |          1 |          8 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                               | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                  |        121 |      9,049 |        219 |        682 |      9,950 |
+| . (Files)                                                                                          |          9 |      4,078 |          4 |         28 |      4,110 |
+| public                                                                                             |         20 |        131 |          0 |         20 |        151 |
+| public\imgs                                                                                        |         20 |        131 |          0 |         20 |        151 |
+| public\imgs\icons                                                                                  |         20 |        131 |          0 |         20 |        151 |
+| public\imgs\icons\auth                                                                             |          5 |         30 |          0 |          5 |         35 |
+| public\imgs\icons\auth (Files)                                                                     |          4 |         23 |          0 |          4 |         27 |
+| public\imgs\icons\auth\sellerAcc                                                                   |          1 |          7 |          0 |          1 |          8 |
+| public\imgs\icons\basket                                                                           |          1 |          4 |          0 |          1 |          5 |
+| public\imgs\icons\catalog                                                                          |          1 |          4 |          0 |          1 |          5 |
+| public\imgs\icons\productCard                                                                      |          2 |          8 |          0 |          2 |         10 |
+| public\imgs\icons\sellerAcc                                                                        |          2 |          8 |          0 |          2 |         10 |
+| public\imgs\icons\yommingo                                                                         |          9 |         77 |          0 |          9 |         86 |
+| src                                                                                                |         92 |      4,840 |        215 |        634 |      5,689 |
+| src (Files)                                                                                        |          2 |         65 |          4 |          7 |         76 |
+| src\api                                                                                            |          6 |        157 |          4 |         31 |        192 |
+| src\assets                                                                                         |          9 |        215 |          6 |         25 |        246 |
+| src\assets (Files)                                                                                 |          7 |        173 |          6 |         19 |        198 |
+| src\assets\CatalogSlider                                                                           |          2 |         42 |          0 |          6 |         48 |
+| src\auth                                                                                           |          1 |          6 |          0 |          1 |          7 |
+| src\context                                                                                        |          2 |         48 |          1 |         13 |         62 |
+| src\context (Files)                                                                                |          1 |          8 |          0 |          1 |          9 |
+| src\context\Providers                                                                              |          1 |         40 |          1 |         12 |         53 |
+| src\pages                                                                                          |         36 |      1,712 |         26 |        188 |      1,926 |
+| src\pages\Auth                                                                                     |         16 |        517 |         23 |         60 |        600 |
+| src\pages\Auth\Login                                                                               |          2 |         72 |          7 |         10 |         89 |
+| src\pages\Auth\LoginSellerAccount                                                                  |          2 |        105 |          0 |         11 |        116 |
+| src\pages\Auth\PasswordReset                                                                       |          2 |          7 |          2 |          2 |         11 |
+| src\pages\Auth\Register                                                                            |          2 |         88 |          8 |         13 |        109 |
+| src\pages\Auth\RegisterSellerAccount                                                               |          2 |        155 |          0 |         12 |        167 |
+| src\pages\Auth\Reset                                                                               |          2 |         22 |          2 |          2 |         26 |
+| src\pages\Auth\ResetSellerAccount                                                                  |          2 |         50 |          0 |          7 |         57 |
+| src\pages\Auth\Welcome                                                                             |          2 |         18 |          4 |          3 |         25 |
+| src\pages\User                                                                                     |          6 |        599 |          1 |         54 |        654 |
+| src\pages\User\SellerAccount                                                                       |          2 |        168 |          1 |         26 |        195 |
+| src\pages\User\SellerAddProduct                                                                    |          2 |        358 |          0 |         19 |        377 |
+| src\pages\User\UserProfile                                                                         |          2 |         73 |          0 |          9 |         82 |
+| src\pages\Yommingo                                                                                 |         14 |        596 |          2 |         74 |        672 |
+| src\pages\Yommingo\YommingoAboutPage                                                               |          2 |        118 |          0 |          7 |        125 |
+| src\pages\Yommingo\YommingoBasket                                                                  |          2 |         39 |          0 |          8 |         47 |
+| src\pages\Yommingo\YommingoCatalog                                                                 |          2 |        100 |          0 |          8 |        108 |
+| src\pages\Yommingo\YommingoCountries                                                               |          2 |         94 |          0 |          9 |        103 |
+| src\pages\Yommingo\YommingoMain                                                                    |          2 |         93 |          2 |         21 |        116 |
+| src\pages\Yommingo\YommingoProductCard                                                             |          2 |        122 |          0 |         15 |        137 |
+| src\pages\Yommingo\YommingoSearch                                                                  |          2 |         30 |          0 |          6 |         36 |
+| src\styles                                                                                         |         31 |      2,321 |        162 |        339 |      2,822 |
+| src\styles (Files)                                                                                 |          1 |         28 |         16 |          6 |         50 |
+| src\styles\abstracts                                                                               |          2 |         58 |          9 |         14 |         81 |
+| src\styles\base                                                                                    |          2 |         50 |          6 |          2 |         58 |
+| src\styles\components                                                                              |          9 |        369 |         18 |         72 |        459 |
+| src\styles\pages                                                                                   |         17 |      1,816 |        113 |        245 |      2,174 |
+| src\styles\pages\auth                                                                              |          8 |        293 |         31 |         48 |        372 |
+| src\styles\pages\user                                                                              |          3 |        630 |         46 |         56 |        732 |
+| src\styles\pages\yommingo                                                                          |          6 |        893 |         36 |        141 |      1,070 |
+| src\types                                                                                          |          5 |        316 |         12 |         30 |        358 |
++----------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                           | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\GLAVPROJECTS\amazon-dip\frontend\README.md                                                      | Markdown           |         60 |          0 |         14 |         74 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\eslint.config.js                                               | JavaScript         |         22 |          0 |          2 |         24 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\index.html                                                     | HTML               |         20 |          0 |          1 |         21 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\package-lock.json                                              | JSON               |      3,882 |          0 |          1 |      3,883 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\package.json                                                   | JSON               |         36 |          0 |          1 |         37 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\Facebook.svg                            | XML                |         10 |          0 |          1 |         11 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\apple.svg                               | XML                |          4 |          0 |          1 |          5 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\google.svg                              | XML                |          6 |          0 |          1 |          7 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\sellerAcc\lightning.svg                 | XML                |          7 |          0 |          1 |          8 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\auth\twitter.svg                             | XML                |          3 |          0 |          1 |          4 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\basket\bag.svg                               | XML                |          4 |          0 |          1 |          5 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\catalog\arrowR.svg                           | XML                |          4 |          0 |          1 |          5 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\productCard\starNo.svg                       | XML                |          4 |          0 |          1 |          5 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\productCard\starYea.svg                      | XML                |          4 |          0 |          1 |          5 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\sellerAcc\ava.svg                            | XML                |          3 |          0 |          1 |          4 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\sellerAcc\kol.svg                            | XML                |          5 |          0 |          1 |          6 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\YomingoLogo.svg                     | XML                |          3 |          0 |          1 |          4 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\account.svg                         | XML                |          5 |          0 |          1 |          6 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\face.svg                            | XML                |         11 |          0 |          1 |         12 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\inst.svg                            | XML                |         17 |          0 |          1 |         18 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\nav.svg                             | XML                |          6 |          0 |          1 |          7 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\search-normal.svg                   | XML                |          4 |          0 |          1 |          5 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\tel.svg                             | XML                |         15 |          0 |          1 |         16 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\tick.svg                            | XML                |          5 |          0 |          1 |          6 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\public\imgs\icons\yommingo\you.svg                             | XML                |         11 |          0 |          1 |         12 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\App.tsx                                                    | TypeScript JSX     |         51 |          3 |          5 |         59 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\api\auths.ts                                               | TypeScript         |         39 |          4 |          8 |         51 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\api\basket.ts                                              | TypeScript         |         11 |          0 |          3 |         14 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\api\fetchClient.ts                                         | TypeScript         |         46 |          0 |         11 |         57 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\api\product.ts                                             | TypeScript         |         41 |          0 |          7 |         48 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\api\seller.ts                                              | TypeScript         |         10 |          0 |          1 |         11 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\api\user.ts                                                | TypeScript         |         10 |          0 |          1 |         11 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CardItem.tsx                                        | TypeScript JSX     |         30 |          0 |          5 |         35 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CardList.tsx                                        | TypeScript JSX     |         16 |          0 |          2 |         18 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CatalogSlider\CatalogSlider.tsx                     | TypeScript JSX     |         41 |          0 |          6 |         47 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\CatalogSlider\index.ts                              | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Divider.tsx                                         | TypeScript JSX     |          8 |          2 |          1 |         11 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Footer.tsx                                          | TypeScript JSX     |         57 |          0 |          7 |         64 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Header.tsx                                          | TypeScript JSX     |         37 |          0 |          1 |         38 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\Logo.tsx                                            | TypeScript JSX     |          6 |          2 |          1 |          9 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\assets\SocialLinks.tsx                                     | TypeScript JSX     |         19 |          2 |          2 |         23 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\auth\auth.helper.ts                                        | TypeScript         |          6 |          0 |          1 |          7 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\context\Providers.tsx                                      | TypeScript JSX     |          8 |          0 |          1 |          9 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\context\Providers\BasketProvider.tsx                       | TypeScript JSX     |         40 |          1 |         12 |         53 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\main.tsx                                                   | TypeScript JSX     |         14 |          1 |          2 |         17 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\LoginSellerAccount\LoginSellerAccount.tsx       | TypeScript JSX     |        104 |          0 |         11 |        115 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\LoginSellerAccount\index.ts                     | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Login\Login.tsx                                 | TypeScript JSX     |         71 |          7 |         10 |         88 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Login\index.ts                                  | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\PasswordReset\PasswordReset.tsx                 | TypeScript JSX     |          6 |          2 |          2 |         10 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\PasswordReset\index.ts                          | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\RegisterSellerAccount\RegisterSellerAccount.tsx | TypeScript JSX     |        154 |          0 |         12 |        166 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\RegisterSellerAccount\index.ts                  | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Register\Register.tsx                           | TypeScript JSX     |         87 |          8 |         13 |        108 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Register\index.ts                               | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\ResetSellerAccount\ResetSellerAccount.tsx       | TypeScript JSX     |         49 |          0 |          7 |         56 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\ResetSellerAccount\index.ts                     | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Reset\Reset.tsx                                 | TypeScript JSX     |         21 |          2 |          2 |         25 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Reset\index.ts                                  | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Welcome\Welcome.tsx                             | TypeScript JSX     |         17 |          4 |          3 |         24 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Auth\Welcome\index.ts                                | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAccount\SellerAccout.tsx                  | TypeScript JSX     |        167 |          1 |         26 |        194 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAccount\index.ts                          | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAddProduct\SellerAddProduct.tsx           | TypeScript JSX     |        358 |          0 |         18 |        376 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\SellerAddProduct\index.ts                       | TypeScript         |          0 |          0 |          1 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\UserProfile\UserProfile.tsx                     | TypeScript JSX     |         72 |          0 |          9 |         81 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\User\UserProfile\index.ts                            | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoAboutPage\YommingoAboutPage.tsx     | TypeScript JSX     |        117 |          0 |          7 |        124 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoAboutPage\index.ts                  | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoBasket\YommingoBasket.tsx           | TypeScript JSX     |         39 |          0 |          7 |         46 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoBasket\index.ts                     | TypeScript         |          0 |          0 |          1 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCatalog\YommingoCatalog.tsx         | TypeScript JSX     |         99 |          0 |          8 |        107 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCatalog\index.ts                    | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCountries\YommingoCountries.tsx     | TypeScript JSX     |         93 |          0 |          9 |        102 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoCountries\index.ts                  | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoMain\YommingoMain.tsx               | TypeScript JSX     |         92 |          2 |         21 |        115 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoMain\index.ts                       | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoProductCard\YommingoProductCard.tsx | TypeScript JSX     |        121 |          0 |         15 |        136 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoProductCard\index.ts                | TypeScript         |          1 |          0 |          0 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoSearch\YommingoSearch.tsx           | TypeScript JSX     |         30 |          0 |          5 |         35 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\pages\Yommingo\YommingoSearch\index.ts                     | TypeScript         |          0 |          0 |          1 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\abstracts\_mixins.scss                              | SCSS               |         44 |          1 |          9 |         54 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\abstracts\_variables.scss                           | SCSS               |         14 |          8 |          5 |         27 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\base\_global.scss                                   | SCSS               |          5 |          0 |          1 |          6 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\base\_normalise.scss                                | SCSS               |         45 |          6 |          1 |         52 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\CardItem.scss                            | SCSS               |         60 |          0 |         11 |         71 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\CardList.scss                            | SCSS               |         10 |          0 |          3 |         13 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\CatalogSlider.scss                       | SCSS               |         62 |          2 |         11 |         75 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\Footermv.scss                            | SCSS               |        119 |          0 |         23 |        142 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\Header.scss                              | SCSS               |         68 |          0 |         14 |         82 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\buttons.scss                             | SCSS               |         13 |          4 |          2 |         19 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\divider.scss                             | SCSS               |         21 |          4 |          4 |         29 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\logo.scss                                | SCSS               |          6 |          4 |          2 |         12 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\components\social.scss                              | SCSS               |         10 |          4 |          2 |         16 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\master.scss                                         | SCSS               |         28 |         16 |          6 |         50 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\auth.scss                                | SCSS               |         64 |         11 |         13 |         88 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\logSellerAccount.scss                    | SCSS               |          0 |          0 |          1 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\login.scss                               | SCSS               |         10 |          2 |          2 |         14 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\regSellerAccount.scss                    | SCSS               |        150 |          6 |         19 |        175 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\register.scss                            | SCSS               |         23 |          4 |          4 |         31 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\reset.scss                               | SCSS               |         30 |          6 |          6 |         42 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\resetSellerAccount.scss                  | SCSS               |          0 |          0 |          1 |          1 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\auth\welcome.scss                             | SCSS               |         16 |          2 |          2 |         20 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\user\SellerAccount.scss                       | SCSS               |        256 |         18 |         19 |        293 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\user\SellerAddProduct.scss                    | SCSS               |        235 |         12 |         23 |        270 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\user\UserProfile.scss                         | SCSS               |        139 |         16 |         14 |        169 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoAboutPage.scss               | SCSS               |        179 |         15 |         21 |        215 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoBasket.scss                  | SCSS               |         88 |          2 |         15 |        105 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoCatalog.scss                 | SCSS               |        130 |          4 |         21 |        155 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\YommingoSearch.scss                  | SCSS               |          9 |          7 |          5 |         21 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\yommingoMain.scss                    | SCSS               |        227 |          2 |         44 |        273 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\styles\pages\yommingo\yommingoProductCard.scss             | SCSS               |        260 |          6 |         35 |        301 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\types\auth.ts                                              | TypeScript         |         37 |          4 |          9 |         50 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\types\product.ts                                           | TypeScript         |         63 |          4 |         12 |         79 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\types\seller.ts                                            | TypeScript         |         13 |          0 |          0 |         13 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\types\testData.ts                                          | TypeScript         |        196 |          4 |          7 |        207 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\src\types\user.ts                                              | TypeScript         |          7 |          0 |          2 |          9 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\tsconfig.app.json                                              | JSON               |         24 |          2 |          3 |         29 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\tsconfig.json                                                  | JSON with Comments |          7 |          0 |          1 |          8 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\tsconfig.node.json                                             | JSON               |         22 |          2 |          3 |         27 |
+| c:\GLAVPROJECTS\amazon-dip\frontend\vite.config.ts                                                 | TypeScript         |          5 |          0 |          2 |          7 |
+| Total                                                                                              |                    |      9,049 |        219 |        682 |      9,950 |
++----------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
