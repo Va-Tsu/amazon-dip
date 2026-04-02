@@ -7,7 +7,7 @@ import { addToBasket, getBasket, removeFromBasket } from "../../api/basket";
 type BasketContextType = {
   basket: BasketItem[],
   addItem: (item: BasketItem) => Promise<void>,
-  removeItem: (id: number) => Promise<void>,
+  removeItem: (id: string) => Promise<void>,
   fetchBasket: () => Promise<void>,
 }
 
@@ -29,7 +29,7 @@ export function BasketProvider({ children }: { children: React.ReactNode }) {
     setBasket(prev => [...prev, item]);
   }
 
-  async function removeItem(id: number) {
+  async function removeItem(id: string) {
     const token = localStorage.getItem('token') ?? '';
     await removeFromBasket(id, token);
     setBasket(prev => prev.filter(item => item.id !== id))

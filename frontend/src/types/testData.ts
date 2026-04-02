@@ -7,7 +7,7 @@ import type { User } from "./user";
 //not full info about card
 export const mockCards: CardItemType[] = [
   {
-    id: 1,
+    id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
     title: "LINDOR PINK LIMITED EDITION",
     brand: "Lindt",
     price: 12.9,
@@ -20,7 +20,7 @@ export const mockCards: CardItemType[] = [
     createdAt: "2024-03-15T10:30:00Z",
   },
   {
-    id: 2,
+    id: "7c9e6679-7425-40de-944b-e07fc1f90ae7",
     title: "Nutella Ferrero",
     brand: "Ferrero",
     price: 8.5,
@@ -33,7 +33,7 @@ export const mockCards: CardItemType[] = [
     createdAt: "2024-02-10T08:00:00Z",
   },
   {
-    id: 3,
+    id: "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     title: "Haribo Gold Bears",
     brand: "Haribo",
     price: 3.99,
@@ -46,7 +46,7 @@ export const mockCards: CardItemType[] = [
     createdAt: "2024-01-05T12:00:00Z",
   },
   {
-    id: 4,
+    id: "b2c3d4e5-f6a7-8901-bcde-f12345678901",
     title: "Toblerone Swiss Chocolate",
     brand: "Toblerone",
     price: 6.49,
@@ -59,7 +59,7 @@ export const mockCards: CardItemType[] = [
     createdAt: "2024-03-01T09:00:00Z",
   },
   {
-    id: 5,
+    id: "c3d4e5f6-a7b8-9012-cdef-123456789012",
     title: "Pringles Original",
     brand: "Pringles",
     price: 4.29,
@@ -76,7 +76,7 @@ export const mockCards: CardItemType[] = [
 //full info about card
 export const mockProducts: Product[] = [
   {
-    id: "1",
+    id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
     title: "LINDOR PINK LIMITED EDITION",
     description: "Indulge in the elegance of Lindt LINDOR Pink Limited Edition — a refined selection of irresistibly smooth chocolate truffles with a delicate, creamy center.",
     photoUrl: "/imgs/img/testdata/lindorTestData.png",
@@ -97,7 +97,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: "2",
+    id: "7c9e6679-7425-40de-944b-e07fc1f90ae7",
     title: "Nutella Ferrero",
     description: "The original hazelnut spread with cocoa. Perfect for breakfast or a snack anytime of the day.",
     photoUrl: "/imgs/img/testdata/kitTestData.png",
@@ -117,7 +117,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: "3",
+    id: "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     title: "Haribo Gold Bears",
     description: "The world famous gummy bears. A fruity treat loved by kids and adults alike.",
     photoUrl: "/imgs/img/testdata/kitTestData.png",
@@ -138,7 +138,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: "4",
+    id: "b2c3d4e5-f6a7-8901-bcde-f12345678901",
     title: "Toblerone Swiss Chocolate",
     description: "Iconic Swiss chocolate with honey and almond nougat in the distinctive triangular shape.",
     photoUrl: "/imgs/img/testdata/lindorTestData.png",
@@ -158,7 +158,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: "5",
+    id: "c3d4e5f6-a7b8-9012-cdef-123456789012",
     title: "Pringles Original",
     description: "The original saddle-shaped potato crisps. Once you pop you can't stop.",
     photoUrl: "/imgs/img/testdata/cotteTestData.png",

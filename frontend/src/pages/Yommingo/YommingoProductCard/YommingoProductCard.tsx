@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export function YommingoProductCard() {
   const { id } = useParams();
-  const product = mockProducts.find(p => p.id === Number(id));
+  const product = mockProducts.find(p => p.id === String(id));
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [comments, setComments] = useState(product?.comments ?? []);

@@ -51,8 +51,7 @@ export function logout(token: string) {
     params.append('confirmedPassword', data.confirmedPassword);
     params.append('storeName', data.storeName);
     params.append('phoneNumber', data.phoneNumber);
-    const countryId = isNaN(Number(data.country)) ? "1" : data.country;
-    params.append('countryId', countryId);
+    params.append('country', data.country);
     return request<void>(
       `/api/seller/register?${params.toString()}`,
       'POST',
