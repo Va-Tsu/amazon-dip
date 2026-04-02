@@ -14,11 +14,15 @@ export function UserProfile() {
 
   useEffect (() => {
     const token = localStorage.getItem('token') ?? '';
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    console.log(payload);
     getMe(token).then(data => {
       console.log(data);
       setUser(data);
     });
   }, [])
+
+
   return (
     <section className="userProfile">
       <Header />

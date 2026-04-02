@@ -23,9 +23,9 @@ export function CardItem( {card} : CardItemProps) {
         <div className="CardItem__footer">
           <h3 className="CardItem__weight">{card.weight}</h3>
           <button className="CardItem__button" onClick={(e) => {
-              e.stopPropagation();
-              addItem(card);
-            }}>
+            e.stopPropagation();
+            addItem({ id: card.id });
+          }}>
             Buy
           </button>
         </div>

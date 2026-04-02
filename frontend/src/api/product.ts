@@ -32,7 +32,7 @@ export async function addProduct(productData: AddProductRequest, token?: string)
   });
 
   return requestWithFormData<{ success: boolean; productId: string }>(
-    '/api/products',
+    '/api/seller/create',
     'POST',
     formData,
     token,
@@ -44,5 +44,5 @@ export async function getSellerProducts(token: string): Promise<Product[]> {
 }
 
 export async function deleteProduct(id: string, token: string): Promise<void> {
-  return request(`/api/products/${id}`, 'DELETE', undefined, token);
+  return request(`/api/seller/products/${id}`, 'DELETE', undefined, token);
 }

@@ -25,7 +25,7 @@ export type Comment = {
 };
 
 export type BasketItem = {
-  id: number
+  id: string;
 }
 
 export type Category = 'snacks' | 'meat' | 'dairy' | 'drinks' | 'sweets' | 'bakery' | 'seafood' | 'other' | null;
@@ -33,7 +33,7 @@ export type Category = 'snacks' | 'meat' | 'dairy' | 'drinks' | 'sweets' | 'bake
 export type Country = 'Germany' | 'Italy' | 'France' | 'Japan' | 'USA' | 'Spain' | 'Switzerland' | 'Other' | null;
 
 export type CardItemType = {
-  id: number;
+  id: string;
   title: string;
   brand: string;
   price: number;
