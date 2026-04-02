@@ -40,9 +40,9 @@ export async function addProduct(productData: AddProductRequest, token?: string)
 }
 
 export async function getSellerProducts(token: string): Promise<Product[]> {
-  return request('/api/seller/products', 'GET', token);
+  return request('/api/seller/products', 'GET', undefined, token);
 }
 
-export async function deleteProduct(id: number, token: string): Promise<void> {
+export async function deleteProduct(id: string, token: string): Promise<void> {
   return request(`/api/products/${id}`, 'DELETE', undefined, token);
 }

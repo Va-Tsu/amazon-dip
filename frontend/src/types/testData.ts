@@ -1,6 +1,6 @@
 import type { CardItemType } from "./product";
 import type { Product } from "./product";
-import type { Seller } from "./seller";
+import type { SellerDashboard } from "./seller";
 import type { User } from "./user";
 
 
@@ -76,7 +76,7 @@ export const mockCards: CardItemType[] = [
 //full info about card
 export const mockProducts: Product[] = [
   {
-    id: 1,
+    id: "1",
     title: "LINDOR PINK LIMITED EDITION",
     description: "Indulge in the elegance of Lindt LINDOR Pink Limited Edition — a refined selection of irresistibly smooth chocolate truffles with a delicate, creamy center.",
     photoUrl: "/imgs/img/testdata/lindorTestData.png",
@@ -97,7 +97,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: 2,
+    id: "2",
     title: "Nutella Ferrero",
     description: "The original hazelnut spread with cocoa. Perfect for breakfast or a snack anytime of the day.",
     photoUrl: "/imgs/img/testdata/kitTestData.png",
@@ -117,7 +117,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: 3,
+    id: "3",
     title: "Haribo Gold Bears",
     description: "The world famous gummy bears. A fruity treat loved by kids and adults alike.",
     photoUrl: "/imgs/img/testdata/kitTestData.png",
@@ -138,7 +138,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: 4,
+    id: "4",
     title: "Toblerone Swiss Chocolate",
     description: "Iconic Swiss chocolate with honey and almond nougat in the distinctive triangular shape.",
     photoUrl: "/imgs/img/testdata/lindorTestData.png",
@@ -158,7 +158,7 @@ export const mockProducts: Product[] = [
     ],
   },
   {
-    id: 5,
+    id: "5",
     title: "Pringles Original",
     description: "The original saddle-shaped potato crisps. Once you pop you can't stop.",
     photoUrl: "/imgs/img/testdata/cotteTestData.png",
@@ -191,16 +191,24 @@ export const mockUser: User = {
 
 //seller acc
 
-export const mockSeller: Seller = {
-  id: 1,
-  name: "john_store",
-  storeName: "John's Premium Store",
-  email: "john@store.com",
-  phone: "+1 (555) 123-4567",
-  country: "USA",
-  description: "Premium imported food from around the world.",
-  logoUrl: "/imgs/icons/sellerAcc/ava.svg",
-  balance: 2847.50,
-  sells: 4675.80,
-  pending: 324.00,
+export const mockSeller: SellerDashboard = {
+  seller: {
+    id: "1",
+    storeName: "John's Premium Store",
+    description: "Premium imported food from around the world.",
+    imageUrl: "/imgs/icons/sellerAcc/ava.svg",
+    balance: 2847.50,
+    pandingBalance: 324.00,
+    user: {
+      fullName: "John Doe",
+      email: "john@store.com",
+      imageUrl: "/imgs/icons/sellerAcc/ava.svg",
+    }
+  },
+  stats: {
+    activeProductsCount: 12,
+    newOrdersCount: 3,
+    sells: 4675.80,
+  },
+  products: []
 };
