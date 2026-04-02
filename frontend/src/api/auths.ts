@@ -59,6 +59,7 @@ export function logout(token: string) {
       undefined,
       token
     );
+    console.log(params);
   }
 /*
   export function loginSeller(data: LoginSellerRequest) {

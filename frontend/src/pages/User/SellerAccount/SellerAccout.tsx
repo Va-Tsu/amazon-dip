@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 import { useEffect, useState } from "react";
-import type { Seller } from "../../../types/seller";
+import type { SellerDashboard } from "../../../types/seller";
 import { getSellerMe } from "../../../api/seller";
 import { mockSeller } from "../../../types/testData";
 import type { Product } from "../../../types/product";
@@ -11,7 +11,7 @@ import { deleteProduct, getSellerProducts } from "../../../api/product";
 
 export function SellerAccount() {
 
-  const [seller, setSeller] = useState<Seller | null>(mockSeller);
+  const [seller, setSeller] = useState<SellerDashboard | null>(mockSeller);
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export function SellerAccount() {
     getSellerProducts(token).then(setProducts);
   }, []);
 
-  const handleDelete = async (id: number) => {
+  const handleDelete = async (id: string) => {
     try {
       const token = localStorage.getItem('token') ?? '';
       await deleteProduct(id, token);
@@ -42,15 +42,15 @@ export function SellerAccount() {
           <section className="sellacc__main">
             <div className="sellacc__main__left">
 
-              <img className="sellacc__main__img" src={seller?.logoUrl ?? "/imgs/icons/sellerAcc/ava.svg"} alt="" />
-              <h2 className="sellacc__main__title">{seller?.name}</h2>
-              <p className="sellacc__main__user">{seller?.email}</p>
+              <img className="sellacc__main__img" src={seller?.seller.imageUrl} alt="" />
+              <h2 className="sellacc__main__title">{seller?.seller.storeName}</h2>
+              <p className="sellacc__main__user">{seller?.seller.user?.email}</p>
             </div>
 
             <div className="sellacc__main__right">
 
               <Link to={'./'} className="sellacc__main__edit">Edit</Link>
-              <p className="sellacc__main__desc">{seller?.description}</p>
+              <p className="sellacc__main__desc">{seller?.seller.description}</p>
             </div>  
 
           </section>
@@ -61,17 +61,17 @@ export function SellerAccount() {
 
               <div className="sellacc__finance__card">
                 <h3 className="sellacc__finance__card__label">Balance</h3>
-                <p className="sellacc__finance__card__value">{seller?.balance}</p>
+                <p className="sellacc__finance__card__value">{seller?.seller.balance}</p>
               </div>
               
               <div className="sellacc__finance__card">
                 <h3 className="sellacc__finance__card__label">Sells</h3>
-                <p className="sellacc__finance__card__value">{seller?.balance}</p>
+                <p className="sellacc__finance__card__value">{seller?.stats.sells}</p>
               </div>
 
               <div className="sellacc__finance__card">
                 <h3 className="sellacc__finance__card__label">Pending</h3>
-                <p className="sellacc__finance__card__value">{seller?.pending}</p>
+                <p className="sellacc__finance__card__value">{seller?.seller.pandingBalance}</p>
               </div>
 
             </div>
@@ -127,17 +127,17 @@ export function SellerAccount() {
 
             <div className="sellacc__stat__content">
               <div className="sellacc__stat__content__card">
-                <img className="sellacc__stat__content__card__img" src="" alt="" />
+                <img className="sellacc__stat__content__card__img" src={seller?.seller.imageUrl} alt="" />
                 <h3 className="sellacc__stat__content__card__title">Number of active products</h3>
                 <p className="sellacc__stat__content__card__value">3</p>
               </div>
               <div className="sellacc__stat__content__card">
-                <img className="sellacc__stat__content__card__img" src="" alt="" />
+                <img className="sellacc__stat__content__card__img" src={seller?.seller.imageUrl} alt="" />
                 <h3 className="sellacc__stat__content__card__title">New orders</h3>
                 <p className="sellacc__stat__content__card__value">3</p>
               </div>
               <div className="sellacc__stat__content__card">
-                <img className="sellacc__stat__content__card__img" src="" alt="" />
+                <img className="sellacc__stat__content__card__img" src={seller?.seller.imageUrl} alt="" />
                 <h3 className="sellacc__stat__content__card__title">Order statuses</h3>
                 <p className="sellacc__stat__content__card__value">3</p>
               </div>
@@ -148,7 +148,7 @@ export function SellerAccount() {
             <h2 className="sellacc__revenue__title">Revenue for the: day / week / month</h2>
 
             <div className="sellacc__revenue__block">
-              <p className="sellacc__revenue__value">{seller?.sells}</p>
+              <p className="sellacc__revenue__value">{seller?.stats.sells}</p>
             </div>
           </section>
 

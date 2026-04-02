@@ -70,7 +70,7 @@ export function UserProfile() {
 
         <div className="userProfile__seller__register">
           <h1 className="userProfile__seller__register__title">My market</h1>
-            {user?.seller !== null ? (
+            {user?.seller === null ? (
               <div className="userProfile__seller__register__block">
                 <Link className="userProfile__seller__register__button__create" to={"/user/regsellacc"}>Create an acoount</Link>
                 <Link className="userProfile__seller__register__button__log" to={"/user/selleracc"}>Log in</Link>

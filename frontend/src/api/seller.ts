@@ -1,8 +1,8 @@
-import type { Seller } from "../types/seller";
+import type { SellerDashboard } from "../types/seller";
 import { request } from "./fetchClient";
 
 export function getSellerMe(token: string) {
-  return request<Seller>(
+  return request<SellerDashboard>(
     '/api/seller/me',
     'GET',
     undefined,
