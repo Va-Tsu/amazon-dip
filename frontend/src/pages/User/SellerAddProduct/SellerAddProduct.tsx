@@ -2,8 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 import type { AddProductRequest } from "../../../types/product";
-import { useState } from "react";
-import { addProduct } from "../../../api/product";
+import { useEffect, useState } from "react";
+import { addProduct, getCategories, getCountries, type CategoryOption, type CountryOption } from "../../../api/product";
 
 export function SellerAddProduct () {
   const navigate = useNavigate();
@@ -12,12 +12,12 @@ export function SellerAddProduct () {
     photo: [],
     name: "",
     brand: "",
-    category: "",
+    categoryId: 0,
+    countryId: 0,
     description: "",
     weight: "",
     ingredients: "",
     sku: "",
-    country: "",
     conditions: "",
     exparaition: "",
     avaibality: false,
@@ -30,10 +30,16 @@ export function SellerAddProduct () {
     params: []
   });
 
+  const [categories, setCategories] = useState<CategoryOption[]>([]);
+  const [countries, setCountries] = useState<CountryOption[]>([]);
+
   const updateProduct = (fields: Partial<AddProductRequest>) => {
     setProduct(prev => ({... prev, ...fields}))
   }
-
+  useEffect(() => {
+    getCategories().then(setCategories).catch(console.error);
+    getCountries().then(setCountries).catch(console.error);
+  }, []);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -114,12 +120,16 @@ export function SellerAddProduct () {
                 </div>
                 <div className="sap__inf__about__field">
                   <h3 className="sap__inf__about__field__label">Select category</h3>
-                  <input
-                    type="text"
+                  <select
                     className="sap__inf__about__field__input"
-                    value={product.category}
-                    onChange={e => updateProduct({ category: e.target.value })}
-                  />
+                    value={product.categoryId ?? ""}
+                    onChange={e => updateProduct({ categoryId: Number(e.target.value)})}
+                  >
+                    <option value="">— Select category —</option>
+                    {categories.map(cat => (
+                      <option key={cat.id} value={cat.id}>{cat.name}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
@@ -140,7 +150,7 @@ export function SellerAddProduct () {
                 <div className="sap__inf__product__field">
                   <h4 className="sap__inf__product__field__label">Weight</h4>
                   <input
-                    type="text"
+                    type="number"
                     placeholder="List ingredients"
                     className="sap__inf__product__field__input"
                     value={product.weight}
@@ -167,16 +177,20 @@ export function SellerAddProduct () {
                     onChange={e => updateProduct({ sku: e.target.value })}
                   />
                 </div>
-                <div className="sap__inf__product__field">
-                  <h4 className="sap__inf__product__field__label">Country of origin</h4>
-                  <input
-                    type="text"
-                    placeholder="Select country"
-                    className="sap__inf__product__field__input"
-                    value={product.country}
-                    onChange={e => updateProduct({ country: e.target.value })}
-                  />
-                </div>
+                  <div className="sap__inf__product__field">
+                    <h4 className="sap__inf__product__field__label">Country of origin</h4>
+                    <select
+                      className="sap__inf__product__field__input"
+                      value={product.countryId ?? ""}
+                      onChange={e => updateProduct({ countryId: Number(e.target.value)})}
+                    >
+                      <option value="">— Select country —</option>
+                      {countries.map(c => (
+                        <option key={c.id} value={c.id}>{c.name}</option>
+                      ))}
+                    </select>
+                  </div>
+
                 <div className="sap__inf__product__field">
                   <h4 className="sap__inf__product__field__label">Store conditions</h4>
                   <input
@@ -190,7 +204,7 @@ export function SellerAddProduct () {
                 <div className="sap__inf__product__field">
                   <h4 className="sap__inf__product__field__label">Expiration date</h4>
                   <input
-                    type="text"
+                    type="date"
                     placeholder="d.m.y"
                     className="sap__inf__product__field__input"
                     value={product.exparaition}

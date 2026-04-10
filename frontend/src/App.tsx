@@ -17,6 +17,7 @@ import { RegisterSellerAccount } from "./pages/Auth/RegisterSellerAccount";
 import { LoginSellerAccount } from "./pages/Auth/LoginSellerAccount";
 import { ResetSellerAccount } from "./pages/Auth/ResetSellerAccount";
 import { YommingoCountries } from "./pages/Yommingo/YommingoCountries";
+import { AdminSeed } from "./admin";
 //#endregion
 
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="login" element={<Login />}/>
           <Route path="reset" element={<Reset />}/>
         </Route>
+        <Route path="/admin/seed" element={<AdminSeed />} />
       </Route>
       <Route path="*" element={<h1>404 Not Found</h1>}/>
     </Routes>

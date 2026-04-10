@@ -5,26 +5,29 @@ import { useEffect, useState } from "react";
 import type { SellerDashboard } from "../../../types/seller";
 import { getSellerMe } from "../../../api/seller";
 import { mockSeller } from "../../../types/testData";
-import type { Product } from "../../../types/product";
-import { deleteProduct, getSellerProducts } from "../../../api/product";
+import { deleteProduct } from "../../../api/product";
 //import { CardList } from "../../../assets/CardList";
 
 export function SellerAccount() {
 
   const [seller, setSeller] = useState<SellerDashboard | null>(mockSeller);
-  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const token = localStorage.getItem('token') ?? '';
     getSellerMe(token).then(setSeller);
-    getSellerProducts(token).then(setProducts);
   }, []);
 
   const handleDelete = async (id: string) => {
     try {
       const token = localStorage.getItem('token') ?? '';
       await deleteProduct(id, token);
-      setProducts(prev => prev.filter(p => p.id !== id));
+      setSeller(prev => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        products: prev.products.filter(p => p.id !== id)
+      };
+    });
     } catch (e) {
       alert((e as Error).message);
     }
@@ -167,13 +170,13 @@ export function SellerAccount() {
 
         <div className="sellacc__myproducts">
           <h2 className="sellacc__myproducts__title">My products</h2>
-          {products.length !== 0 ? (
+          {seller?.products.length !== 0 ? (
             <div className="sellacc__myproducts__grid">
-              {products.map(product => (
+              {seller?.products.map(product => (
                 <div key={product.id} className="sellacc__myproducts__card">
-                  <img src={product.photoUrl} alt={product.title} className="sellacc__myproducts__card__img" />
+                  <img src={product.mainImage || '/imgs/placeholder.png'} alt={product.name} className="sellacc__myproducts__card__img" />
                   <div className="sellacc__myproducts__card__info">
-                    <h3 className="sellacc__myproducts__card__name">{product.title}</h3>
+                    <h3 className="sellacc__myproducts__card__name">{product.name}</h3>
                     <p className="sellacc__myproducts__card__price">{product.price}</p>
                   </div>
                   <div className="sellacc__myproducts__card__actions">
