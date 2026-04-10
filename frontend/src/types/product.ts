@@ -53,12 +53,12 @@ export type AddProductRequest = {
   photo: File[];
   name: string;
   brand: string;
-  category: string;
+  categoryId: number;
+  countryId: number;
   description: string;
   weight: string;
   ingredients: string; //mb array?
   sku: string;
-  country: string;
   conditions: string;
   exparaition: string;
   avaibality: boolean;
