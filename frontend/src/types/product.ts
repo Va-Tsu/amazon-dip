@@ -62,6 +62,11 @@ export type Comment = {
 
 export type BasketItem = {
   id: string;
+  productId: string;
+  title: string;
+  price: number;
+  quantity: number;
+  photoUrl: string;
 }
 
 export type Category = 'snacks' | 'meat' | 'dairy' | 'drinks' | 'sweets' | 'bakery' | 'seafood' | 'other' | null;
@@ -75,8 +80,8 @@ export type CardItemType = {
   price: number;
   weight: string;
   photoUrl: string;
-  category: Category;
-  country: Country;
+  category: string;
+  country: string;
   discount: number;   // 0 если нет скидки, иначе процент например 20 = 20%
   isNew: boolean;
   createdAt: string;  // ISO формат "2024-03-15T10:30:00Z"

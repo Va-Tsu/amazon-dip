@@ -23,16 +23,17 @@ export function BasketProvider({ children }: { children: React.ReactNode }) {
       setBasket(items);
     }
 
+
   async function addItem(item: BasketItem) {
     const token = localStorage.getItem('token') ?? '';
-    await addToBasket(item.id, token);   
-    setBasket(prev => [...prev, item]);
+    await addToBasket(item.productId, token);  // передаём productId, не id
+    await fetchBasket();  // перезагружаем с сервера
   }
 
   async function removeItem(id: string) {
     const token = localStorage.getItem('token') ?? '';
     await removeFromBasket(id, token);
-    setBasket(prev => prev.filter(item => item.id !== id))
+    setBasket(prev => prev.filter(item => item.productId !== id))
   }
 
   return (
