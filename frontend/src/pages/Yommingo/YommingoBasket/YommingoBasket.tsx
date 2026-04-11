@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
@@ -5,14 +6,19 @@ import { CardList } from "../../../assets/CardList";
 import { mockCards } from "../../../types/testData"
 import { useBasket } from "../../../context/Providers/BasketProvider";
 import type { CardItemType } from "../../../types/product";
+import { useEffect } from "react";
 
 export function YommingoBasket() {
 
-  const { basket } = useBasket();
+  const { basket, fetchBasket } = useBasket();
   const basketCards = basket
   .map(item => mockCards.find(card => card.id === item.id))
   .filter((card): card is CardItemType => Boolean(card));
-  
+
+  useEffect(() => {
+    fetchBasket();
+  }, []);
+
   return (
   <section className="basket">
     <Header/>
@@ -30,7 +36,19 @@ export function YommingoBasket() {
         <section className="basket__main">
           <h1 className="basket__main__title">Basket</h1>
           {basket.length !== 0 ? (
-            <CardList limit={basket.length} cards={basketCards}/>
+            <CardList limit={basket.length} cards={basket.map(item => ({
+              id: item.id,
+              title: item.title,
+              price: item.price,
+              photoUrl: item.photoUrl,
+              brand: '',
+              weight: '',
+              category: '',
+              country: '',
+              discount: 0,
+              isNew: false,
+              createdAt: '',
+            }))}/>
           ) : null}
           <button className="basket__main__btn">Go to order</button>
         </section>
