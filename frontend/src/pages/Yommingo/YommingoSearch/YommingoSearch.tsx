@@ -3,12 +3,20 @@ import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 import { useSearchParams } from "react-router-dom";
 import { mockCards } from "../../../types/testData";
+import type { CardItemType } from "../../../types/product";
+import { useEffect, useState } from "react";
+import { getProducts } from "../../../api/product";
 
 export function YommingoSearch () {
   const [searchParams] = useSearchParams();
   const query = searchParams.get('q') ?? '';
+  const [products, setProducts] = useState<CardItemType[]>([]);
 
-  const results = mockCards.filter(card =>
+  useEffect(() => {
+    getProducts().then(setProducts).catch(console.error);
+  }, []);
+
+  const results = products.filter(card =>
     card.title.toLowerCase().includes(query.toLowerCase()) ||
     card.brand.toLowerCase().includes(query.toLowerCase())
   );

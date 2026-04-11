@@ -1,31 +1,39 @@
 import { useParams } from "react-router-dom";
-
-import { mockProducts } from "../../../types/testData"
 import { Header } from "../../../assets/Header";
 import { Footer } from "../../../assets/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type {ProductFull } from "../../../types/product";
+import { getProductById } from "../../../api/product";
 
 
 export function YommingoProductCard() {
   const { id } = useParams();
-  const product = mockProducts.find(p => p.id === String(id));
+  const [product, setProduct] = useState<ProductFull | null>(null);
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
-  const [comments, setComments] = useState(product?.comments ?? []);
+  const [comments, setComments] = useState<ProductFull['comments']>([]);
   const [commentText, setCommentText] = useState('');
+
+  useEffect(() => {
+    if (!id) return;
+    getProductById(id)
+      .then(p => {
+        setProduct(p);
+        setComments(p.comments);
+      })
+      .catch(console.error);
+  }, [id]);
 
   const handlePublish = () => {
     if (!commentText.trim() || rating === 0) return;
-    
     const newComment = {
-      id: Date.now(),
-      userId: 0,
+      id: String(Date.now()),
+      userId: '',
       userName: 'You',
       content: commentText,
-      rating: rating,
+      rating,
       date: new Date().toISOString(),
     };
-
     setComments(prev => [...prev, newComment]);
     setCommentText('');
     setRating(0);
@@ -77,7 +85,7 @@ export function YommingoProductCard() {
 
           <section className="Ypc__productCard__details">
             <h2 className="Ypc__productCard__details__title">Product details</h2>
-            <p className="Ypc__productCard__details__description">{product.details}</p>
+            <p className="Ypc__productCard__details__description">{product.description}</p>
           </section>
 
         </section>

@@ -1,38 +1,39 @@
 //#region Imports
 import { Link } from "react-router-dom";
 import { CardList } from "../../../assets/CardList";
-import { mockCards } from "../../../types/testData";
+//import { mockCards } from "../../../types/testData";
 import { useEffect, useState } from "react";
 import { Header } from "../../../assets/Header";
 import { Footer } from "../../../assets/Footer";
 import { Slider } from "../../../assets/CatalogSlider/CatalogSlider";
+import type { CardItemType } from "../../../types/product";
+import { getNewProducts, getRecommendedProducts } from "../../../api/product";
 //#endregion
 
 
 export function YommingoMain() {
-  function useLimit() {
-    const [limit, setLimit] = useState(4);
+  const [limit, setLimit] = useState(4);
+  const [newProducts, setNewProducts] = useState<CardItemType[]>([]);
+  const [forYou, setForYou] = useState<CardItemType[]>([]);
 
-    useEffect(() => {
-      const mediaQuery = window.matchMedia('(max-width: 767px)');
+  useEffect(() => {
 
-      const handleChange = (e: MediaQueryList | MediaQueryListEvent): void => {
-        setLimit(e.matches ? 2 : 4);
-      };
+    getNewProducts().then(setNewProducts).catch(console.error);
+    getRecommendedProducts().then(setForYou).catch(console.error);
+    const mediaQuery = window.matchMedia('(max-width: 767px)');
 
-      handleChange(mediaQuery);
+    const handleChange = (e: MediaQueryList | MediaQueryListEvent): void => {
+      setLimit(e.matches ? 2 : 4);
+    };
 
-      mediaQuery.addEventListener('change', handleChange);
+    handleChange(mediaQuery);
 
-      return () => {
-        mediaQuery.removeEventListener('change', handleChange);
-      };
-    }, []);
+    mediaQuery.addEventListener('change', handleChange);
 
-    return limit;
-  }
-
-  const limit = useLimit();
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+    };
+  }, []);
 
   return (
     <section className="yommingo">
@@ -94,7 +95,7 @@ export function YommingoMain() {
         </div>
 
         <div className="new__cards">
-          <CardList cards={mockCards} limit={limit}/>
+          <CardList cards={newProducts} limit={limit}/>
         </div>
       </section>
 
@@ -105,7 +106,7 @@ export function YommingoMain() {
         </div>
 
         <div className="new__cards">
-          <CardList cards={mockCards} limit={limit * 2}/>
+          <CardList cards={forYou} limit={limit * 2}/>
         </div>
       </section>
 

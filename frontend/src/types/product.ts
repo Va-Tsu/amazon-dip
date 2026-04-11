@@ -1,3 +1,4 @@
+/*
 export type Product = {
   id: string;
   title: string;
@@ -22,6 +23,41 @@ export type Comment = {
   content: string;
   rating: number; // 1 to 5
   date: string; // ISO format
+};
+*/
+
+export type ProductFull = {
+  id: string;
+  title: string;
+  description: string;
+  photoUrl: string;
+  price: number;
+  currentPrice: number;
+  hasDiscount: boolean;
+  category: string;
+  brand: string;
+  weight: number;
+  ingredients: string;
+  storageConditions: string;
+  expirationDate: string | null;
+  sku: string;
+  information: InformationItem[];
+  comments: Comment[];
+  images: { url: string; isMain: boolean; sortOrder: number }[];
+};
+
+export type InformationItem = {
+  label: string;
+  value: string;
+};
+
+export type Comment = {
+  id: string;
+  userId: string;
+  userName: string;
+  content: string;
+  rating: number;
+  date: string;
 };
 
 export type BasketItem = {
@@ -75,5 +111,5 @@ export type AddProductRequest = {
 
 
 //#region product card for seller
-export type SellerCardItem = Pick<Product, "id" | "photoUrl" | "price" | "title">;
+export type SellerCardItem = Pick<ProductFull, "id" | "photoUrl" | "price" | "title">;
 //#endregion
