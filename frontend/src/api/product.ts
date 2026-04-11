@@ -1,7 +1,8 @@
-import type { AddProductRequest, Product } from "../types/product";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import type { AddProductRequest, CardItemType, ProductFull } from "../types/product";
 import { request } from "./fetchClient";
-//import { requestWithFormData } from "./fetchClient";
 /*
+//import { requestWithFormData } from "./fetchClient";
 export async function addProduct(productData: AddProductRequest, token?: string) {
   const formData = new FormData();
 
@@ -70,12 +71,12 @@ export async function addProduct(productData: AddProductRequest, token?: string)
   );
 }
 
-export async function getSellerProducts(token: string): Promise<Product[]> {
+export async function getSellerProducts(token: string): Promise<ProductFull[]> {
   return request('/api/seller/products', 'GET', undefined, token);
 }
 
 export async function deleteProduct(id: string, token: string): Promise<void> {
-  return request(`/api/seller/products/${id}`, 'DELETE', undefined, token);
+  return request(`/api/seller/delete/${id}`, 'DELETE', undefined, token);
 }
 
 export type CategoryOption = { id: number; name: string; };
@@ -87,4 +88,81 @@ export async function getCategories(): Promise<CategoryOption[]> {
 
 export async function getCountries(): Promise<CountryOption[]> {
   return request('/api/Country', 'GET');
+}
+
+function mapToCard(p: any): CardItemType {
+  return {
+    id: p.id,
+    title: p.name,           // бэкенд: name → фронт: title
+    brand: p.brand,
+    price: p.currentPrice ?? p.price,
+    weight: p.weight?.toString() ?? "",
+    photoUrl: p.images?.find((i: any) => i.isMain)?.url
+      ?? p.images?.[0]?.url
+      ?? "",
+    category: p.category ?? "",
+    country: p.country ?? "",
+    discount: p.hasDiscount
+      ? p.discounts?.[0]?.discountPersentage ?? 0
+      : 0,
+    isNew: true,
+    createdAt: p.createdAt,
+  };
+}
+
+export async function getNewProducts(): Promise<CardItemType[]> {
+  const data = await request<any[]>('/api/products/new', 'GET');
+  return data.map(mapToCard);
+}
+
+export async function getRecommendedProducts(): Promise<CardItemType[]> {
+  const data = await request<{ products: any[] }>('/api/products/recommended', 'GET');
+  return data.products.map(mapToCard);
+}
+
+export async function getProducts(): Promise<CardItemType[]> {
+  const data = await request<any[]>('/api/products', 'GET');
+  return data.map(mapToCard);
+}
+
+export async function getProductById(id: string): Promise<ProductFull> {
+  const p = await request<any>(`/api/products/${id}`, 'GET');
+
+  return {
+    id: p.id,
+    title: p.name,
+    description: p.description ?? "",
+    photoUrl: p.images?.find((i: any) => i.isMain)?.url
+      ?? p.images?.[0]?.url
+      ?? "",
+    price: p.price,
+    currentPrice: p.currentPrice ?? p.price,
+    hasDiscount: p.hasDiscount ?? false,
+    category: p.category?.name ?? "",
+    brand: p.brand ?? "",
+    weight: p.weight ?? 0,
+    ingredients: p.ingridients ?? "",   // бэкенд: ingridients (опечатка)
+    storageConditions: p.storageConditions ?? "",
+    expirationDate: p.expirationDate ?? null,
+    sku: p.sku ?? "",
+    information: (p.parameters ?? []).map((param: any) => ({
+      label: param.name,
+      value: param.value,
+    })),
+    comments: (p.comments ?? [])
+      .filter((c: any) => !c.isDeleted)
+      .map((c: any) => ({
+        id: c.id,
+        userId: c.userId,
+        userName: c.user?.fullName ?? c.user?.userName ?? "Anonymous",
+        content: c.text,
+        rating: c.rating,
+        date: c.createdAt,
+      })),
+    images: (p.images ?? []).map((i: any) => ({
+      url: i.url,
+      isMain: i.isMain,
+      sortOrder: i.sortOrder,
+    })),
+  };
 }
