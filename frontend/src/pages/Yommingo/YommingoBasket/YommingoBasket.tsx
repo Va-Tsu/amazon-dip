@@ -1,19 +1,14 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 import { CardList } from "../../../assets/CardList";
 import { mockCards } from "../../../types/testData"
 import { useBasket } from "../../../context/Providers/BasketProvider";
-import type { CardItemType } from "../../../types/product";
 import { useEffect } from "react";
 
 export function YommingoBasket() {
 
   const { basket, fetchBasket } = useBasket();
-  const basketCards = basket
-  .map(item => mockCards.find(card => card.id === item.id))
-  .filter((card): card is CardItemType => Boolean(card));
 
   useEffect(() => {
     fetchBasket();

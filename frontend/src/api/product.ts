@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { AddProductRequest, CardItemType, ProductFull } from "../types/product";
-import { request } from "./fetchClient";
+import { request, requestWithFormData } from "./fetchClient";
 /*
 //import { requestWithFormData } from "./fetchClient";
 export async function addProduct(productData: AddProductRequest, token?: string) {
@@ -42,6 +42,7 @@ export async function addProduct(productData: AddProductRequest, token?: string)
 }
 */
 
+/*
 export async function addProduct(productData: AddProductRequest, token?: string) {
   const jsonData = {
     name: productData.name,
@@ -70,6 +71,49 @@ export async function addProduct(productData: AddProductRequest, token?: string)
     token,
   );
 }
+*/
+
+export async function addProduct(productData: AddProductRequest, token?: string) {
+  const formData = new FormData();
+
+  formData.append('name', productData.name);
+  formData.append('description', productData.description);
+  formData.append('brand', productData.brand);
+  formData.append('weight', productData.weight || '0');
+  formData.append('price', String(productData.price));
+  formData.append('categoryId', String(productData.categoryId ?? 1));
+  formData.append('countryId', String(productData.countryId ?? 1));
+  formData.append('sku', productData.sku);
+  formData.append('trackInventory', 'false');
+  formData.append('isActive', String(productData.avaibality));
+  formData.append('isPublished', 'true');
+  formData.append('status', '0');
+  formData.append('ingridients', productData.ingredients); // опечатка бэкендера
+
+  if (productData.conditions)
+    formData.append('storageConditions', productData.conditions);
+
+  if (productData.exparaition)
+    formData.append('expirationDate', new Date(productData.exparaition).toISOString());
+
+  if (productData.costOfGood)
+    formData.append('costOfGoods', String(productData.costOfGood));
+
+  productData.photo.forEach(file => {
+    formData.append('images', file);
+  });
+
+  for (const [key, value] of formData.entries()) {
+    console.log(`"${key}" =`, value);
+  }
+
+  return requestWithFormData<{ id: string }>(
+    '/api/seller/create',
+    'POST',
+    formData,
+    token,
+  );
+}
 
 export async function getSellerProducts(token: string): Promise<ProductFull[]> {
   return request('/api/seller/products', 'GET', undefined, token);
@@ -90,10 +134,11 @@ export async function getCountries(): Promise<CountryOption[]> {
   return request('/api/Country', 'GET');
 }
 
+/*
 function mapToCard(p: any): CardItemType {
   return {
     id: p.id,
-    title: p.name,           // бэкенд: name → фронт: title
+    title: p.name,
     brand: p.brand,
     price: p.currentPrice ?? p.price,
     weight: p.weight?.toString() ?? "",
@@ -109,6 +154,27 @@ function mapToCard(p: any): CardItemType {
     createdAt: p.createdAt,
   };
 }
+*/
+
+function mapToCard(p: any): CardItemType {
+  const imageUrl = p.images?.find((i: any) => i.isMain)?.url
+    ?? p.images?.[0]?.url
+    ?? "";
+
+  return {
+    id: p.id,
+    title: p.name,
+    brand: p.brand,
+    price: p.currentPrice ?? p.price,
+    weight: p.weight?.toString() ?? "",
+    photoUrl: imageUrl ? `http://localhost:5123${imageUrl}` : "",
+    category: p.category ?? "",
+    country: p.country ?? "",
+    discount: p.hasDiscount ? p.discounts?.[0]?.discountPersentage ?? 0 : 0,
+    isNew: true,
+    createdAt: p.createdAt,
+  };
+}
 
 export async function getNewProducts(): Promise<CardItemType[]> {
   const data = await request<any[]>('/api/products/new', 'GET');
@@ -117,11 +183,13 @@ export async function getNewProducts(): Promise<CardItemType[]> {
 
 export async function getRecommendedProducts(): Promise<CardItemType[]> {
   const data = await request<{ products: any[] }>('/api/products/recommended', 'GET');
+  console.log('raw products:', data);
   return data.products.map(mapToCard);
 }
 
 export async function getProducts(): Promise<CardItemType[]> {
   const data = await request<any[]>('/api/products', 'GET');
+  console.log('raw products:', data);
   return data.map(mapToCard);
 }
 
