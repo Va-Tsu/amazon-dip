@@ -156,6 +156,7 @@ function mapToCard(p: any): CardItemType {
 }
 */
 
+/*
 function mapToCard(p: any): CardItemType {
   const imageUrl = p.images?.find((i: any) => i.isMain)?.url
     ?? p.images?.[0]?.url
@@ -170,6 +171,27 @@ function mapToCard(p: any): CardItemType {
     photoUrl: imageUrl ? `http://localhost:5123${imageUrl}` : "",
     category: p.category ?? "",
     country: p.country ?? "",
+    discount: p.hasDiscount ? p.discounts?.[0]?.discountPersentage ?? 0 : 0,
+    isNew: true,
+    createdAt: p.createdAt,
+  };
+}
+  */
+
+function mapToCard(p: any): CardItemType {
+  const imageUrl = p.images?.find((i: any) => i.isMain)?.url
+    ?? p.images?.[0]?.url
+    ?? "";
+  console.log('images:', p.images, 'imageUrl:', imageUrl);
+  return {
+    id: p.id,
+    title: p.name,
+    brand: p.brand,
+    price: p.currentPrice ?? p.price,
+    weight: p.weight?.toString() ?? "",
+    photoUrl: imageUrl ? `http://localhost:5123${imageUrl}` : "",
+    category: p.category?.name ?? "",
+    country: p.country?.name ?? "",
     discount: p.hasDiscount ? p.discounts?.[0]?.discountPersentage ?? 0 : 0,
     isNew: true,
     createdAt: p.createdAt,

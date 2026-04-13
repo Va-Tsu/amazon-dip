@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { Footer } from "../../../assets/Footer";
 import { Header } from "../../../assets/Header";
 import { CardList } from "../../../assets/CardList";
-import { mockCards } from "../../../types/testData"
 import { useBasket } from "../../../context/Providers/BasketProvider";
 import { useEffect } from "react";
+import { imgUrl } from "../../../utils/imageUrl";
 
 export function YommingoBasket() {
 
@@ -35,7 +35,7 @@ export function YommingoBasket() {
               id: item.id,
               title: item.title,
               price: item.price,
-              photoUrl: item.photoUrl,
+              photoUrl: imgUrl(item.photoUrl),
               brand: '',
               weight: '',
               category: '',
@@ -50,7 +50,6 @@ export function YommingoBasket() {
 
         <section className="basket__viewed">
           <h1 className="basket__viewed__title">Viewed</h1>
-          <CardList limit={4} cards={mockCards} />
         </section>
       </section>
     <Footer/>
