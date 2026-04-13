@@ -69,19 +69,20 @@ export function logout(token: string) {
     );
   }
 */
-export function loginSeller(data: LoginSellerRequest, token: string) {
+export async function loginSeller(data: LoginSellerRequest, token: string) {
   const params = new URLSearchParams();
-  
   params.append('fullName', data.name);
   params.append('email', data.email);
   params.append('password', data.password);
 
-  return request<void>(
+  const response = await request<{ token: string }>(  // ← не void
     `/api/seller/login?${params.toString()}`,
     'POST',
     undefined,
     token
   );
+
+  return response;  // не сохраняем здесь, сохраняем в компоненте
 }
 //#endregion
 

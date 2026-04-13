@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import type { CardItemType } from "../types/product"
 import { useBasket } from "../context/Providers/BasketProvider";
+import { imgUrl } from "../utils/imageUrl";
 
 
 type CardItemProps = {
@@ -14,7 +15,7 @@ export function CardItem( {card} : CardItemProps) {
 
   return (
     <div className="CardItem" onClick={() => navigate(`/product/${card.id}`)}>
-      <img src={card.photoUrl} alt={card.title} className="CardItem__img" />
+      <img src={imgUrl(card.photoUrl)} alt={card.title} className="CardItem__img" />
       <div className="CardItem__content">
         <h3 className="CardItem__price">{card.price.toFixed(2)} USD</h3>
         <span className="CardItem__span"></span>

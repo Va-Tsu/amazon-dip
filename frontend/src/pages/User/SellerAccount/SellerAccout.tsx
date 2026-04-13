@@ -6,6 +6,7 @@ import type { SellerDashboard } from "../../../types/seller";
 import { getSellerMe } from "../../../api/seller";
 import { mockSeller } from "../../../types/testData";
 import { deleteProduct } from "../../../api/product";
+import { imgUrl } from "../../../utils/imageUrl";
 //import { CardList } from "../../../assets/CardList";
 
 export function SellerAccount() {
@@ -14,7 +15,10 @@ export function SellerAccount() {
 
   useEffect(() => {
     const token = localStorage.getItem('token') ?? '';
-    getSellerMe(token).then(setSeller);
+    getSellerMe(token).then(data => {
+      setSeller(data);
+      console.log('products:', data.products);
+    });
   }, []);
 
   const handleDelete = async (id: string) => {
@@ -174,7 +178,7 @@ export function SellerAccount() {
             <div className="sellacc__myproducts__grid">
               {seller?.products.map(product => (
                 <div key={product.id} className="sellacc__myproducts__card">
-                  <img src={product.mainImage || '/imgs/placeholder.png'} alt={product.name} className="sellacc__myproducts__card__img" />
+                  <img src={imgUrl(product.mainImage)} alt={product.name} className="sellacc__myproducts__card__img" />
                   <div className="sellacc__myproducts__card__info">
                     <h3 className="sellacc__myproducts__card__name">{product.name}</h3>
                     <p className="sellacc__myproducts__card__price">{product.price}</p>
