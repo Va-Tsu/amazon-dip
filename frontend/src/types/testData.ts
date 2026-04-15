@@ -115,7 +115,6 @@ export const mockUser: User = {
 }
 
 //seller acc
-
 export const mockSeller: SellerDashboard = {
   seller: {
     id: "1",

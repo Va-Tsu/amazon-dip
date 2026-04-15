@@ -1,44 +1,79 @@
 import { useParams } from "react-router-dom";
 import { Header } from "../../../assets/Header";
 import { CardList } from "../../../assets/CardList";
-import { mockCards } from "../../../types/testData";
 import { Footer } from "../../../assets/Footer";
+import type { CardItemType } from "../../../types/product";
+import { useEffect, useState } from "react";
+import { getProducts } from "../../../api/product";
 
 const mockCategory = {
   vegetables: {
     title: 'Vegetables and greens',
     imgUrl: '/imgs/img/yommingo/vg.png',
+    categoryFilter: 'vegetables',
   },
   fruits: {
     title: 'Fruits and berries',
     imgUrl: '/imgs/img/yommingo/fb.png',
+    categoryFilter: 'fruits',
   },
   dairy: {
     title: 'Dairy products',
     imgUrl: '/imgs/img/yommingo/dp.png',
+    categoryFilter: 'dairy',
   },
   Meat: {
     title: 'Meat and fish',
     imgUrl: '/imgs/img/yommingo/mf.png',
+    categoryFilter: 'meat',
   },
   grocery: {
     title: 'Grocery store',
     imgUrl: '/imgs/img/yommingo/gs.png',
-    Category: 'Grocery',
+    categoryFilter: 'grocery',
   },
   Snacks: {
     title: 'Snacks and sweets',
     imgUrl: '/imgs/img/yommingo/ss.png',
+    categoryFilter: 'snacks',
   },
   Drinks: {
     title: 'Drinks',
     imgUrl: '/imgs/img/yommingo/d.png',
+    categoryFilter: 'drinks',
   },
 };
 
 export function YommingoCatalog() {
   const { category } = useParams();
   const data = mockCategory[category as keyof typeof mockCategory];
+  const [products, setProducts] = useState<CardItemType[]>([]);
+    
+    useEffect( () => {
+      getProducts().then(setProducts).catch(console.error);
+    }, []);
+  
+  
+    function getFilteredCards(
+      cards: CardItemType[],
+      categoryFilter: string,
+      query?: string
+    ): CardItemType[] {
+      let result = cards.filter(c => c.category === categoryFilter);
+  
+      if (query && query.trim() !== '') {
+        const q = query.toLowerCase().trim();
+        result = result.filter(c =>
+          c.title.toLowerCase().includes(q) ||
+          c.brand.toLowerCase().includes(q)
+        );
+      }
+  
+      return result;
+    }
+  
+  const getFilteredProducts = getFilteredCards(products, category || '');
+
   return (
     <section className="catalog">
       <Header/>
@@ -90,7 +125,7 @@ export function YommingoCatalog() {
                 Discounts
               </h1>
               <div className="catalog__discounts__list">
-                <CardList cards={mockCards} limit={5}/>
+                <CardList cards={getFilteredProducts.filter(p => p.discount > 0)} limit={4}/>
               </div>
             </section>
           </section>
@@ -98,7 +133,7 @@ export function YommingoCatalog() {
           <section className="catalog__main">
             <h1 className="catalog__main__title" id="catalog__title">{category}</h1>
 
-            <CardList cards={mockCards} limit={5}/>
+            <CardList cards={getFilteredProducts} limit={8}/>
           </section>
         </section>
       <Footer/>

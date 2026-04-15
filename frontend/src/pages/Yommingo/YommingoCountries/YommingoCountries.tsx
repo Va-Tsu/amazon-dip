@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import { Header } from "../../../assets/Header";
 import { CardList } from "../../../assets/CardList";
-import { mockCards } from "../../../types/testData";
 import { Footer } from "../../../assets/Footer";
+import type { CardItemType } from "../../../types/product";
+import { useEffect, useState } from "react";
+import { getProducts } from "../../../api/product";
 
 const mockCountry = {
   italy: {
@@ -30,6 +32,32 @@ const mockCountry = {
 export function YommingoCountries() {
   const { country } = useParams();
   const data = mockCountry[country as keyof typeof mockCountry];
+  const [products, setProducts] = useState<CardItemType[]>([]);
+  
+  useEffect( () => {
+    getProducts().then(setProducts).catch(console.error);
+  }, []);
+
+
+  function getFilteredCards(
+    cards: CardItemType[],
+    countryFilter: string,
+    query?: string
+  ): CardItemType[] {
+    let result = cards.filter(c => c.country === countryFilter);
+
+    if (query && query.trim() !== '') {
+      const q = query.toLowerCase().trim();
+      result = result.filter(c =>
+        c.title.toLowerCase().includes(q) ||
+        c.brand.toLowerCase().includes(q)
+      );
+    }
+
+    return result;
+  }
+
+  const getFilteredProducts = getFilteredCards(products, country || '');
 
   if (!data) {
     return <h1>Country not found</h1>
@@ -85,7 +113,7 @@ export function YommingoCountries() {
                 Discounts
               </h1>
               <div className="catalog__discounts__list">
-                <CardList cards={mockCards} limit={5}/>
+                <CardList cards={getFilteredProducts.filter(p => p.discount > 0)} limit={8}/>
               </div>
             </section>
           </section>
@@ -93,7 +121,7 @@ export function YommingoCountries() {
           <section className="catalog__main">
             <h1 className="catalog__main__title" id="catalog__title">Products</h1>
 
-            <CardList cards={mockCards} limit={5}/>
+            <CardList cards={getFilteredProducts} limit={8}/>
           </section>
         </section>
       <Footer/>
