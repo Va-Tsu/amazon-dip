@@ -46,6 +46,8 @@
 
       &__img {
         border-radius: 16px;
+        width: 200px;
+        height: 200px;
       }
 
       &__text {
@@ -287,6 +289,7 @@
   padding: 20px 20px;
   width: 60px;
   height: 60px;
+  cursor: pointer;
   @include mobile () {
     width: 30px;
     height: 30px;

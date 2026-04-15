@@ -4,6 +4,7 @@ import { Footer } from "../../../assets/Footer";
 import { useEffect, useState } from "react";
 import type {ProductFull } from "../../../types/product";
 import { getProductById } from "../../../api/product";
+import { imgUrl } from "../../../utils/imageUrl";
 
 
 export function YommingoProductCard() {
@@ -13,6 +14,7 @@ export function YommingoProductCard() {
   const [hover, setHover] = useState(0);
   const [comments, setComments] = useState<ProductFull['comments']>([]);
   const [commentText, setCommentText] = useState('');
+  const [value, setValue] = useState(1);
 
   useEffect(() => {
     if (!id) return;
@@ -50,7 +52,7 @@ export function YommingoProductCard() {
       <main className="Ypc__main">
         <section className="Ypc__productCard">
           <section className="Ypc__productCard__topInfo">
-            <img src={product.photoUrl} alt={product.title} className="Ypc__productCard__topInfo__img" />
+            <img src={imgUrl(product.photoUrl)} alt={product.title} className="Ypc__productCard__topInfo__img" />
             <div className="Ypc__productCard__topInfo__text">
               <h1 className="Ypc__productCard__topInfo__text__title">{product.title}</h1>
               <p className="Ypc__productCard__topInfo__text__description">{product.description}</p>
@@ -64,9 +66,21 @@ export function YommingoProductCard() {
             </div>
             <form className="Ypc__productCard__downInfo__form">
               <div className="Ypc__productCard__downInfo__counter">
-                <button className="Ypc__productCard__downInfo__counter__btn empty__style">+</button>
-                <div className="Ypc__productCard__downInfo__counter__value empty__style">1</div>
-                <button className="Ypc__productCard__downInfo__counter__btn empty__style">-</button>
+                <button 
+                  className="Ypc__productCard__downInfo__counter__btn empty__style" 
+                  onClick={() => setValue(v => v + 1)}
+                  type="button"
+                >
+                  +
+                </button>
+                <div className="Ypc__productCard__downInfo__counter__value empty__style">{value}</div>
+                <button 
+                  className="Ypc__productCard__downInfo__counter__btn empty__style" 
+                  onClick={() => setValue(v => v > 1 ? v - 1 : 1)}
+                  type="button"
+                >
+                  -
+                </button>
               </div>
               <button className="Ypc__productCard__downInfo__addButton">Buy</button>
             </form>
